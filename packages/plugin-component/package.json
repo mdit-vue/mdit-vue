@@ -1,0 +1,45 @@
+{
+  "name": "@mdit-vue/plugin-component",
+  "version": "0.0.0",
+  "description": "markdown-it plugin - allow vue component in markdown",
+  "keywords": [
+    "markdown-it",
+    "vue"
+  ],
+  "homepage": "https://github.com/mdit-vue",
+  "bugs": {
+    "url": "https://github.com/mdit-vue/mdit-vue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdit-vue/mdit-vue.git"
+  },
+  "license": "MIT",
+  "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "markdown-it": "^13.0.1"
+  },
+  "devDependencies": {
+    "c8": "^7.11.3",
+    "unbuild": "^0.7.4",
+    "vitest": "^0.15.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
