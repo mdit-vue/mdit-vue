@@ -1,0 +1,10 @@
+{
+  "extends": "@meteorlxy/tsconfig/base.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": ["ES2020"],
+    "module": "Commonjs",
+    "moduleResolution": "Node",
+    "target": "ES2020"
+  }
+}

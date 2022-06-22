@@ -1,0 +1,4 @@
+!.*.cjs
+coverage/
+node_modules/
+packages/*/dist

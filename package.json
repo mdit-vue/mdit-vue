@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "clean": "pnpm -r clean",
+    "lint": "eslint --ext .cjs,.ts .",
+    "prepare": "husky install",
+    "release": "lerna publish",
+    "test": "vitest run"
+  },
+  "lint-staged": {
+    "*.{cjs,ts}": "eslint --fix",
+    "*.{json,md,yml}": "prettier --write",
+    "package.json": "sort-package-json"
+  },
+  "prettier": "@meteorlxy/prettier-config",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@lerna-lite/cli": "^1.5.1",
+    "@meteorlxy/eslint-config-prettier": "^2.15.0",
+    "@meteorlxy/eslint-config-prettier-typescript": "^2.15.0",
+    "@meteorlxy/prettier-config": "^2.11.0",
+    "@meteorlxy/tsconfig": "^2.14.1",
+    "c8": "^7.11.3",
+    "eslint": "^8.18.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "sort-package-json": "^1.57.0",
+    "typescript": "^4.7.4",
+    "vitest": "^0.15.2"
+  },
+  "packageManager": "pnpm@7.3.0",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "eslint-plugin-import"
+      ]
+    }
+  }
+}
