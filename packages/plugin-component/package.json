@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/plugin-component",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "markdown-it plugin - allow vue component in markdown",
   "keywords": [
     "markdown-it",
