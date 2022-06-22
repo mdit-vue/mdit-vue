@@ -1,5 +1,7 @@
 # @mdit-vue/plugin-component
 
+[![npm](https://badgen.net/npm/v/@mdit-vue/plugin-component)](https://www.npmjs.com/package/@mdit-vue/plugin-component)
+
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to treat unknown HTML tags as Vue custom components.
 
 ## Install
