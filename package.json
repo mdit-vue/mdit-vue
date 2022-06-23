@@ -5,7 +5,7 @@
     "clean": "pnpm -r clean",
     "lint": "eslint --ext .cjs,.ts .",
     "prepare": "husky install",
-    "release": "lerna publish",
+    "release": "pnpm clean && pnpm build && pnpm lint && pnpm test && lerna publish",
     "test": "vitest run"
   },
   "lint-staged": {
