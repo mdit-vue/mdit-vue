@@ -1,0 +1,40 @@
+# @mdit-vue/plugin-sfc
+
+[![npm](https://badgen.net/npm/v/@mdit-vue/plugin-sfc)](https://www.npmjs.com/package/@mdit-vue/plugin-sfc)
+
+A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to help transforming markdown to [Vue SFC](https://vuejs.org/guide/scaling-up/sfc.html).
+
+- Extract all SFC blocks except `<template>` from rendered result to markdown-it `env.sfcBlocks`.
+- Support extracting custom blocks.
+
+## Install
+
+```sh
+npm i @mdit-vue/plugin-sfc
+```
+
+## Usage
+
+This plugin will only take effects when the `html` option of markdown-it is enabled:
+
+```ts
+import MarkdownIt from 'markdown-it';
+import { sfcPlugin } from '@mdit-vue/plugin-sfc';
+import type { MarkdownItEnv } from '@mdit-vue/shared';
+
+const md = MarkdownIt({ html: true }).use(sfcPlugin);
+const env: MarkdownItEnv = {};
+
+const rendered = md.render(
+  `\
+# foo
+
+<script>
+console.log('bar')
+</script>
+`,
+  env,
+);
+
+const sfc = `<template>${rendered}</template>${env.sfcBlocks}`;
+```

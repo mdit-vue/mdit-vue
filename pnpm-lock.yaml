@@ -51,6 +51,23 @@ importers:
       unbuild: 0.7.4
       vitest: 0.15.2_c8@7.11.3
 
+  packages/plugin-sfc:
+    specifiers:
+      '@mdit-vue/shared': workspace:*
+      '@types/markdown-it': ^12.2.3
+      c8: ^7.11.3
+      markdown-it: ^13.0.1
+      unbuild: ^0.7.4
+      vitest: ^0.15.2
+    dependencies:
+      '@mdit-vue/shared': link:../shared
+      '@types/markdown-it': 12.2.3
+      markdown-it: 13.0.1
+    devDependencies:
+      c8: 7.11.3
+      unbuild: 0.7.4
+      vitest: 0.15.2_c8@7.11.3
+
   packages/shared:
     specifiers:
       unbuild: ^0.7.4
