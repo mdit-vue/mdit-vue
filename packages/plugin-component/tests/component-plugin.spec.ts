@@ -643,7 +643,7 @@ const createInlineTestCases = (tags: string[]): ComponentPluginTestCases[] => {
   return testCases;
 };
 
-describe('@vuepress/markdown > plugins > customComponentPlugin', () => {
+describe('@mdit-vue/plugin-component > component-plugin', () => {
   describe('should render custom components as normal html blocks', () => {
     describe('PascalCase components', () => {
       const testCases = createTestCases([
