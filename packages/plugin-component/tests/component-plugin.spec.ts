@@ -523,7 +523,7 @@ const createInlineTestCases = (tags: string[]): ComponentPluginTestCases[] => {
        * <span><div>foobar</div></span>
        *
        * @remark
-       * This is invalid HTML an should be avoided
+       * This is invalid HTML and should be avoided
        */
       {
         name: `block element <${comp}>`,
