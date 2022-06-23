@@ -22,7 +22,9 @@ import MarkdownIt from 'markdown-it';
 import { sfcPlugin } from '@mdit-vue/plugin-sfc';
 import type { MarkdownItEnv } from '@mdit-vue/shared';
 
-const md = MarkdownIt({ html: true }).use(sfcPlugin);
+const md = MarkdownIt({ html: true }).use(sfcPlugin, {
+  // options
+});
 const env: MarkdownItEnv = {};
 
 const rendered = md.render(
@@ -38,3 +40,19 @@ console.log('bar')
 
 const sfc = `<template>${rendered}</template>${env.sfcBlocks}`;
 ```
+
+## Options
+
+### customBlocks
+
+- Type: `string[]`
+
+- Default: `[]`
+
+- Details:
+
+  SFC custom blocks to be extracted.
+
+  By default, only `<script>` and `<style>` tags will be extracted. You can set this option to support SFC custom blocks in markdown.
+
+  For example, if you set this option to `['foo']`, the `<foo>` tag in your markdown content will also be extracted to `env.sfcBlocks` and won't appear in the rendered result.
