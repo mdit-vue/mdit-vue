@@ -33,6 +33,7 @@ const HTML_SEQUENCES: [RegExp, RegExp, boolean][] = [
     /^$/,
     true,
   ],
+  // MODIFIED HERE: Tweak the original HTML_OPEN_CLOSE_TAG_RE
   [new RegExp(HTML_OPEN_CLOSE_TAG_RE.source + '\\s*$'), /^$/, false],
 ];
 
