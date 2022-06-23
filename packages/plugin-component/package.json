@@ -1,10 +1,12 @@
 {
   "name": "@mdit-vue/plugin-component",
   "version": "0.1.1",
-  "description": "markdown-it plugin - allow vue component in markdown",
+  "description": "A markdown-it plugin to allow vue components in markdown",
   "keywords": [
     "markdown-it",
-    "vue"
+    "markdown-it-plugin",
+    "vue",
+    "component"
   ],
   "homepage": "https://github.com/mdit-vue",
   "bugs": {
