@@ -33,7 +33,7 @@ const extractedStyle = source.replace(/^.*(<style .*<\/style>).*$/s, '$1\n');
 const extractedDocs = source.replace(/^.*(<docs>.*<\/docs>).*$/s, '$1\n');
 
 describe('@mdit-vue/plugin-sfc > sfc-plugin', () => {
-  it('should hoist script and style tags', () => {
+  it('should extract `<script>` and `<style>` tags correctly', () => {
     const md = MarkdownIt({ html: true }).use(sfcPlugin);
     const env: MarkdownItEnv = {};
 
@@ -43,7 +43,7 @@ describe('@mdit-vue/plugin-sfc > sfc-plugin', () => {
     expect(/<(script|style)\b/.test(rendered)).toBe(false);
   });
 
-  it('should hoist docs tags correctly', () => {
+  it('should extract `<docs>` tags correctly', () => {
     const md = MarkdownIt({ html: true }).use(sfcPlugin, {
       customBlocks: ['docs'],
     });
