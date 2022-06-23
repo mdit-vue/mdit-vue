@@ -2,7 +2,11 @@
 
 [![npm](https://badgen.net/npm/v/@mdit-vue/plugin-component)](https://www.npmjs.com/package/@mdit-vue/plugin-component)
 
-A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to treat unknown HTML tags as Vue custom components.
+A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to allow Vue components in markdown.
+
+- Treat [vue built-in components](https://vuejs.org/api/built-in-components.html) and unknown HTML tags as vue components (markdown-it would treat them as inline tags by default).
+- Allow vue [`@` directive](https://vuejs.org/api/built-in-directives.html#v-on) on native HTML tags.
+- With full tests.
 
 ## Install
 
