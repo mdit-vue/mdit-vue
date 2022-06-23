@@ -3,7 +3,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "lib": ["ES2020"],
-    "module": "Commonjs",
+    "module": "ES2020",
     "moduleResolution": "Node",
     "target": "ES2020"
   }

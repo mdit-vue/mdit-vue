@@ -1,0 +1,39 @@
+{
+  "name": "@mdit-vue/shared",
+  "version": "0.0.0",
+  "description": "Shared utils and types of mdit-vue",
+  "keywords": [
+    "markdown-it",
+    "vue"
+  ],
+  "homepage": "https://github.com/mdit-vue",
+  "bugs": {
+    "url": "https://github.com/mdit-vue/mdit-vue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdit-vue/mdit-vue.git"
+  },
+  "license": "MIT",
+  "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "unbuild": "^0.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
