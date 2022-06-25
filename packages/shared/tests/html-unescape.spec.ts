@@ -10,7 +10,7 @@ const testCases = [
   ],
 ];
 
-describe('shared > htmlUnescape', () => {
+describe('shared > html-unescape', () => {
   describe('should unescape special chars', () => {
     testCases.forEach(([source, expected]) => {
       it(source, () => {

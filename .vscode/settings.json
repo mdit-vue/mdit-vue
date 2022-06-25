@@ -14,5 +14,5 @@
     "typescript",
     "typescriptreact"
   ],
-  "cSpell.words": ["mdit"]
+  "cSpell.words": ["mdit", "slugification"]
 }

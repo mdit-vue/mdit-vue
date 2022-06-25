@@ -2,3 +2,10 @@
 export interface MarkdownItEnv {
   // to be extended with module augmentation
 }
+
+export interface MarkdownItHeader {
+  level: number;
+  title: string;
+  slug: string;
+  children: MarkdownItHeader[];
+}

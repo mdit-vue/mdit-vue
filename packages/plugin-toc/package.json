@@ -1,10 +1,13 @@
 {
-  "name": "@mdit-vue/shared",
+  "name": "@mdit-vue/plugin-toc",
   "version": "0.2.0",
-  "description": "Shared utils and types of mdit-vue",
+  "description": "A markdown-it plugin to generate table-of-contents that compatible with Vue.js",
   "keywords": [
     "markdown-it",
-    "vue"
+    "markdown-it-plugin",
+    "vue",
+    "toc",
+    "table-of-contents"
   ],
   "homepage": "https://github.com/mdit-vue",
   "bugs": {
@@ -31,11 +34,13 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@mdit-vue/shared": "workspace:*",
     "@types/markdown-it": "^12.2.3",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
     "c8": "^7.11.3",
+    "markdown-it-anchor": "^8.6.4",
     "unbuild": "^0.7.4",
     "vitest": "^0.15.2"
   },
