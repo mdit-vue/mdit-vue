@@ -1,7 +1,6 @@
 /**
  * Options of @mdit-vue/plugin-toc
  */
-
 export interface TocPluginOptions {
   /**
    * The pattern serving as the TOC placeholder in your markdown
