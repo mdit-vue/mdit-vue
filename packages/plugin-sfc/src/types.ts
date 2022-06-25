@@ -4,6 +4,8 @@
 export interface SfcPluginOptions {
   /**
    * Custom blocks to be extracted
+   *
+   * @default []
    */
   customBlocks?: string[];
 }
