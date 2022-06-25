@@ -70,9 +70,13 @@ importers:
 
   packages/shared:
     specifiers:
+      c8: ^7.11.3
       unbuild: ^0.7.4
+      vitest: ^0.15.2
     devDependencies:
+      c8: 7.11.3
       unbuild: 0.7.4
+      vitest: 0.15.2_c8@7.11.3
 
 packages:
 
