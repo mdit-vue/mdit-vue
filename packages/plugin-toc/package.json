@@ -42,7 +42,7 @@
     "c8": "^7.11.3",
     "markdown-it-anchor": "^8.6.4",
     "unbuild": "^0.7.4",
-    "vitest": "^0.15.2"
+    "vitest": "^0.16.0"
   },
   "publishConfig": {
     "access": "public"
