@@ -27,11 +27,11 @@ export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
     self,
   ) => {
     const content = tokens[idx].content;
-    const extractedSfcBlocks = env.sfcBlocks || (env.sfcBlocks = []);
 
     // extract sfc blocks to env and do not render them
     if (sfcBlocksRegexp.test(content.trim())) {
-      extractedSfcBlocks.push(content);
+      env.sfcBlocks ??= [];
+      env.sfcBlocks.push(content);
       return '';
     }
 
