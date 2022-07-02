@@ -1,6 +1,7 @@
 # @mdit-vue/plugin-component
 
 [![npm](https://badgen.net/npm/v/@mdit-vue/plugin-component)](https://www.npmjs.com/package/@mdit-vue/plugin-component)
+[![license](https://badgen.net/github/license/mdit-vue/mdit-vue)](https://github.com/mdit-vue/mdit-vue/blob/main/LICENSE)
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to allow Vue components in markdown.
 

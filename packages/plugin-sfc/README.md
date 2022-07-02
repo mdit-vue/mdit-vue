@@ -1,6 +1,7 @@
 # @mdit-vue/plugin-sfc
 
 [![npm](https://badgen.net/npm/v/@mdit-vue/plugin-sfc)](https://www.npmjs.com/package/@mdit-vue/plugin-sfc)
+[![license](https://badgen.net/github/license/mdit-vue/mdit-vue)](https://github.com/mdit-vue/mdit-vue/blob/main/LICENSE)
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to help transforming markdown to [Vue SFC](https://vuejs.org/guide/scaling-up/sfc.html).
 

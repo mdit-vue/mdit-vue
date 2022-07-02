@@ -1,6 +1,7 @@
 # @mdit-vue/plugin-toc
 
 [![npm](https://badgen.net/npm/v/@mdit-vue/plugin-toc)](https://www.npmjs.com/package/@mdit-vue/plugin-toc)
+[![license](https://badgen.net/github/license/mdit-vue/mdit-vue)](https://github.com/mdit-vue/mdit-vue/blob/main/LICENSE)
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to generate table-of-contents (TOC) that compatible with [Vue.js](https://vuejs.org).
 
