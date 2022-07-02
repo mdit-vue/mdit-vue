@@ -39,7 +39,7 @@ const fixtures = {
 `,
 };
 
-describe('@vuepress/markdown > plugins > headersPlugin', () => {
+describe('@mdit-vue/plugin-headers > headers-plugin', () => {
   describe('should extract headers with default option (h2, h3)', () => {
     const md = MarkdownIt().use(headersPlugin);
 

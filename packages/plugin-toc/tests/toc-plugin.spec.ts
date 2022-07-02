@@ -41,7 +41,7 @@ const fixtures = {
 `,
 };
 
-describe('@vuepress/markdown > plugins > tocPlugin', () => {
+describe('@mdit-vue/plugin-toc > toc-plugin', () => {
   describe('should render toc with default option (h2, h3)', () => {
     const md = MarkdownIt().use(tocPlugin);
 
