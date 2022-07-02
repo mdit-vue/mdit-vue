@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/mdit-vue/mdit-vue/compare/v0.3.1...v0.4.0) (2022-07-02)
+
+### Features
+
+- **plugin-headers:** add headers plugin ([636aa9b](https://github.com/mdit-vue/mdit-vue/commit/636aa9be80051922ee290d61a5074f7d90d7b793))
+- **plugin-title:** add title plugin ([662e153](https://github.com/mdit-vue/mdit-vue/commit/662e153b74226df6db57531e71ab5f8d563da780))
+
 ## [0.3.1](https://github.com/mdit-vue/mdit-vue/compare/v0.3.0...v0.3.1) (2022-06-25)
 
 ### Bug Fixes
