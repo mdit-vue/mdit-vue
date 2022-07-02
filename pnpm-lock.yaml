@@ -87,6 +87,27 @@ importers:
       unbuild: 0.7.4
       vitest: 0.16.0_c8@7.11.3
 
+  packages/plugin-title:
+    specifiers:
+      '@mdit-vue/shared': workspace:*
+      '@types/markdown-it': ^12.2.3
+      '@types/markdown-it-emoji': ^2.0.2
+      c8: ^7.11.3
+      markdown-it: ^13.0.1
+      markdown-it-emoji: ^2.0.2
+      unbuild: ^0.7.4
+      vitest: ^0.16.0
+    dependencies:
+      '@mdit-vue/shared': link:../shared
+      '@types/markdown-it': 12.2.3
+      markdown-it: 13.0.1
+    devDependencies:
+      '@types/markdown-it-emoji': 2.0.2
+      c8: 7.11.3
+      markdown-it-emoji: 2.0.2
+      unbuild: 0.7.4
+      vitest: 0.16.0_c8@7.11.3
+
   packages/plugin-toc:
     specifiers:
       '@mdit-vue/shared': workspace:*
@@ -1197,6 +1218,12 @@ packages:
 
   /@types/linkify-it/3.0.2:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
+
+  /@types/markdown-it-emoji/2.0.2:
+    resolution: {integrity: sha512-2ln8Wjbcj/0oRi/6VnuMeWEHHuK8uapFttvcLmDIe1GKCsFBLOLBX+D+xhDa9oWOQV0IpvxwrSfKKssAqqroog==}
+    dependencies:
+      '@types/markdown-it': 12.2.3
+    dev: true
 
   /@types/markdown-it/12.2.3:
     resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
@@ -4241,6 +4268,10 @@ packages:
     dependencies:
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
+    dev: true
+
+  /markdown-it-emoji/2.0.2:
+    resolution: {integrity: sha512-zLftSaNrKuYl0kR5zm4gxXjHaOI3FAOEaloKmRA5hijmJZvSjmxcokOLlzycb/HXlUFWzXqpIEoyEMCE4i9MvQ==}
     dev: true
 
   /markdown-it/13.0.1:
