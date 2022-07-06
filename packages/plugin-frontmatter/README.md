@@ -35,7 +35,7 @@ const rendered = md.render(
 ---
 title: foobar
 ---
-Everything above <!-- more --> will be extracted as excerpt.
+Everything above **more** comment will be extracted as excerpt.
 <!-- more -->
 `,
   env,
