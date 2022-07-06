@@ -18,4 +18,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           body: |
-            Please refer to [CHANGELOG.md](https://github.com/TODO/TODO/blob/main/CHANGELOG.md) for details.
+            Please refer to [CHANGELOG.md](https://github.com/mdit-vue/mdit-vue/blob/main/CHANGELOG.md) for details.
