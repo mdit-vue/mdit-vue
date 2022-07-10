@@ -18,7 +18,7 @@ importers:
       prettier: ^2.7.1
       sort-package-json: ^1.57.0
       typescript: ^4.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     devDependencies:
       '@commitlint/cli': 17.0.3
       '@commitlint/config-conventional': 17.0.3
@@ -34,7 +34,7 @@ importers:
       prettier: 2.7.1
       sort-package-json: 1.57.0
       typescript: 4.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
   packages/plugin-component:
     specifiers:
@@ -42,14 +42,14 @@ importers:
       c8: ^7.11.3
       markdown-it: ^13.0.1
       unbuild: ^0.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     dependencies:
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     devDependencies:
       c8: 7.11.3
       unbuild: 0.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
   packages/plugin-frontmatter:
     specifiers:
@@ -59,7 +59,7 @@ importers:
       gray-matter: ^4.0.3
       markdown-it: ^13.0.1
       unbuild: ^0.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@types/markdown-it': 12.2.3
@@ -68,7 +68,7 @@ importers:
     devDependencies:
       c8: 7.11.3
       unbuild: 0.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
   packages/plugin-headers:
     specifiers:
@@ -78,7 +78,7 @@ importers:
       markdown-it: ^13.0.1
       markdown-it-anchor: ^8.6.4
       unbuild: ^0.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@types/markdown-it': 12.2.3
@@ -87,7 +87,7 @@ importers:
       c8: 7.11.3
       markdown-it-anchor: 8.6.4_ea7kj7wzjkld5jo2noyjqxi764
       unbuild: 0.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
   packages/plugin-sfc:
     specifiers:
@@ -96,7 +96,7 @@ importers:
       c8: ^7.11.3
       markdown-it: ^13.0.1
       unbuild: ^0.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@types/markdown-it': 12.2.3
@@ -104,7 +104,7 @@ importers:
     devDependencies:
       c8: 7.11.3
       unbuild: 0.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
   packages/plugin-title:
     specifiers:
@@ -115,7 +115,7 @@ importers:
       markdown-it: ^13.0.1
       markdown-it-emoji: ^2.0.2
       unbuild: ^0.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@types/markdown-it': 12.2.3
@@ -125,7 +125,7 @@ importers:
       c8: 7.11.3
       markdown-it-emoji: 2.0.2
       unbuild: 0.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
   packages/plugin-toc:
     specifiers:
@@ -135,7 +135,7 @@ importers:
       markdown-it: ^13.0.1
       markdown-it-anchor: ^8.6.4
       unbuild: ^0.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@types/markdown-it': 12.2.3
@@ -144,7 +144,7 @@ importers:
       c8: 7.11.3
       markdown-it-anchor: 8.6.4_ea7kj7wzjkld5jo2noyjqxi764
       unbuild: 0.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
   packages/shared:
     specifiers:
@@ -152,14 +152,14 @@ importers:
       c8: ^7.11.3
       markdown-it: ^13.0.1
       unbuild: ^0.7.4
-      vitest: ^0.17.0
+      vitest: ^0.18.0
     dependencies:
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     devDependencies:
       c8: 7.11.3
       unbuild: 0.7.4
-      vitest: 0.17.0_c8@7.11.3
+      vitest: 0.18.0_c8@7.11.3
 
 packages:
 
@@ -6423,8 +6423,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.17.0_c8@7.11.3:
-    resolution: {integrity: sha512-5YO9ubHo0Zg35mea3+zZAr4sCku32C3usvIH5COeJB48TZV/R0J9aGNtGOOqEWZYfOKP0pGZUvTokne3x/QEFg==}
+  /vitest/0.18.0_c8@7.11.3:
+    resolution: {integrity: sha512-ryAtlh5Gvg3+aLNuOQ8YOHxgQCCu46jx40X5MBL0K0/ejB9i5zsr8fV8LTGXbXex80UMHlzceI9F+ouGaiR+mQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
