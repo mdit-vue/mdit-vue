@@ -10,7 +10,7 @@ export interface SfcPluginOptions {
   customBlocks?: string[];
 }
 
-declare module '@mdit-vue/shared' {
+declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
     sfcBlocks?: string[];
   }

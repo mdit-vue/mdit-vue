@@ -2,7 +2,7 @@ import {
   slugify as defaultSlugify,
   resolveHeadersFromTokens,
 } from '@mdit-vue/shared';
-import type { MarkdownItHeader } from '@mdit-vue/shared';
+import type { MarkdownItHeader } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
 import { createRenderHeaders } from './create-render-headers';
 import { createTocBlockRule } from './create-toc-block-rule';

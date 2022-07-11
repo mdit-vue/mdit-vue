@@ -19,7 +19,7 @@ export interface FrontmatterPluginOptions {
   renderExcerpt?: boolean;
 }
 
-declare module '@mdit-vue/shared' {
+declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
     excerpt?: string;
     frontmatter?: Record<string, unknown>;

@@ -53,7 +53,7 @@ importers:
 
   packages/plugin-frontmatter:
     specifiers:
-      '@mdit-vue/shared': workspace:*
+      '@mdit-vue/types': workspace:*
       '@types/markdown-it': ^12.2.3
       c8: ^7.11.3
       gray-matter: ^4.0.3
@@ -61,7 +61,7 @@ importers:
       unbuild: ^0.7.4
       vitest: ^0.18.0
     dependencies:
-      '@mdit-vue/shared': link:../shared
+      '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
       gray-matter: 4.0.3
       markdown-it: 13.0.1
@@ -73,6 +73,7 @@ importers:
   packages/plugin-headers:
     specifiers:
       '@mdit-vue/shared': workspace:*
+      '@mdit-vue/types': workspace:*
       '@types/markdown-it': ^12.2.3
       c8: ^7.11.3
       markdown-it: ^13.0.1
@@ -81,6 +82,7 @@ importers:
       vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
+      '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     devDependencies:
@@ -91,14 +93,14 @@ importers:
 
   packages/plugin-sfc:
     specifiers:
-      '@mdit-vue/shared': workspace:*
+      '@mdit-vue/types': workspace:*
       '@types/markdown-it': ^12.2.3
       c8: ^7.11.3
       markdown-it: ^13.0.1
       unbuild: ^0.7.4
       vitest: ^0.18.0
     dependencies:
-      '@mdit-vue/shared': link:../shared
+      '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     devDependencies:
@@ -109,6 +111,7 @@ importers:
   packages/plugin-title:
     specifiers:
       '@mdit-vue/shared': workspace:*
+      '@mdit-vue/types': workspace:*
       '@types/markdown-it': ^12.2.3
       '@types/markdown-it-emoji': ^2.0.2
       c8: ^7.11.3
@@ -118,6 +121,7 @@ importers:
       vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
+      '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     devDependencies:
@@ -130,6 +134,7 @@ importers:
   packages/plugin-toc:
     specifiers:
       '@mdit-vue/shared': workspace:*
+      '@mdit-vue/types': workspace:*
       '@types/markdown-it': ^12.2.3
       c8: ^7.11.3
       markdown-it: ^13.0.1
@@ -138,6 +143,7 @@ importers:
       vitest: ^0.18.0
     dependencies:
       '@mdit-vue/shared': link:../shared
+      '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     devDependencies:
@@ -148,18 +154,26 @@ importers:
 
   packages/shared:
     specifiers:
+      '@mdit-vue/types': workspace:*
       '@types/markdown-it': ^12.2.3
       c8: ^7.11.3
       markdown-it: ^13.0.1
       unbuild: ^0.7.4
       vitest: ^0.18.0
     dependencies:
+      '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
     devDependencies:
       c8: 7.11.3
       unbuild: 0.7.4
       vitest: 0.18.0_c8@7.11.3
+
+  packages/types:
+    specifiers:
+      unbuild: ^0.7.4
+    devDependencies:
+      unbuild: 0.7.4
 
 packages:
 

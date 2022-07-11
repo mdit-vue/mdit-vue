@@ -2,7 +2,7 @@ import {
   slugify as defaultSlugify,
   resolveHeadersFromTokens,
 } from '@mdit-vue/shared';
-import type { MarkdownItEnv, MarkdownItHeader } from '@mdit-vue/shared';
+import type { MarkdownItEnv, MarkdownItHeader } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
 import type { HeadersPluginOptions } from './types';
 

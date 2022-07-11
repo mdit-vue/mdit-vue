@@ -1,4 +1,4 @@
-import type { MarkdownItEnv } from '@mdit-vue/shared';
+import type { MarkdownItEnv } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
 import type { SfcPluginOptions } from './types';
 

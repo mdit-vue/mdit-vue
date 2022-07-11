@@ -1,5 +1,5 @@
 import { resolveTitleFromToken } from '@mdit-vue/shared';
-import type { MarkdownItEnv } from '@mdit-vue/shared';
+import type { MarkdownItEnv } from '@mdit-vue/types';
 import type { PluginSimple } from 'markdown-it';
 
 /**

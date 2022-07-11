@@ -4,7 +4,8 @@
   "description": "Shared utils and types of mdit-vue",
   "keywords": [
     "markdown-it",
-    "vue"
+    "vue",
+    "utils"
   ],
   "homepage": "https://github.com/mdit-vue",
   "bugs": {
@@ -31,6 +32,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@mdit-vue/types": "workspace:*",
     "@types/markdown-it": "^12.2.3",
     "markdown-it": "^13.0.1"
   },

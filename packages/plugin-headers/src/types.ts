@@ -1,4 +1,4 @@
-import type { MarkdownItHeader } from '@mdit-vue/shared';
+import type { MarkdownItHeader } from '@mdit-vue/types';
 
 export type { MarkdownItHeader };
 
@@ -30,7 +30,7 @@ export interface HeadersPluginOptions {
   level?: number[];
 }
 
-declare module '@mdit-vue/shared' {
+declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
     headers?: MarkdownItHeader[];
   }

@@ -34,7 +34,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@mdit-vue/shared": "workspace:*",
+    "@mdit-vue/types": "workspace:*",
     "@types/markdown-it": "^12.2.3",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1"

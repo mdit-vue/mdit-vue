@@ -1,6 +1,6 @@
 export {};
 
-declare module '@mdit-vue/shared' {
+declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
     title?: string;
   }

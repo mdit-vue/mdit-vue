@@ -1,6 +1,6 @@
+import type { MarkdownItHeader } from '@mdit-vue/types';
 import type Token from 'markdown-it/lib/token';
 import { resolveTitleFromToken } from './resolve-title-from-token';
-import type { MarkdownItHeader } from './types';
 
 /**
  * Resolve headers from markdown-it tokens

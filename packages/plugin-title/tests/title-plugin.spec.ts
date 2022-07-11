@@ -1,4 +1,4 @@
-import type { MarkdownItEnv } from '@mdit-vue/shared';
+import type { MarkdownItEnv } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
 import emojiPlugin from 'markdown-it-emoji';
 import { describe, expect, it } from 'vitest';
