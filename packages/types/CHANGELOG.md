@@ -8,9 +8,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 - **types:** extract types from shared package ([5fc56ce](https://github.com/mdit-vue/mdit-vue/commit/5fc56ce6439159584e09e13ca9a6e87abe8f4389))
-
-# [0.5.0](https://github.com/mdit-vue/mdit-vue/compare/v0.4.0...v0.5.0) (2022-07-06)
-
-### Features
-
-- **plugin-frontmatter:** add frontmatter plugin ([bcffc7a](https://github.com/mdit-vue/mdit-vue/commit/bcffc7a7fef0c48a869d703f0358d168524ac19e))
