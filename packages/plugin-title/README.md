@@ -18,6 +18,7 @@ npm i @mdit-vue/plugin-title
 ```ts
 import MarkdownIt from 'markdown-it';
 import { titlePlugin } from '@mdit-vue/plugin-title';
+import type { MarkdownItEnv } from '@mdit-vue/types';
 
 const md = MarkdownIt({ html: true }).use(titlePlugin);
 const env: MarkdownItEnv = {};

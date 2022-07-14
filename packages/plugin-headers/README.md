@@ -18,6 +18,7 @@ npm i @mdit-vue/plugin-headers
 ```ts
 import MarkdownIt from 'markdown-it';
 import { headersPlugin } from '@mdit-vue/plugin-headers';
+import type { MarkdownItEnv } from '@mdit-vue/types';
 
 const md = MarkdownIt({ html: true }).use(headersPlugin, {
   // options
