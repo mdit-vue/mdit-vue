@@ -1,6 +1,24 @@
 import type Token from 'markdown-it/lib/token';
 import { htmlEscape } from './html-escape';
 
+export interface ResolveTitleOptions {
+  /**
+   * Should allow inline HTML tags or not.
+   *
+   * If the result is going to be used as Vue template, it should allow inline
+   * HTML tags so that Vue custom components would be kept.
+   */
+  shouldAllowHtml: boolean;
+
+  /**
+   * Should escape the text content or not.
+   *
+   * If the result is going to be used in HTML directly, it should be escaped
+   * so that the text content won't be wrongly treated as HTML tags.
+   */
+  shouldEscapeText: boolean;
+}
+
 /**
  * Resolve header title from markdown-it token
  *
@@ -8,13 +26,7 @@ import { htmlEscape } from './html-escape';
  */
 export const resolveTitleFromToken = (
   token: Token,
-  {
-    shouldAllowHtml,
-    shouldEscapeText,
-  }: {
-    shouldAllowHtml: boolean;
-    shouldEscapeText: boolean;
-  },
+  { shouldAllowHtml, shouldEscapeText }: ResolveTitleOptions,
 ): string => {
   // children of the token contains the parsed result of the heading title
   const children = token.children ?? [];

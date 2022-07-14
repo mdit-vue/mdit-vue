@@ -1,6 +1,26 @@
 import type { MarkdownItHeader } from '@mdit-vue/types';
 import type Token from 'markdown-it/lib/token';
 import { resolveTitleFromToken } from './resolve-title-from-token';
+import type { ResolveTitleOptions } from './resolve-title-from-token';
+
+export interface ResolveHeadersOptions extends ResolveTitleOptions {
+  /**
+   * Heading level that going to be resolved
+   */
+  level: number[];
+
+  /**
+   * A custom slugification function
+   *
+   * Would be ignored if the `id` attr of the token is set.
+   */
+  slugify: (str: string) => string;
+
+  /**
+   * A function for formatting headings
+   */
+  format?: (str: string) => string;
+}
 
 /**
  * Resolve headers from markdown-it tokens
@@ -13,13 +33,7 @@ export const resolveHeadersFromTokens = (
     shouldEscapeText,
     slugify,
     format,
-  }: {
-    level: number[];
-    shouldAllowHtml: boolean;
-    shouldEscapeText: boolean;
-    slugify: (str: string) => string;
-    format?: (str: string) => string;
-  },
+  }: ResolveHeadersOptions,
 ): MarkdownItHeader[] => {
   // store the result of headers
   const headers: MarkdownItHeader[] = [];
