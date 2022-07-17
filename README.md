@@ -1,10 +1,26 @@
-# mdit-vue
+<p align="center">
+  <a href="https://github.com/mdit-vue/mdit-vue" target="_blank">
+    <img width="220" src="https://avatars.githubusercontent.com/u/107597382" alt="mdit-vue">
+  </a>
+</p>
 
-[![github check](https://github.com/mdit-vue/mdit-vue/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/mdit-vue/mdit-vue/actions/workflows/check.yml)
-[![coverage](https://coveralls.io/repos/github/mdit-vue/mdit-vue/badge.svg?branch=main)](https://coveralls.io/github/mdit-vue/mdit-vue?branch=main)
-[![license](https://badgen.net/github/license/mdit-vue/mdit-vue)](https://github.com/mdit-vue/mdit-vue/blob/main/LICENSE)
+<h1 align="center">
+  mdit-vue
+</h1>
 
-[markdown-it](https://github.com/markdown-it/markdown-it) plugins for [Vue.js](https://github.com/vuejs/core)
+<p align="center">
+  <a href="https://github.com/mdit-vue/mdit-vue/actions/workflows/check.yml" target="_blank">
+    <img src="https://github.com/mdit-vue/mdit-vue/actions/workflows/check.yml/badge.svg?branch=main" alt="github check">
+  </a>
+  <a href="https://coveralls.io/github/mdit-vue/mdit-vue?branch=main" target="_blank">
+    <img src="https://coveralls.io/repos/github/mdit-vue/mdit-vue/badge.svg?branch=main" alt="coverage">
+  </a>
+  <a href="https://github.com/mdit-vue/mdit-vue/blob/main/LICENSE" target="_blank">
+    <img src="https://badgen.net/github/license/mdit-vue/mdit-vue" alt="license">
+  </a>
+</p>
+
+> [markdown-it](https://github.com/markdown-it/markdown-it) plugins for [Vue.js](https://github.com/vuejs/core)
 
 ## Why?
 
