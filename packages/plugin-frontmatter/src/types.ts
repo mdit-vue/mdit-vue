@@ -15,13 +15,25 @@ export interface FrontmatterPluginOptions {
 
   /**
    * Render the excerpt or not
+   *
+   * @default true
    */
   renderExcerpt?: boolean;
 }
 
 declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
+    /**
+     * The excerpt that extracted by `@mdit-vue/plugin-frontmatter`
+     *
+     * - Would be the rendered HTML when `renderExcerpt` is enabled
+     * - Would be the raw Markdown when `renderExcerpt` is disabled
+     */
     excerpt?: string;
+
+    /**
+     * The frontmatter that extracted by `@mdit-vue/plugin-frontmatter`
+     */
     frontmatter?: Record<string, unknown>;
   }
 }

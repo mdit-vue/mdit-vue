@@ -32,6 +32,9 @@ export interface HeadersPluginOptions {
 
 declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
+    /**
+     * The headers that extracted by `@mdit-vue/plugin-headers`
+     */
     headers?: MarkdownItHeader[];
   }
 }
