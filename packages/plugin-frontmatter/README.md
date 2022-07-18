@@ -7,6 +7,7 @@ A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to get markdo
 
 - Extract frontmatter into markdown-it `env.frontmatter`.
 - Allow providing default frontmatter via markdown-it `env.frontmatter`.
+- Extract markdown content without frontmatter into markdown-it `env.content`.
 - Support extracting rendered excerpt into markdown-it `env.excerpt`.
 
 ## Install

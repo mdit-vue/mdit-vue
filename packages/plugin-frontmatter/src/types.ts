@@ -24,6 +24,11 @@ export interface FrontmatterPluginOptions {
 declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
     /**
+     * The raw Markdown content without frontmatter
+     */
+    content?: string;
+
+    /**
      * The excerpt that extracted by `@mdit-vue/plugin-frontmatter`
      *
      * - Would be the rendered HTML when `renderExcerpt` is enabled

@@ -16,6 +16,9 @@ export const frontmatterPlugin: PluginWithOptions<FrontmatterPluginOptions> = (
   md.render = (src, env: MarkdownItEnv = {}) => {
     const { data, content, excerpt = '' } = grayMatter(src, grayMatterOptions);
 
+    // extract stripped content
+    env.content = content;
+
     // extract frontmatter
     env.frontmatter = {
       // allow providing default value
