@@ -34,7 +34,7 @@
     "build": "unbuild"
   },
   "devDependencies": {
-    "unbuild": "^0.7.4"
+    "unbuild": "^0.7.6"
   },
   "publishConfig": {
     "access": "public"

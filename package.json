@@ -22,7 +22,7 @@
     "@meteorlxy/eslint-config-prettier-typescript": "^2.16.0",
     "@meteorlxy/prettier-config": "^2.11.0",
     "@meteorlxy/tsconfig": "^2.16.0",
-    "c8": "^7.11.3",
+    "c8": "^7.12.0",
     "eslint": "^8.20.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",

@@ -43,9 +43,9 @@
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
-    "c8": "^7.11.3",
+    "c8": "^7.12.0",
     "markdown-it-anchor": "^8.6.4",
-    "unbuild": "^0.7.4",
+    "unbuild": "^0.7.6",
     "vitest": "^0.18.1"
   },
   "publishConfig": {
