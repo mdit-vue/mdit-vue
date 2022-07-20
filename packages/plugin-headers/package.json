@@ -19,6 +19,7 @@
   },
   "license": "MIT",
   "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
