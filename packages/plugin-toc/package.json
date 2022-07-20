@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/plugin-toc",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "A markdown-it plugin to generate table-of-contents that compatible with Vue.js",
   "keywords": [
     "markdown-it",

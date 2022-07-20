@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/plugin-sfc",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "A markdown-it plugin to help transforming markdown tu vue sfc",
   "keywords": [
     "markdown-it",
