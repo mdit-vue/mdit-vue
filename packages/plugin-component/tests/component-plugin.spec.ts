@@ -293,6 +293,15 @@ const createTestCases = (
 </ul>
 </${comp}>`,
           ],
+          [
+            `- <${comp} /> [foo](https://github.com/)`,
+            `\
+<ul>
+<li>
+<${comp} /> [foo](https://github.com/)</li>
+</ul>
+`,
+          ],
 
           // edge case
           // the blockquote should not be terminated
@@ -634,6 +643,14 @@ const createInlineTestCases = (tags: string[]): ComponentPluginTestCases[] => {
 <li>bar</li>
 </ul>
 </${comp}>`,
+          ],
+          [
+            `- <${comp} /> [foo](https://github.com/)`,
+            `\
+<ul>
+<li><${comp} /> <a href="https://github.com/">foo</a></li>
+</ul>
+`,
           ],
         ],
       },
