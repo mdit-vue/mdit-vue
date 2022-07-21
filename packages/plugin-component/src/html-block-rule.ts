@@ -13,13 +13,13 @@ const HTML_SEQUENCES: [RegExp, RegExp, boolean][] = [
   [/^<\?/, /\?>/, true],
   [/^<![A-Z]/, />/, true],
   [/^<!\[CDATA\[/, /\]\]>/, true],
-  // MODIFIED HERE: Treat vue reserved tags as block tags
+  // ADDED: Treat vue reserved tags as block tags
   [
     new RegExp('^</?(' + vueReservedTags.join('|') + ')(?=(\\s|/?>|$))', 'i'),
     /^$/,
     true,
   ],
-  // MODIFIED HERE: Treat unknown tags as block tags (custom components), excluding known inline tags
+  // ADDED: Treat unknown tags as block tags (custom components), excluding known inline tags
   [
     new RegExp(
       '^</?(?!(' + inlineTags.join('|') + ')(?![\\w-]))\\w[\\w-]*[\\s/>]',
@@ -32,7 +32,7 @@ const HTML_SEQUENCES: [RegExp, RegExp, boolean][] = [
     /^$/,
     true,
   ],
-  // MODIFIED HERE: Tweak the original HTML_OPEN_CLOSE_TAG_RE
+  // MODIFIED: Tweak the original HTML_OPEN_CLOSE_TAG_RE
   [new RegExp(HTML_OPEN_CLOSE_TAG_RE.source + '\\s*$'), /^$/, false],
 ];
 

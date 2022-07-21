@@ -32,7 +32,7 @@ export const htmlInlineRule: RuleInline = (state, silent) => {
     return false;
   }
 
-  // MODIFIED HERE: Tweak the original HTML_TAG_RE
+  // MODIFIED: Tweak the original HTML_TAG_RE
   const match = state.src.slice(pos).match(HTML_TAG_RE);
   if (!match) {
     return false;
