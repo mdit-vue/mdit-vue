@@ -1,6 +1,6 @@
 import type { PluginSimple } from 'markdown-it';
-import { htmlBlockRule } from './html-block-rule';
-import { htmlInlineRule } from './html-inline-rule';
+import { htmlBlockRule } from './html-block-rule.js';
+import { htmlInlineRule } from './html-inline-rule.js';
 
 /**
  * Replacing the default htmlBlock rule to allow using custom components

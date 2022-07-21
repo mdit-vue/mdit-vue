@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { htmlUnescape } from '../src';
+import { htmlUnescape } from '../src/index.js';
 
 const testCases = [
   ['&amp;&#38;&lt;&#60;&gt;&#62;&apos;&#39;&quot;&#34;', '&&<<>>\'\'""'],

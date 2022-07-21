@@ -1,3 +1,2 @@
-import './types';
-
-export * from './title-plugin';
+export * from './title-plugin.js';
+export * from './types.js';

@@ -1,5 +1,5 @@
-import type { RuleInline } from 'markdown-it/lib/parser_inline';
-import { HTML_TAG_RE } from './html-re';
+import type { RuleInline } from 'markdown-it/lib/parser_inline.js';
+import { HTML_TAG_RE } from './html-re.js';
 
 // Forked and modified from 'markdown-it/lib/rules_inline/html_inline.js'
 

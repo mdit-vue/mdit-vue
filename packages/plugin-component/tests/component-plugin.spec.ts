@@ -1,6 +1,6 @@
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
-import { componentPlugin, inlineTags, vueReservedTags } from '../src';
+import { componentPlugin, inlineTags, vueReservedTags } from '../src/index.js';
 
 const md = MarkdownIt({ html: true }).use(componentPlugin);
 

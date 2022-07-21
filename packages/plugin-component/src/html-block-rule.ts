@@ -1,8 +1,7 @@
-// eslint-disable-next-line import/extensions
 import blockNames from 'markdown-it/lib/common/html_blocks.js';
-import type { RuleBlock } from 'markdown-it/lib/parser_block';
-import { HTML_OPEN_CLOSE_TAG_RE } from './html-re';
-import { inlineTags, vueReservedTags } from './tags';
+import type { RuleBlock } from 'markdown-it/lib/parser_block.js';
+import { HTML_OPEN_CLOSE_TAG_RE } from './html-re.js';
+import { inlineTags, vueReservedTags } from './tags.js';
 
 // Forked and modified from 'markdown-it/lib/rules_block/html_block.js'
 

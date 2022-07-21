@@ -2,7 +2,7 @@ import { slugify } from '@mdit-vue/shared';
 import MarkdownIt from 'markdown-it';
 import anchorPlugin from 'markdown-it-anchor';
 import { describe, expect, it } from 'vitest';
-import { tocPlugin } from '../src';
+import { tocPlugin } from '../src/index.js';
 
 const fixtures = {
   simpleTree: `\

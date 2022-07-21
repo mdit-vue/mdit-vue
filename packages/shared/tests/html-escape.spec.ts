@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { htmlEscape } from '../src';
+import { htmlEscape } from '../src/index.js';
 
 const testCases = [['&<>\'"', '&amp;&lt;&gt;&#39;&quot;']];
 

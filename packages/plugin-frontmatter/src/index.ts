@@ -1,2 +1,2 @@
-export * from './frontmatter-plugin';
-export * from './types';
+export * from './frontmatter-plugin.js';
+export * from './types.js';

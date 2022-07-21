@@ -2,7 +2,7 @@ import type { MarkdownItEnv } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
 import emojiPlugin from 'markdown-it-emoji';
 import { describe, expect, it } from 'vitest';
-import { titlePlugin } from '../src';
+import { titlePlugin } from '../src/index.js';
 
 describe('@mdit-vue/plugin-title > title-plugin', () => {
   const md = MarkdownIt().use(emojiPlugin).use(titlePlugin);

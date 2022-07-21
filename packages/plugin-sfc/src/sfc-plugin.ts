@@ -1,6 +1,6 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
-import type { SfcPluginOptions } from './types';
+import type { SfcPluginOptions } from './types.js';
 
 /**
  * Avoid rendering vue SFC script / style / custom blocks

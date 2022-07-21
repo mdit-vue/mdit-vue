@@ -1,5 +1,5 @@
-import type Token from 'markdown-it/lib/token';
-import { htmlEscape } from './html-escape';
+import type Token from 'markdown-it/lib/token.js';
+import { htmlEscape } from './html-escape.js';
 
 export interface ResolveTitleOptions {
   /**

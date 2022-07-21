@@ -1,2 +1,2 @@
-export * from './sfc-plugin';
-export * from './types';
+export * from './sfc-plugin.js';
+export * from './types.js';

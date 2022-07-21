@@ -1,5 +1,5 @@
-import type { RuleBlock } from 'markdown-it/lib/parser_block';
-import type { TocPluginOptions } from './types';
+import type { RuleBlock } from 'markdown-it/lib/parser_block.js';
+import type { TocPluginOptions } from './types.js';
 
 /**
  * Forked and modified from markdown-it-toc-done-right

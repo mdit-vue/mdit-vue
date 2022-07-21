@@ -1,8 +1,8 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
-import { frontmatterPlugin } from '../src';
-import type { FrontmatterPluginOptions } from '../src';
+import { frontmatterPlugin } from '../src/index.js';
+import type { FrontmatterPluginOptions } from '../src/index.js';
 
 const testCases: {
   source: string;

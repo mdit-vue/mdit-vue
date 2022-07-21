@@ -10,7 +10,15 @@ module.exports = {
       },
       rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
-        'no-bitwise': 'off',
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            js: 'always',
+            cjs: 'always',
+            mjs: 'always',
+          },
+        ],
         'no-plusplus': 'off',
         'prefer-destructuring': 'off',
         'prefer-template': 'off',

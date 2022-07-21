@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { slugify } from '../src';
+import { slugify } from '../src/index.js';
 
 const testCases: [string, string][] = [
   ['Привет', 'привет'],

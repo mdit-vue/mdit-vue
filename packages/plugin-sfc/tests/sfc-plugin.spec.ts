@@ -1,7 +1,7 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
-import { sfcPlugin } from '../src';
+import { sfcPlugin } from '../src/index.js';
 
 const source = `\
 # hello vuepress
