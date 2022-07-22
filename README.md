@@ -51,7 +51,7 @@ This project was originally extracted from Vue's official project, and maintaine
 
 - [Slidev](https://github.com/slidevjs/slidev)
 - [VuePress v2](https://github.com/vuepress/vuepress-next)
-- [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown)
+- [vite-plugin-vue-markdown](https://github.com/mdit-vue/vite-plugin-vue-markdown)
 - ... and so on
 
 ## License
