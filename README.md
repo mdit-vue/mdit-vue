@@ -34,10 +34,22 @@ There has been lots of projects that built with this idea, but they are using di
 
 This project is here to provide some unified plugins for [markdown-it](https://github.com/markdown-it/markdown-it), one of the most popular markdown parsers in JS world, to make it work better with Vue.
 
+## Packages
+
+| Package                                                     | Version (click for changelogs)                                                                                                   |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [@mdit-vue/plugin-component](packages/plugin-component)     | [![plugin-component version](https://badgen.net/npm/v/@mdit-vue/plugin-component)](packages/plugin-component/CHANGELOG.md)       |
+| [@mdit-vue/plugin-frontmatter](packages/plugin-frontmatter) | [![plugin-frontmatter version](https://badgen.net/npm/v/@mdit-vue/plugin-frontmatter)](packages/plugin-frontmatter/CHANGELOG.md) |
+| [@mdit-vue/plugin-headers](packages/plugin-headers)         | [![plugin-headers version](https://badgen.net/npm/v/@mdit-vue/plugin-headers)](packages/plugin-headers/CHANGELOG.md)             |
+| [@mdit-vue/plugin-sfc](packages/plugin-sfc)                 | [![plugin-sfc version](https://badgen.net/npm/v/@mdit-vue/plugin-sfc)](packages/plugin-sfc/CHANGELOG.md)                         |
+| [@mdit-vue/plugin-title](packages/plugin-title)             | [![plugin-title version](https://badgen.net/npm/v/@mdit-vue/plugin-title)](packages/plugin-title/CHANGELOG.md)                   |
+| [@mdit-vue/plugin-toc](packages/plugin-toc)                 | [![plugin-toc version](https://badgen.net/npm/v/@mdit-vue/plugin-title)](packages/plugin-toc/CHANGELOG.md)                       |
+
 ## Who is using?
 
 This project was originally extracted from Vue's official project, and maintained by Vue team members. It is supporting many awesome projects:
 
+- [Slidev](https://github.com/slidevjs/slidev)
 - [VuePress v2](https://github.com/vuepress/vuepress-next)
 - [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-vue-markdown)
 - ... and so on
