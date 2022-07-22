@@ -285,14 +285,24 @@ const createMarkdownSyntaxTagsCases = (
 </${comp}>`,
     ],
 
-    // a block tag at the beginning will terminate parsing of the line
+    // IMPORTANT:
+    // A block tag at the beginning will terminate parsing of the line,
+    // so the following content will be kept as is.
     [
       `<${comp} /> [foo](https://github.com/)`,
       `<${comp} /> [foo](https://github.com/)`,
     ],
     [
+      `<${comp} :prop-name="prop" @click="onClick" /> [foo](https://github.com/)`,
+      `<${comp} :prop-name="prop" @click="onClick" /> [foo](https://github.com/)`,
+    ],
+    [
       `<${comp}>foobar</${comp}> [foo](https://github.com/)`,
       `<${comp}>foobar</${comp}> [foo](https://github.com/)`,
+    ],
+    [
+      `<${comp} :prop-name="prop" @click="onClick">foobar</${comp}> [foo](https://github.com/)`,
+      `<${comp} :prop-name="prop" @click="onClick">foobar</${comp}> [foo](https://github.com/)`,
     ],
     [
       `- <${comp} /> [foo](https://github.com/)`,
@@ -304,11 +314,29 @@ const createMarkdownSyntaxTagsCases = (
 `,
     ],
     [
+      `- <${comp} :prop-name="prop" @click="onClick" /> [foo](https://github.com/)`,
+      `\
+<ul>
+<li>
+<${comp} :prop-name="prop" @click="onClick" /> [foo](https://github.com/)</li>
+</ul>
+`,
+    ],
+    [
       `- <${comp}>foobar</${comp}> [foo](https://github.com/)`,
       `\
 <ul>
 <li>
 <${comp}>foobar</${comp}> [foo](https://github.com/)</li>
+</ul>
+`,
+    ],
+    [
+      `- <${comp} :prop-name="prop" @click="onClick">foobar</${comp}> [foo](https://github.com/)`,
+      `\
+<ul>
+<li>
+<${comp} :prop-name="prop" @click="onClick">foobar</${comp}> [foo](https://github.com/)</li>
 </ul>
 `,
     ],

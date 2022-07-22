@@ -1,5 +1,9 @@
 import type { RuleBlock } from 'markdown-it/lib/parser_block.js';
-import { HTML_OPEN_CLOSE_TAG_RE } from './html-re.js';
+import {
+  HTML_OPEN_AND_CLOSE_TAG_IN_THE_SAME_LINE_RE,
+  HTML_OPEN_CLOSE_TAG_RE,
+  HTML_SELF_CLOSING_TAG_RE,
+} from './html-re.js';
 import { TAGS_BLOCK, TAGS_INLINE, TAGS_VUE_RESERVED } from './tags.js';
 import type { ComponentPluginOptions } from './types.js';
 
@@ -33,7 +37,7 @@ const createHtmlSequences = ({
       /^$/,
       true,
     ],
-    // ADDED: Exclude known inline tags, and treat all unknown tags as block tags
+    // ADDED: Matching component tags (all unknown tags) (i = 6)
     [
       new RegExp(
         '^</?(?!(' +
@@ -92,6 +96,28 @@ export const createHtmlBlockRule = (
     if (silent) {
       // true if this sequence can be a terminator, false otherwise
       return HTML_SEQUENCES[i][2];
+    }
+
+    // ADDED: We have matched a component tag (i = 6)
+    if (i === 6) {
+      const match =
+        // if the component tag is self-closing
+        lineText.match(HTML_SELF_CLOSING_TAG_RE) ??
+        // or has open and close tag in the same line
+        lineText.match(HTML_OPEN_AND_CLOSE_TAG_IN_THE_SAME_LINE_RE);
+      if (match) {
+        state.line = startLine + 1;
+        // treat the component tag as a special `html_inline` token
+        let token = state.push('html_inline', '', 0);
+        token.content = match[0];
+        token.map = [startLine, state.line];
+        // treat the following content as `inline` token to be parsed by other inline rules
+        token = state.push('inline', '', 0);
+        token.content = lineText.slice(match[0].length);
+        token.map = [startLine, state.line];
+        token.children = [];
+        return true;
+      }
     }
 
     nextLine = startLine + 1;

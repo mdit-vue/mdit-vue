@@ -43,3 +43,13 @@ export const HTML_TAG_RE = new RegExp(
 export const HTML_OPEN_CLOSE_TAG_RE = new RegExp(
   '^(?:' + open_tag + '|' + close_tag + ')',
 );
+
+// ADDED: To match self-closing HTML tags
+export const HTML_SELF_CLOSING_TAG_RE = new RegExp(
+  '^<[A-Za-z][A-Za-z0-9\\-]*' + attribute + '*\\s*\\/>',
+);
+
+// ADDED: To match open and close HTML tags in the same line
+export const HTML_OPEN_AND_CLOSE_TAG_IN_THE_SAME_LINE_RE = new RegExp(
+  '^<([A-Za-z][A-Za-z0-9\\-]*)' + attribute + '*\\s*>.*<\\/\\1\\s*>',
+);

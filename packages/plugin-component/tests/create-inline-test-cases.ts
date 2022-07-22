@@ -299,15 +299,24 @@ const createMarkdownSyntaxTagsCases = (
 </${comp}>`,
     ],
 
-    // differences from block tags
-    // an inline tag at the beginning will not terminate parsing of the line
+    // IMPORTANT:
+    // An inline tag at the beginning will not terminate parsing of the line,
+    // and the line will be wrapped with a `<p>` tag as usual.
     [
       `<${comp} /> [foo](https://github.com/)`,
       `<p><${comp} /> <a href="https://github.com/">foo</a></p>\n`,
     ],
     [
+      `<${comp} :prop-name="prop" @click="onClick" /> [foo](https://github.com/)`,
+      `<p><${comp} :prop-name="prop" @click="onClick" /> <a href="https://github.com/">foo</a></p>\n`,
+    ],
+    [
       `<${comp}>foobar</${comp}> [foo](https://github.com/)`,
       `<p><${comp}>foobar</${comp}> <a href="https://github.com/">foo</a></p>\n`,
+    ],
+    [
+      `<${comp} :prop-name="prop" @click="onClick">foobar</${comp}> [foo](https://github.com/)`,
+      `<p><${comp} :prop-name="prop" @click="onClick">foobar</${comp}> <a href="https://github.com/">foo</a></p>\n`,
     ],
     [
       `- <${comp} /> [foo](https://github.com/)`,
@@ -318,10 +327,26 @@ const createMarkdownSyntaxTagsCases = (
 `,
     ],
     [
+      `- <${comp} :prop-name="prop" @click="onClick" /> [foo](https://github.com/)`,
+      `\
+<ul>
+<li><${comp} :prop-name="prop" @click="onClick" /> <a href="https://github.com/">foo</a></li>
+</ul>
+`,
+    ],
+    [
       `- <${comp}>foobar</${comp}> [foo](https://github.com/)`,
       `\
 <ul>
 <li><${comp}>foobar</${comp}> <a href="https://github.com/">foo</a></li>
+</ul>
+`,
+    ],
+    [
+      `- <${comp} :prop-name="prop" @click="onClick">foobar</${comp}> [foo](https://github.com/)`,
+      `\
+<ul>
+<li><${comp} :prop-name="prop" @click="onClick">foobar</${comp}> <a href="https://github.com/">foo</a></li>
 </ul>
 `,
     ],
