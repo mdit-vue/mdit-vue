@@ -295,11 +295,11 @@ const createMarkdownSyntaxTagsCases = (
       `<${comp}>foobar</${comp}> [foo](https://github.com/)`,
     ],
     [
-      `- <${comp}>foobar</${comp}> [foo](https://github.com/)`,
+      `- <${comp} /> [foo](https://github.com/)`,
       `\
 <ul>
 <li>
-<${comp}>foobar</${comp}> [foo](https://github.com/)</li>
+<${comp} /> [foo](https://github.com/)</li>
 </ul>
 `,
     ],
