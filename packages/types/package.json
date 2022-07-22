@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/types",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Shared types definition of mdit-vue",
   "keywords": [
     "markdown-it",

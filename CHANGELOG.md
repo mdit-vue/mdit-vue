@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/mdit-vue/mdit-vue/compare/v0.7.1...v0.8.0) (2022-07-22)
+
+### Features
+
+- **plugin-component:** add blockTags and inlineTags options ([4651422](https://github.com/mdit-vue/mdit-vue/commit/4651422dc3c4a2c4aab6d5eff23164e92d8a4430))
+
 ## [0.7.1](https://github.com/mdit-vue/mdit-vue/compare/v0.7.0...v0.7.1) (2022-07-20)
 
 **Note:** Version bump only for package mdit-vue
