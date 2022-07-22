@@ -1,3 +1,12 @@
+import blockNames from 'markdown-it/lib/common/html_blocks.js';
+
+/**
+ * List of block tags
+ *
+ * @see https://spec.commonmark.org/0.30/#html-blocks
+ */
+export const TAGS_BLOCK = blockNames;
+
 /**
  * According to markdown spec, all non-block html tags are treated as "inline"
  * tags (wrapped with <p></p>), including those "unknown" tags
@@ -12,7 +21,7 @@
  *
  * The inline tags list comes from MDN
  *
- * @see https://spec.commonmark.org/0.29/#raw-html
+ * @see https://spec.commonmark.org/0.30/#raw-html
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
  */
 export const TAGS_INLINE = [
@@ -36,8 +45,7 @@ export const TAGS_INLINE = [
   'em',
   'embed',
   'i',
-  /* iframe is treated as HTML blocks in markdown spec */
-  // 'iframe',
+  'iframe',
   'img',
   'input',
   'ins',

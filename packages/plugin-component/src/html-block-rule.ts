@@ -1,7 +1,6 @@
-import TAGS_BLOCK from 'markdown-it/lib/common/html_blocks.js';
 import type { RuleBlock } from 'markdown-it/lib/parser_block.js';
 import { HTML_OPEN_CLOSE_TAG_RE } from './html-re.js';
-import { TAGS_INLINE, TAGS_VUE_RESERVED } from './tags.js';
+import { TAGS_BLOCK, TAGS_INLINE, TAGS_VUE_RESERVED } from './tags.js';
 import type { ComponentPluginOptions } from './types.js';
 
 // Forked and modified from 'markdown-it/lib/rules_block/html_block.js'
