@@ -15,7 +15,7 @@
  * @see https://spec.commonmark.org/0.29/#raw-html
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
  */
-export const inlineTags = [
+export const TAGS_INLINE = [
   'a',
   'abbr',
   'acronym',
@@ -75,11 +75,12 @@ export const inlineTags = [
 ];
 
 /**
- * Vue reserved tags
+ * Tags of Vue built-in components
  *
  * @see https://vuejs.org/api/built-in-components.html
+ * @see https://vuejs.org/api/built-in-special-elements.html
  */
-export const vueReservedTags = [
+export const TAGS_VUE_RESERVED = [
   'template',
   'component',
   'transition',

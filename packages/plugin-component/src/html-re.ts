@@ -4,7 +4,7 @@
 
 // Regexps to match html elements
 
-// MODIFIED HERE: Support `@` as the first char of attr name
+// MODIFIED: Support `@` as the first char of attr name
 const attr_name = '[a-zA-Z_:@][a-zA-Z0-9:._-]*';
 
 const unquoted = '[^"\'=<>`\\x00-\\x20]+';

@@ -1,8 +1,10 @@
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
-import { componentPlugin, inlineTags, vueReservedTags } from '../src/index.js';
-
-const md = MarkdownIt({ html: true }).use(componentPlugin);
+import {
+  TAGS_INLINE,
+  TAGS_VUE_RESERVED,
+  componentPlugin,
+} from '../src/index.js';
 
 interface ComponentPluginTestCases {
   name: string;
@@ -662,6 +664,8 @@ const createInlineTestCases = (tags: string[]): ComponentPluginTestCases[] => {
 
 describe('@mdit-vue/plugin-component > component-plugin', () => {
   describe('should render custom components as normal html blocks', () => {
+    const md = MarkdownIt({ html: true }).use(componentPlugin);
+
     describe('PascalCase components', () => {
       const testCases = createTestCases([
         'FooBar',
@@ -723,7 +727,7 @@ describe('@mdit-vue/plugin-component > component-plugin', () => {
     });
 
     describe('vue reserved tags', () => {
-      const testCases = createTestCases(vueReservedTags);
+      const testCases = createTestCases(TAGS_VUE_RESERVED);
 
       testCases.forEach(({ name, cases }) => {
         describe(name, () => {
@@ -739,20 +743,18 @@ describe('@mdit-vue/plugin-component > component-plugin', () => {
   });
 
   it('should not treat custom components as html blocks if html option is disabled', () => {
-    md.set({ html: false });
-
+    const md = MarkdownIt({ html: false }).use(componentPlugin);
     const source = '<foo-bar>foobar</foo-bar>';
     const expected = '<p>&lt;foo-bar&gt;foobar&lt;/foo-bar&gt;</p>\n';
     const rendered = md.render(source);
     expect(rendered).toBe(expected);
-
-    md.set({ html: true });
   });
 
   describe('should make native inline tags work with vue template syntax', () => {
+    const md = MarkdownIt({ html: true }).use(componentPlugin);
     const testCases = createInlineTestCases(
-      inlineTags.filter(
-        (item) => ![...vueReservedTags, 'script'].includes(item),
+      TAGS_INLINE.filter(
+        (item) => ![...TAGS_VUE_RESERVED, 'script'].includes(item),
       ),
     );
 
@@ -769,6 +771,7 @@ describe('@mdit-vue/plugin-component > component-plugin', () => {
   });
 
   describe('some behaviors of original html block ruler (mainly for coverage purpose)', () => {
+    const md = MarkdownIt({ html: true }).use(componentPlugin);
     describe('those html blocks whose ending tag is not required to be followed with an empty line', () => {
       it('ending tag in the same line as starting tag', () => {
         const source = '<pre>foobar</pre>';
@@ -787,6 +790,7 @@ describe('@mdit-vue/plugin-component > component-plugin', () => {
   });
 
   describe('compatibility with other markdown syntax', () => {
+    const md = MarkdownIt({ html: true }).use(componentPlugin);
     it('should work with autolink', () => {
       const source = [
         '<https://github.com>',
@@ -811,6 +815,53 @@ describe('@mdit-vue/plugin-component > component-plugin', () => {
 
       const rendered = md.render(source);
       expect(rendered).toBe(expected);
+    });
+  });
+
+  describe('options', () => {
+    describe('should allow setting blockTags and inlineTags', () => {
+      const blockTags = ['img', 'slot'];
+      const inlineTags = ['Foo', 'foo-bar', 'FooBar', 'fooBar'];
+      const md = MarkdownIt({ html: true }).use(componentPlugin, {
+        blockTags,
+        inlineTags,
+      });
+      const testCases = [
+        ...createTestCases(blockTags),
+        ...createInlineTestCases(inlineTags),
+      ];
+
+      testCases.forEach(({ name, cases }) => {
+        describe(name, () => {
+          cases.forEach(([source, expected], index) => {
+            it(`case ${index}`, () => {
+              const rendered = md.render(source);
+              expect(rendered).toBe(expected);
+            });
+          });
+        });
+      });
+    });
+  });
+
+  it('blockTags should have higher priority', () => {
+    const blockTags = ['force-block', 'ForceBlock'];
+    const inlineTags = blockTags;
+    const md = MarkdownIt({ html: true }).use(componentPlugin, {
+      blockTags,
+      inlineTags,
+    });
+    const testCases = [...createTestCases(inlineTags)];
+
+    testCases.forEach(({ name, cases }) => {
+      describe(name, () => {
+        cases.forEach(([source, expected], index) => {
+          it(`case ${index}`, () => {
+            const rendered = md.render(source);
+            expect(rendered).toBe(expected);
+          });
+        });
+      });
     });
   });
 });

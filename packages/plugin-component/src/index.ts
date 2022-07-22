@@ -3,3 +3,4 @@ export * from './html-block-rule.js';
 export * from './html-inline-rule.js';
 export * from './html-re.js';
 export * from './tags.js';
+export * from './types.js';
