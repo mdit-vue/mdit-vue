@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/mdit-vue/mdit-vue/compare/v0.8.1...v0.9.0) (2022-07-26)
+
+### Features
+
+- **plugin-sfc:** extract SFC blocks as structured data ([5a0aa54](https://github.com/mdit-vue/mdit-vue/commit/5a0aa54f23a853a9b335311ed074af7dafca94f9))
+
+### BREAKING CHANGES
+
+- **plugin-sfc:** the type of `env.sfcBlocks` has been changed
+
 # [0.8.0](https://github.com/mdit-vue/mdit-vue/compare/v0.7.1...v0.8.0) (2022-07-22)
 
 **Note:** Version bump only for package @mdit-vue/plugin-sfc

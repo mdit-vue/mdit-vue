@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/plugin-frontmatter",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "A markdown-it plugin to get markdown frontmatter",
   "keywords": [
     "markdown-it",
@@ -38,7 +38,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@mdit-vue/types": "workspace:0.8.0",
+    "@mdit-vue/types": "workspace:0.9.0",
     "@types/markdown-it": "^12.2.3",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1"
