@@ -40,17 +40,19 @@ export interface SfcBlock {
   tagClose: string;
 }
 
+export interface MarkdownSfcBlocks {
+  template: SfcBlock | null;
+  script: SfcBlock | null;
+  scriptSetup: SfcBlock | null;
+  styles: SfcBlock[];
+  customBlocks: SfcBlock[];
+}
+
 declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
     /**
      * SFC blocks that extracted by `@mdit-vue/plugin-sfc`
      */
-    sfcBlocks?: {
-      template: SfcBlock | null;
-      script: SfcBlock | null;
-      scriptSetup: SfcBlock | null;
-      styles: SfcBlock[];
-      customBlocks: SfcBlock[];
-    };
+    sfcBlocks?: MarkdownSfcBlocks;
   }
 }
