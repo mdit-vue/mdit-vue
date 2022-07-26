@@ -38,8 +38,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@mdit-vue/shared": "workspace:*",
-    "@mdit-vue/types": "workspace:*",
+    "@mdit-vue/shared": "workspace:0.8.0",
+    "@mdit-vue/types": "workspace:0.8.0",
     "@types/markdown-it": "^12.2.3",
     "markdown-it": "^13.0.1"
   },
@@ -47,7 +47,7 @@
     "c8": "^7.12.0",
     "markdown-it-anchor": "^8.6.4",
     "unbuild": "^0.7.6",
-    "vitest": "^0.18.1"
+    "vitest": "^0.19.1"
   },
   "publishConfig": {
     "access": "public"
