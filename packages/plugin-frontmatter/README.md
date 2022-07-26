@@ -5,10 +5,10 @@
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to get markdown frontmatter with [gray-matter](https://github.com/jonschlinkert/gray-matter).
 
-- Extract frontmatter into markdown-it `env.frontmatter`.
-- Allow providing default frontmatter via markdown-it `env.frontmatter`.
-- Extract markdown content without frontmatter into markdown-it `env.content`.
-- Support extracting rendered excerpt into markdown-it `env.excerpt`.
+- Extracts frontmatter into markdown-it `env.frontmatter`.
+- Allows providing default frontmatter via markdown-it `env.frontmatter`.
+- Extracts markdown content without frontmatter into markdown-it `env.content`.
+- Supports extracting rendered excerpt into markdown-it `env.excerpt`.
 
 ## Install
 

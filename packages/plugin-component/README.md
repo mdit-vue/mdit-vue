@@ -5,9 +5,8 @@
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to allow Vue components in markdown.
 
-- Treat [vue built-in components](https://vuejs.org/api/built-in-components.html) and unknown HTML tags as vue components (markdown-it would treat them as inline tags by default).
-- Allow vue [`@` directive](https://vuejs.org/api/built-in-directives.html#v-on) on native HTML tags.
-- With full tests.
+- Treats [vue built-in components](https://vuejs.org/api/built-in-components.html) and unknown HTML tags as vue components (markdown-it would treat them as inline tags by default).
+- Allows vue [`@` directive](https://vuejs.org/api/built-in-directives.html#v-on) on native HTML tags.
 
 ## Install
 

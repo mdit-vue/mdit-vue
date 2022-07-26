@@ -6,7 +6,7 @@ import type { FrontmatterPluginOptions } from './types.js';
 /**
  * Get markdown frontmatter and excerpt
  *
- * Extract them to env
+ * Extract them into env
  */
 export const frontmatterPlugin: PluginWithOptions<FrontmatterPluginOptions> = (
   md,

@@ -5,9 +5,9 @@
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to help transforming markdown to [Vue SFC](https://vuejs.org/guide/scaling-up/sfc.html).
 
-- Avoid rendering `<script>` and `<style>` tags and extract them into to markdown-it `env.sfcBlocks`.
-- Support extracting custom blocks.
-- Provide `env.sfcBlocks.template` for convenience.
+- Avoids rendering `<script>` and `<style>` tags and extract them into to markdown-it `env.sfcBlocks`.
+- Supports extracting custom blocks.
+- Provides `env.sfcBlocks.template` for convenience.
 
 ## Install
 

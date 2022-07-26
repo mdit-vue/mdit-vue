@@ -5,7 +5,7 @@
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to get page title.
 
-- Extract title (the content of the first level-1 heading) into markdown-it `env.title`.
+- Extracts title (the content of the first level-1 heading) into markdown-it `env.title`.
 
 ## Install
 

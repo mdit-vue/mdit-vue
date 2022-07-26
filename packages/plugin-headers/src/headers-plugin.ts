@@ -9,7 +9,7 @@ import type { HeadersPluginOptions } from './types.js';
 /**
  * Get markdown headers info
  *
- * Extract them to env
+ * Extract them into env
  */
 export const headersPlugin: PluginWithOptions<HeadersPluginOptions> = (
   md,

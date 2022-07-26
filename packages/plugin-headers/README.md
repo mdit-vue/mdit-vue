@@ -5,7 +5,7 @@
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to get markdown headers.
 
-- Extract all headers info into markdown-it `env.headers`.
+- Extracts all headers info into markdown-it `env.headers`.
 
 ## Install
 

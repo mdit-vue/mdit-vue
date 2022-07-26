@@ -5,7 +5,7 @@ import type { PluginSimple } from 'markdown-it';
 /**
  * Get markdown page title info
  *
- * Extract it to env
+ * Extract it into env
  */
 export const titlePlugin: PluginSimple = (md): void => {
   let title: string;

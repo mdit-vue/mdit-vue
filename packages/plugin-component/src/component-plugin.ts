@@ -4,8 +4,7 @@ import { htmlInlineRule } from './html-inline-rule.js';
 import type { ComponentPluginOptions } from './types.js';
 
 /**
- * Replacing the default htmlBlock rule to allow using custom components
- * in markdown
+ * Allows better use of Vue components in Markdown
  */
 export const componentPlugin: PluginWithOptions<ComponentPluginOptions> = (
   md,
