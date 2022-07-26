@@ -1,0 +1,166 @@
+// Vitest Snapshot v1
+
+exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract custom blocks correctly 1`] = `
+"<h1>hello vuepress</h1>
+<p>{{ msg }}</p>
+"
+`;
+
+exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract custom blocks correctly 2`] = `
+{
+  "customBlocks": [
+    {
+      "content": "<docs>
+extra hoisted tag
+</docs>",
+      "contentStripped": "
+extra hoisted tag
+",
+      "tagClose": "</docs>",
+      "tagOpen": "<docs>",
+      "type": "docs",
+    },
+  ],
+  "script": {
+    "content": "<script>
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+</script>",
+    "contentStripped": "
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+",
+    "tagClose": "</script>",
+    "tagOpen": "<script>",
+    "type": "script",
+  },
+  "scriptSetup": {
+    "content": "<script setup lang=\\"ts\\">
+const foo = 'scriptSetup'
+</script>",
+    "contentStripped": "
+const foo = 'scriptSetup'
+",
+    "tagClose": "</script>",
+    "tagOpen": "<script setup lang=\\"ts\\">",
+    "type": "script",
+  },
+  "styles": [
+    {
+      "content": "<style lang=\\"stylus\\">
+.h1
+  red
+</style>",
+      "contentStripped": "
+.h1
+  red
+",
+      "tagClose": "</style>",
+      "tagOpen": "<style lang=\\"stylus\\">",
+      "type": "style",
+    },
+  ],
+  "template": {
+    "content": "<template><h1>hello vuepress</h1>
+<p>{{ msg }}</p>
+</template>",
+    "contentStripped": "<h1>hello vuepress</h1>
+<p>{{ msg }}</p>
+",
+    "tagClose": "</template>",
+    "tagOpen": "<template>",
+    "type": "template",
+  },
+}
+`;
+
+exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract default sfc blocks correctly 1`] = `
+"<h1>hello vuepress</h1>
+<p>{{ msg }}</p>
+<docs>
+extra hoisted tag
+</docs>
+"
+`;
+
+exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract default sfc blocks correctly 2`] = `
+{
+  "customBlocks": [],
+  "script": {
+    "content": "<script>
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+</script>",
+    "contentStripped": "
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+",
+    "tagClose": "</script>",
+    "tagOpen": "<script>",
+    "type": "script",
+  },
+  "scriptSetup": {
+    "content": "<script setup lang=\\"ts\\">
+const foo = 'scriptSetup'
+</script>",
+    "contentStripped": "
+const foo = 'scriptSetup'
+",
+    "tagClose": "</script>",
+    "tagOpen": "<script setup lang=\\"ts\\">",
+    "type": "script",
+  },
+  "styles": [
+    {
+      "content": "<style lang=\\"stylus\\">
+.h1
+  red
+</style>",
+      "contentStripped": "
+.h1
+  red
+",
+      "tagClose": "</style>",
+      "tagOpen": "<style lang=\\"stylus\\">",
+      "type": "style",
+    },
+  ],
+  "template": {
+    "content": "<template><h1>hello vuepress</h1>
+<p>{{ msg }}</p>
+<docs>
+extra hoisted tag
+</docs>
+</template>",
+    "contentStripped": "<h1>hello vuepress</h1>
+<p>{{ msg }}</p>
+<docs>
+extra hoisted tag
+</docs>
+",
+    "tagClose": "</template>",
+    "tagOpen": "<template>",
+    "type": "template",
+  },
+}
+`;

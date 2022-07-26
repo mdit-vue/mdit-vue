@@ -10,11 +10,47 @@ export interface SfcPluginOptions {
   customBlocks?: string[];
 }
 
+/**
+ * SFC block that extracted from markdown
+ */
+export interface SfcBlock {
+  /**
+   * The type of the block
+   */
+  type: string;
+
+  /**
+   * The content, including open-tag and close-tag
+   */
+  content: string;
+
+  /**
+   * The content that stripped open-tag and close-tag off
+   */
+  contentStripped: string;
+
+  /**
+   * The open-tag
+   */
+  tagOpen: string;
+
+  /**
+   * The close-tag
+   */
+  tagClose: string;
+}
+
 declare module '@mdit-vue/types' {
   interface MarkdownItEnv {
     /**
-     * The rendered HTML string of SFC blocks that extracted by `@mdit-vue/plugin-sfc`
+     * SFC blocks that extracted by `@mdit-vue/plugin-sfc`
      */
-    sfcBlocks?: string[];
+    sfcBlocks?: {
+      template: SfcBlock | null;
+      script: SfcBlock | null;
+      scriptSetup: SfcBlock | null;
+      styles: SfcBlock[];
+      customBlocks: SfcBlock[];
+    };
   }
 }

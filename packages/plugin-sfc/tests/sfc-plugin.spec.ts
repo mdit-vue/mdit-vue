@@ -12,11 +12,15 @@ const source = `\
 extra hoisted tag
 </docs>
 
+<script setup lang="ts">
+const foo = 'scriptSetup'
+</script>
+
 <script>
 export default {
   setup() {
     return {
-      msg: 'foobar'
+      msg: 'script'
     }
   }
 }
@@ -28,22 +32,18 @@ export default {
 </style>
 `;
 
-const extractedScript = source.replace(/^.*(<script>.*<\/script>).*$/s, '$1\n');
-const extractedStyle = source.replace(/^.*(<style .*<\/style>).*$/s, '$1\n');
-const extractedDocs = source.replace(/^.*(<docs>.*<\/docs>).*$/s, '$1\n');
-
 describe('@mdit-vue/plugin-sfc > sfc-plugin', () => {
-  it('should extract `<script>` and `<style>` tags correctly', () => {
+  it('should extract default sfc blocks correctly', () => {
     const md = MarkdownIt({ html: true }).use(sfcPlugin);
     const env: MarkdownItEnv = {};
 
     const rendered = md.render(source, env);
 
-    expect(env.sfcBlocks).toEqual([extractedScript, extractedStyle]);
-    expect(/<(script|style)\b/.test(rendered)).toBe(false);
+    expect(rendered).toMatchSnapshot();
+    expect(env.sfcBlocks).toMatchSnapshot();
   });
 
-  it('should extract `<docs>` tags correctly', () => {
+  it('should extract custom blocks correctly', () => {
     const md = MarkdownIt({ html: true }).use(sfcPlugin, {
       customBlocks: ['docs'],
     });
@@ -51,11 +51,7 @@ describe('@mdit-vue/plugin-sfc > sfc-plugin', () => {
 
     const rendered = md.render(source, env);
 
-    expect(env.sfcBlocks).toEqual([
-      extractedDocs,
-      extractedScript,
-      extractedStyle,
-    ]);
-    expect(/<(script|style|docs)\b/.test(rendered)).toBe(false);
+    expect(rendered).toMatchSnapshot();
+    expect(env.sfcBlocks).toMatchSnapshot();
   });
 });

@@ -1,24 +1,54 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
+import {
+  TAG_NAME_SCRIPT,
+  TAG_NAME_STYLE,
+  TAG_NAME_TEMPLATE,
+} from './constants.js';
+import { SCRIPT_SETUP_TAG_OPEN_REGEXP, createSfcRegexp } from './sfc-regexp.js';
+import type { SfcRegExpMatchArray } from './sfc-regexp.js';
 import type { SfcPluginOptions } from './types.js';
 
 /**
- * Avoid rendering vue SFC script / style / custom blocks
+ * Get Vue SFC blocks
  *
- * Extract them into env
+ * Extract them into env and avoid rendering them
  */
 export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
   md,
   { customBlocks = [] }: SfcPluginOptions = {},
 ): void => {
-  // extract `<script>`, `<style>` and other user defined custom blocks
-  const sfcBlocks = Array.from(new Set(['script', 'style', ...customBlocks]));
-  const sfcBlocksRegexp = new RegExp(
-    `^<(${sfcBlocks.join('|')})(?=(\\s|>|$))`,
-    'i',
-  );
+  const sfcRegexp = createSfcRegexp({ customBlocks });
 
-  const rawRule = md.renderer.rules.html_block!;
+  // wrap the original render function
+  const render = md.render.bind(md);
+  md.render = (src, env: MarkdownItEnv = {}) => {
+    // initialize `env.sfcBlocks`
+    env.sfcBlocks = {
+      template: null,
+      script: null,
+      scriptSetup: null,
+      styles: [],
+      customBlocks: [],
+    };
+
+    // call the original render function to get the rendered result
+    const rendered = render(src, env);
+
+    // create template block from the rendered result
+    env.sfcBlocks.template = {
+      type: TAG_NAME_TEMPLATE,
+      content: `<${TAG_NAME_TEMPLATE}>${rendered}</${TAG_NAME_TEMPLATE}>`,
+      contentStripped: rendered,
+      tagOpen: `<${TAG_NAME_TEMPLATE}>`,
+      tagClose: `</${TAG_NAME_TEMPLATE}>`,
+    };
+
+    return rendered;
+  };
+
+  // wrap the original html_block renderer rule
+  const htmlBlockRule = md.renderer.rules.html_block!;
   md.renderer.rules.html_block = (
     tokens,
     idx,
@@ -26,15 +56,36 @@ export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
     env: MarkdownItEnv,
     self,
   ) => {
-    const content = tokens[idx].content;
-
-    // extract sfc blocks to env and do not render them
-    if (sfcBlocksRegexp.test(content.trim())) {
-      env.sfcBlocks ??= [];
-      env.sfcBlocks.push(content);
-      return '';
+    // skip if `env.sfcBlocks` is not initialized
+    if (!env.sfcBlocks) {
+      return htmlBlockRule(tokens, idx, options, env, self);
     }
 
-    return rawRule(tokens, idx, options, env, self);
+    // get the html_block token
+    const token = tokens[idx];
+    const content = token.content;
+
+    // try to match sfc
+    const match = content.match(sfcRegexp) as SfcRegExpMatchArray | null;
+    if (!match) {
+      return htmlBlockRule(tokens, idx, options, env, self);
+    }
+
+    // extract sfc blocks to `env.sfcBlocks`
+    const sfcBlock = match.groups;
+    if (sfcBlock.type === TAG_NAME_SCRIPT) {
+      if (SCRIPT_SETUP_TAG_OPEN_REGEXP.test(sfcBlock.tagOpen)) {
+        env.sfcBlocks.scriptSetup = sfcBlock;
+      } else {
+        env.sfcBlocks.script = sfcBlock;
+      }
+    } else if (sfcBlock.type === TAG_NAME_STYLE) {
+      env.sfcBlocks.styles.push(sfcBlock);
+    } else {
+      env.sfcBlocks.customBlocks.push(sfcBlock);
+    }
+
+    // avoid rendering sfc blocks
+    return '';
   };
 };

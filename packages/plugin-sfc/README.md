@@ -5,8 +5,9 @@
 
 A [markdown-it](https://github.com/markdown-it/markdown-it) plugin to help transforming markdown to [Vue SFC](https://vuejs.org/guide/scaling-up/sfc.html).
 
-- Extract all SFC blocks except `<template>` from rendered result to markdown-it `env.sfcBlocks`.
+- Avoid rendering `<script>` and `<style>` tags and extract them into to markdown-it `env.sfcBlocks`.
 - Support extracting custom blocks.
+- Provide `env.sfcBlocks.template` for convenience.
 
 ## Install
 
@@ -39,7 +40,7 @@ console.log('bar')
   env,
 );
 
-const sfc = `<template>${rendered}</template>${env.sfcBlocks.join('')}`;
+console.log(env.sfcBlocks);
 ```
 
 ## Options
@@ -56,4 +57,4 @@ const sfc = `<template>${rendered}</template>${env.sfcBlocks.join('')}`;
 
   By default, only `<script>` and `<style>` tags will be extracted. You can set this option to support SFC custom blocks in markdown.
 
-  For example, if you set this option to `['foo']`, the `<foo>` tag in your markdown content will also be extracted to `env.sfcBlocks` and won't appear in the rendered result.
+  For example, if you set this option to `['i18n']`, the `<i18n>` tag in your markdown content will be extracted to `env.sfcBlocks.customBlocks` and won't appear in the rendered result.
