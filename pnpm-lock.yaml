@@ -55,7 +55,7 @@ importers:
 
   packages/plugin-frontmatter:
     specifiers:
-      '@mdit-vue/types': workspace:0.8.0
+      '@mdit-vue/types': workspace:0.9.0
       '@types/markdown-it': ^12.2.3
       c8: ^7.12.0
       gray-matter: ^4.0.3
@@ -74,8 +74,8 @@ importers:
 
   packages/plugin-headers:
     specifiers:
-      '@mdit-vue/shared': workspace:0.8.0
-      '@mdit-vue/types': workspace:0.8.0
+      '@mdit-vue/shared': workspace:0.9.0
+      '@mdit-vue/types': workspace:0.9.0
       '@types/markdown-it': ^12.2.3
       c8: ^7.12.0
       markdown-it: ^13.0.1
@@ -95,7 +95,7 @@ importers:
 
   packages/plugin-sfc:
     specifiers:
-      '@mdit-vue/types': workspace:0.8.0
+      '@mdit-vue/types': workspace:0.9.0
       '@types/markdown-it': ^12.2.3
       c8: ^7.12.0
       markdown-it: ^13.0.1
@@ -112,8 +112,8 @@ importers:
 
   packages/plugin-title:
     specifiers:
-      '@mdit-vue/shared': workspace:0.8.0
-      '@mdit-vue/types': workspace:0.8.0
+      '@mdit-vue/shared': workspace:0.9.0
+      '@mdit-vue/types': workspace:0.9.0
       '@types/markdown-it': ^12.2.3
       '@types/markdown-it-emoji': ^2.0.2
       c8: ^7.12.0
@@ -135,8 +135,8 @@ importers:
 
   packages/plugin-toc:
     specifiers:
-      '@mdit-vue/shared': workspace:0.8.0
-      '@mdit-vue/types': workspace:0.8.0
+      '@mdit-vue/shared': workspace:0.9.0
+      '@mdit-vue/types': workspace:0.9.0
       '@types/markdown-it': ^12.2.3
       c8: ^7.12.0
       markdown-it: ^13.0.1
@@ -156,7 +156,7 @@ importers:
 
   packages/shared:
     specifiers:
-      '@mdit-vue/types': workspace:0.8.0
+      '@mdit-vue/types': workspace:0.9.0
       '@types/markdown-it': ^12.2.3
       c8: ^7.12.0
       markdown-it: ^13.0.1

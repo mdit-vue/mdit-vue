@@ -6,7 +6,8 @@
       "allowBranch": "main",
       "conventionalCommits": true,
       "exact": true,
-      "message": "build: version %v"
+      "message": "build: version %v",
+      "syncWorkspaceLock": true
     }
   }
 }
