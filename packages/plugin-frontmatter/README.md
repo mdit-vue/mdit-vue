@@ -37,13 +37,18 @@ const rendered = md.render(
 ---
 title: foobar
 ---
+
 Everything above **more** comment will be extracted as excerpt.
+
 <!-- more -->
+
+Things below **more** comment will not be included in the excerpt.
 `,
   env,
 );
 
 console.log(env.frontmatter);
+console.log(env.content);
 console.log(env.excerpt);
 ```
 

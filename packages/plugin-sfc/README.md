@@ -39,7 +39,7 @@ console.log('bar')
   env,
 );
 
-const sfc = `<template>${rendered}</template>${env.sfcBlocks}`;
+const sfc = `<template>${rendered}</template>${env.sfcBlocks.join('')}`;
 ```
 
 ## Options
