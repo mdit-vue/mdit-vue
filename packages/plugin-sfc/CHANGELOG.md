@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/mdit-vue/mdit-vue/compare/v0.9.0...v0.9.1) (2022-07-26)
+
+### Bug Fixes
+
+- **plugin-sfc:** expose MarkdownSfcBlocks type ([c2a91de](https://github.com/mdit-vue/mdit-vue/commit/c2a91dec810555c674d72eea3890b3a09920b298))
+
 # [0.9.0](https://github.com/mdit-vue/mdit-vue/compare/v0.8.1...v0.9.0) (2022-07-26)
 
 ### Features
