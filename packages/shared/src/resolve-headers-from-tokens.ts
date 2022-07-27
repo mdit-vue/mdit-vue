@@ -56,12 +56,12 @@ export const resolveHeadersFromTokens = (
     }
   };
 
-  tokens.forEach((_, idx) => {
-    const token = tokens[idx];
+  for (let i = 0; i < tokens.length; i += 1) {
+    const token = tokens[i];
 
     // if the token type does not match, skip
     if (token?.type !== 'heading_open') {
-      return;
+      continue;
     }
 
     // get the level from the tag, h1 -> 1
@@ -69,15 +69,15 @@ export const resolveHeadersFromTokens = (
 
     // if the level should not be extracted, skip
     if (!level.includes(headerLevel)) {
-      return;
+      continue;
     }
 
     // the next token of 'heading_open' contains the heading content
-    const nextToken = tokens[idx + 1];
+    const nextToken = tokens[i + 1];
 
     // if the next token does not exist, skip
     if (!nextToken) {
-      return;
+      continue;
     }
 
     const title = resolveTitleFromToken(nextToken, {
@@ -96,7 +96,7 @@ export const resolveHeadersFromTokens = (
       slug,
       children: [],
     });
-  });
+  }
 
   return headers;
 };
