@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.0.3
       '@commitlint/config-conventional': ^17.0.3
-      '@lerna-lite/cli': ^1.8.0
+      '@lerna-lite/cli': ^1.9.0
       '@meteorlxy/eslint-config-prettier': ^2.16.0
       '@meteorlxy/eslint-config-prettier-typescript': ^2.16.0
       '@meteorlxy/prettier-config': ^2.11.0
@@ -18,11 +18,11 @@ importers:
       prettier: ^2.7.1
       sort-package-json: ^1.57.0
       typescript: ^4.7.4
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     devDependencies:
       '@commitlint/cli': 17.0.3
       '@commitlint/config-conventional': 17.0.3
-      '@lerna-lite/cli': 1.8.0
+      '@lerna-lite/cli': 1.9.0
       '@meteorlxy/eslint-config-prettier': 2.16.0_vvfpqh5kol6rhqy7beehv5uezq
       '@meteorlxy/eslint-config-prettier-typescript': 2.16.0_7wmdnazylordkmmp5xylrck47q
       '@meteorlxy/prettier-config': 2.11.0
@@ -34,7 +34,7 @@ importers:
       prettier: 2.7.1
       sort-package-json: 1.57.0
       typescript: 4.7.4
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/plugin-component:
     specifiers:
@@ -43,7 +43,7 @@ importers:
       c8: ^7.12.0
       markdown-it: ^13.0.1
       unbuild: ^0.7.6
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     dependencies:
       '@types/markdown-it': 12.2.3
       markdown-it: 13.0.1
@@ -51,7 +51,7 @@ importers:
       '@vue/shared': 3.2.37
       c8: 7.12.0
       unbuild: 0.7.6
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/plugin-frontmatter:
     specifiers:
@@ -61,7 +61,7 @@ importers:
       gray-matter: ^4.0.3
       markdown-it: ^13.0.1
       unbuild: ^0.7.6
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     dependencies:
       '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
@@ -70,7 +70,7 @@ importers:
     devDependencies:
       c8: 7.12.0
       unbuild: 0.7.6
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/plugin-headers:
     specifiers:
@@ -81,7 +81,7 @@ importers:
       markdown-it: ^13.0.1
       markdown-it-anchor: ^8.6.4
       unbuild: ^0.7.6
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@mdit-vue/types': link:../types
@@ -91,7 +91,7 @@ importers:
       c8: 7.12.0
       markdown-it-anchor: 8.6.4_ea7kj7wzjkld5jo2noyjqxi764
       unbuild: 0.7.6
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/plugin-sfc:
     specifiers:
@@ -100,7 +100,7 @@ importers:
       c8: ^7.12.0
       markdown-it: ^13.0.1
       unbuild: ^0.7.6
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     dependencies:
       '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
@@ -108,7 +108,7 @@ importers:
     devDependencies:
       c8: 7.12.0
       unbuild: 0.7.6
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/plugin-title:
     specifiers:
@@ -120,7 +120,7 @@ importers:
       markdown-it: ^13.0.1
       markdown-it-emoji: ^2.0.2
       unbuild: ^0.7.6
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@mdit-vue/types': link:../types
@@ -131,7 +131,7 @@ importers:
       c8: 7.12.0
       markdown-it-emoji: 2.0.2
       unbuild: 0.7.6
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/plugin-toc:
     specifiers:
@@ -142,7 +142,7 @@ importers:
       markdown-it: ^13.0.1
       markdown-it-anchor: ^8.6.4
       unbuild: ^0.7.6
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     dependencies:
       '@mdit-vue/shared': link:../shared
       '@mdit-vue/types': link:../types
@@ -152,7 +152,7 @@ importers:
       c8: 7.12.0
       markdown-it-anchor: 8.6.4_ea7kj7wzjkld5jo2noyjqxi764
       unbuild: 0.7.6
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/shared:
     specifiers:
@@ -161,7 +161,7 @@ importers:
       c8: ^7.12.0
       markdown-it: ^13.0.1
       unbuild: ^0.7.6
-      vitest: ^0.19.1
+      vitest: ^0.20.2
     dependencies:
       '@mdit-vue/types': link:../types
       '@types/markdown-it': 12.2.3
@@ -169,7 +169,7 @@ importers:
     devDependencies:
       c8: 7.12.0
       unbuild: 0.7.6
-      vitest: 0.19.1_c8@7.12.0
+      vitest: 0.20.2_c8@7.12.0
 
   packages/types:
     specifiers:
@@ -641,17 +641,17 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@lerna-lite/cli/1.8.0:
-    resolution: {integrity: sha512-ozrlLBgfcnqXeV8aTFITxBv+Z2ECV1N2eXr0nio4O8+IqK4G9FynC9T2degVORFplr9dhrePC1eikny8fJteJQ==}
+  /@lerna-lite/cli/1.9.0:
+    resolution: {integrity: sha512-K6ipXhYRTQ4CDq0Im15iQPuz/jtUWxXF5telt2aa3Lhss+e2n3qwGz5eodXWSdUaHDVHxS1Iaj7cRVb4Hf0oHw==}
     engines: {node: '>=14.15.0', npm: '>=8.0.0'}
     hasBin: true
     dependencies:
-      '@lerna-lite/core': 1.8.0
-      '@lerna-lite/info': 1.8.0
-      '@lerna-lite/init': 1.8.0
-      '@lerna-lite/listable': 1.8.0
-      '@lerna-lite/publish': 1.8.0
-      '@lerna-lite/version': 1.8.0
+      '@lerna-lite/core': 1.9.0
+      '@lerna-lite/info': 1.9.0
+      '@lerna-lite/init': 1.9.0
+      '@lerna-lite/listable': 1.9.0
+      '@lerna-lite/publish': 1.9.0
+      '@lerna-lite/version': 1.9.0
       dedent: 0.7.0
       dotenv: 16.0.1
       import-local: 3.1.0
@@ -663,8 +663,8 @@ packages:
       - supports-color
     dev: true
 
-  /@lerna-lite/core/1.8.0:
-    resolution: {integrity: sha512-hoTGLgMoGbKDXrlm7xzC9/8o2QcTu2OBbfYof6MNQ9WBilX75YcMILBzlkbBgrkUIINAN52UK9+H+qZ04bUUhQ==}
+  /@lerna-lite/core/1.9.0:
+    resolution: {integrity: sha512-8fv/YUpK28yLjH0nz8rUTUxZkk9gC/lqDshmNMSFORXrEyNpG63P26cGafqjG7zHuxdmNkZBuidV1QzT6k+mGg==}
     engines: {node: '>=14.15.0', npm: '>=8.0.0'}
     dependencies:
       os: 0.1.2
@@ -726,11 +726,11 @@ packages:
       - supports-color
     dev: true
 
-  /@lerna-lite/info/1.8.0:
-    resolution: {integrity: sha512-K/nL3gLSFVsDLYOChHu22RblymFywRXaqCDXAwcFC8mJVvMk0pBbZJmYe56QkRxK79Bxd2Sv/XQnu7k57Mya/A==}
+  /@lerna-lite/info/1.9.0:
+    resolution: {integrity: sha512-m9KYdHrN5hLaM3W+nlEc8e7BLbJQ7P8cgV2RKxNuNsSTZZKUJURvsoRWlSU7gx5XsPnF8W6smoSUXtWHEpdR5A==}
     engines: {node: '>=14.15.0', npm: '>=8.0.0'}
     dependencies:
-      '@lerna-lite/core': 1.8.0
+      '@lerna-lite/core': 1.9.0
       dedent: 0.7.0
       envinfo: 7.8.1
       yargs: 17.5.1
@@ -740,11 +740,11 @@ packages:
       - supports-color
     dev: true
 
-  /@lerna-lite/init/1.8.0:
-    resolution: {integrity: sha512-RhkvCmaRWb+hh7/Qika4QCMFJwmNhxNBTrl8DWosjaa7VoUbHsfEpHH2yfYg2gUwxWavGhPbMOFvtpHzegHAaA==}
+  /@lerna-lite/init/1.9.0:
+    resolution: {integrity: sha512-aqM48kVNLQpP5irY2pnNWaYGxQlLWJkHX13pyTAXvYPgEPjzeIn31BHN2DBfuwzpWDQ/OmutBpMpCYD8W95I2g==}
     engines: {node: '>=14.15.0', npm: '>=8.0.0'}
     dependencies:
-      '@lerna-lite/core': 1.8.0
+      '@lerna-lite/core': 1.9.0
       fs-extra: 10.1.0
       p-map: 4.0.0
       write-json-file: 4.3.0
@@ -754,11 +754,11 @@ packages:
       - supports-color
     dev: true
 
-  /@lerna-lite/listable/1.8.0:
-    resolution: {integrity: sha512-CFhaz4YWlNkO0l+uSd0bEK3agkv0hff6hngnbFbgcZDQfn7KkVSqg4NMlGOKFpVk6DK7csdkqxw41Y6aUlzbGg==}
+  /@lerna-lite/listable/1.9.0:
+    resolution: {integrity: sha512-R+9Anwx+hmNpr1va/QjDHi1xCQYFPWjmndLd60SO74ghBP2w1+O7IgQl7aPL/XGKGTSItB/BfTAOlAKzMIJKIQ==}
     engines: {node: '>=14.15.0', npm: '>=8.0.0'}
     dependencies:
-      '@lerna-lite/core': 1.8.0
+      '@lerna-lite/core': 1.9.0
       chalk: 4.1.2
       columnify: 1.6.0
     transitivePeerDependencies:
@@ -767,13 +767,13 @@ packages:
       - supports-color
     dev: true
 
-  /@lerna-lite/publish/1.8.0:
-    resolution: {integrity: sha512-Z4hnzp4tDALFWGSyCoYkz41IP4B4Ga5y20/lzrD12V/ZNNn1nxm/RbKEnr8jePzD44qANUnrUYqyGOvtVv59vQ==}
+  /@lerna-lite/publish/1.9.0:
+    resolution: {integrity: sha512-bLB9/sCk/XK76CSz9DwOKGXGwEvf69Sk995m3KwwyNJMpEwtJ3RrXEKqFc/7iioU4cA0XyE3R1tKGTLwEW/hWw==}
     engines: {node: '>=14.15.0', npm: '>=8.0.0'}
     dependencies:
       os: 0.1.2
-      '@lerna-lite/core': 1.8.0
-      '@lerna-lite/version': 1.8.0
+      '@lerna-lite/core': 1.9.0
+      '@lerna-lite/version': 1.9.0
       byte-size: 7.0.1
       columnify: 1.6.0
       fs-extra: 10.1.0
@@ -807,12 +807,12 @@ packages:
       - supports-color
     dev: true
 
-  /@lerna-lite/version/1.8.0:
-    resolution: {integrity: sha512-x0u94I/DlCnPc4fWlCpTb3neHhtJ0i2WzifGSubm7F8q8AxA2CKpKnnrhFb9rJeHZBGmpAfkIRIwI1BPkaX+Rw==}
+  /@lerna-lite/version/1.9.0:
+    resolution: {integrity: sha512-oQHZ1sleqaoCyvlWoQnRfm3Fzyqnqg9aVqbbpXwD7dMo+0L9/2ydmbJSsVyfWTW4HViGuiYICMR9x95i0o1OtA==}
     engines: {node: '>=14.15.0', npm: '>=8.0.0'}
     dependencies:
       os: 0.1.2
-      '@lerna-lite/core': 1.8.0
+      '@lerna-lite/core': 1.9.0
       chalk: 4.1.2
       dedent: 0.7.0
       load-json-file: 6.2.0
@@ -6007,8 +6007,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.19.1_c8@7.12.0:
-    resolution: {integrity: sha512-E/ZXpFMUahn731wzhMBNzWRp4mGgiZFT0xdHa32cbNO0CSaHpE9hTfteEU247Gi2Dula8uXo5vvrNB6dtszmQA==}
+  /vitest/0.20.2_c8@7.12.0:
+    resolution: {integrity: sha512-AFXTHrwG4d2OO6SAL8WP5ZkOwLtgeF4tlrHfXFqrHc+5chNegeR53pge0lv/C4316SqJ2DbYaUBH8vh3CdF+BQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
