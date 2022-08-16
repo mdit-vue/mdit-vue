@@ -17,8 +17,8 @@ export default defineConfig({
     target: 'node14',
   },
   test: {
-    // TODO: vitest coverage with c8 is incorrect
     coverage: {
+      provider: 'istanbul',
       reporter: ['clover', 'json', 'lcov', 'text'],
     },
   },

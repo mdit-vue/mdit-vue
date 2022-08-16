@@ -1,3 +1,8 @@
+const fs = require('fs');
+const path = require('path');
+
+const packages = fs.readdirSync(path.resolve(__dirname, 'packages'));
+
 module.exports = {
   root: true,
   extends: ['@meteorlxy/prettier'],
@@ -22,6 +27,18 @@ module.exports = {
         'no-plusplus': 'off',
         'prefer-destructuring': 'off',
         'prefer-template': 'off',
+      },
+    },
+    {
+      files: ['*.spec.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            devDependencies: true,
+            packageDir: ['./', ...packages.map((item) => `./packages/${item}`)],
+          },
+        ],
       },
     },
   ],

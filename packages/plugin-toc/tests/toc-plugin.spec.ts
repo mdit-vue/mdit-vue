@@ -1,6 +1,7 @@
 import { slugify } from '@mdit-vue/shared';
 import MarkdownIt from 'markdown-it';
-import anchorPlugin from 'markdown-it-anchor';
+// eslint-disable-next-line import/no-named-default
+import { default as anchorPlugin } from 'markdown-it-anchor';
 import { describe, expect, it } from 'vitest';
 import { tocPlugin } from '../src/index.js';
 
