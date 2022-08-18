@@ -11,7 +11,7 @@ importers:
       '@meteorlxy/eslint-config-prettier-typescript': ^2.16.0
       '@meteorlxy/prettier-config': ^2.11.0
       '@meteorlxy/tsconfig': ^2.16.0
-      '@vitest/coverage-istanbul': ^0.22.0
+      '@vitest/coverage-istanbul': ^0.22.1
       eslint: ^8.22.0
       husky: ^8.0.1
       lint-staged: ^13.0.3
@@ -19,7 +19,7 @@ importers:
       sort-package-json: ^1.57.0
       typescript: ^4.7.4
       unbuild: ^0.8.8
-      vitest: ^0.22.0
+      vitest: ^0.22.1
     devDependencies:
       '@commitlint/cli': 17.0.3
       '@commitlint/config-conventional': 17.0.3
@@ -28,7 +28,7 @@ importers:
       '@meteorlxy/eslint-config-prettier-typescript': 2.16.0_zczhdx677l6mw2hrju5deojgfm
       '@meteorlxy/prettier-config': 2.11.0
       '@meteorlxy/tsconfig': 2.16.0
-      '@vitest/coverage-istanbul': 0.22.0
+      '@vitest/coverage-istanbul': 0.22.1
       eslint: 8.22.0
       husky: 8.0.1
       lint-staged: 13.0.3
@@ -36,7 +36,7 @@ importers:
       sort-package-json: 1.57.0
       typescript: 4.7.4
       unbuild: 0.8.8
-      vitest: 0.22.0
+      vitest: 0.22.1
 
   packages/plugin-component:
     specifiers:
@@ -1399,8 +1399,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitest/coverage-istanbul/0.22.0:
-    resolution: {integrity: sha512-o6NlBkN1a0+UG3K30Kx8EQVzsX7WJNFPyXA7n0Fd6pKf0ez31xjCYHWoERwNHUkDdOOd5Y1CF6sFU+z/xA7JVA==}
+  /@vitest/coverage-istanbul/0.22.1:
+    resolution: {integrity: sha512-S29NBnmu8ko3Yj69yYX0F17RvyVO+3KOKvhExNX8/a1qL3Z+4EeT03DSdXTxkpq+gyxWlaIIMduxKct/imy3Dg==}
     dependencies:
       istanbul-lib-coverage: 3.2.0
       istanbul-lib-instrument: 5.2.0
@@ -1408,7 +1408,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       test-exclude: 6.0.0
-      vitest: 0.22.0
+      vitest: 0.22.1
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -5467,14 +5467,6 @@ packages:
       - supports-color
     dev: true
 
-  /rollup/2.77.0:
-    resolution: {integrity: sha512-vL8xjY4yOQEw79DvyXLijhnhh+R/O9zpF/LEgkCebZFtb6ELeN9H3/2T0r8+mp+fFTBHZ5qGpOpW2ela2zRt3g==}
-    engines: {node: '>=10.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /rollup/2.78.0:
     resolution: {integrity: sha512-4+YfbQC9QEVvKTanHhIAFVUFSRsezvQF8vFOJwtGfb9Bb+r014S+qryr9PSmw8x6sMnPkmFBGAvIFVQxvJxjtg==}
     engines: {node: '>=10.0.0'}
@@ -5914,8 +5906,8 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
-  /tinyspy/1.0.0:
-    resolution: {integrity: sha512-FI5B2QdODQYDRjfuLF+OrJ8bjWRMCXokQPcwKm0W3IzcbUmBNv536cQc7eXGoAuXphZwgx1DFbqImwzz08Fnhw==}
+  /tinyspy/1.0.2:
+    resolution: {integrity: sha512-bSGlgwLBYf7PnUsQ6WOc6SJ3pGOcd+d8AA6EUnLDDM0kWEstC1JIlSZA3UNliDXhd9ABoS7hiRBDCu+XP/sf1Q==}
     engines: {node: '>=14.0.0'}
     dev: true
 
@@ -6245,13 +6237,13 @@ packages:
       esbuild: 0.14.50
       postcss: 8.4.14
       resolve: 1.22.1
-      rollup: 2.77.0
+      rollup: 2.78.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.22.0:
-    resolution: {integrity: sha512-BSIro/QOHLaQY08FHwT6THWhqLQ+VPU+N4Rdo4pcP+16XB6oLmNNAXGcSh/MOLUhfUy+mqCwx7AyKmU7Ms5R+g==}
+  /vitest/0.22.1:
+    resolution: {integrity: sha512-+x28YTnSLth4KbXg7MCzoDAzPJlJex7YgiZbUh6YLp0/4PqVZ7q7/zyfdL0OaPtKTpNiQFPpMC8Y2MSzk8F7dw==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -6279,7 +6271,7 @@ packages:
       debug: 4.3.4
       local-pkg: 0.4.2
       tinypool: 0.2.4
-      tinyspy: 1.0.0
+      tinyspy: 1.0.2
       vite: 3.0.3
     transitivePeerDependencies:
       - less
