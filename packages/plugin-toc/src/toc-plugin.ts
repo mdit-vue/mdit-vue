@@ -2,7 +2,6 @@ import {
   slugify as defaultSlugify,
   resolveHeadersFromTokens,
 } from '@mdit-vue/shared';
-import type { MarkdownItHeader } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
 import { createRenderHeaders } from './create-render-headers.js';
 import { createTocBlockRule } from './create-toc-block-rule.js';
@@ -31,21 +30,6 @@ export const tocPlugin: PluginWithOptions<TocPluginOptions> = (
     linkClass = '',
   }: TocPluginOptions = {},
 ): void => {
-  let headers: MarkdownItHeader[];
-
-  // push the rule to the end of the chain
-  // resolve headers from the parsed tokens
-  md.core.ruler.push('resolveTocHeaders', (state) => {
-    headers = resolveHeadersFromTokens(state.tokens, {
-      level,
-      shouldAllowHtml: true,
-      shouldEscapeText: true,
-      slugify,
-      format,
-    });
-    return true;
-  });
-
   // add toc syntax as a block rule
   md.block.ruler.before(
     'heading',
@@ -60,6 +44,7 @@ export const tocPlugin: PluginWithOptions<TocPluginOptions> = (
     },
   );
 
+  // create the headers renderer from the options
   const renderHeaders = createRenderHeaders({
     listTag,
     listClass,
@@ -69,11 +54,21 @@ export const tocPlugin: PluginWithOptions<TocPluginOptions> = (
   });
 
   // custom toc_body render rule
-  md.renderer.rules.toc_body = () => {
-    /* istanbul ignore if */
-    if (!headers) {
-      return '';
-    }
-    return renderHeaders(headers);
-  };
+  // Notice that markdown-it-toc-done-right collects ast (i.e. headers) by pushing a custom ruler,
+  // that's good because it ensures we only collect headers once. However the collected headers
+  // are possible to be overridden by calling `md.render` / `md.renderInline` before the toc_body
+  // is rendered (like https://github.com/vuejs/vitepress/issues/1093).
+  // Here we changed to collect headers during rendering toc_body. The drawback is that it is possible
+  // to collect headers multiple times if there are more than one toc_body, which is acceptable because
+  // in most cases there is only one toc per page.
+  md.renderer.rules.toc_body = (tokens) =>
+    renderHeaders(
+      resolveHeadersFromTokens(tokens, {
+        level,
+        shouldAllowHtml: true,
+        shouldEscapeText: true,
+        slugify,
+        format,
+      }),
+    );
 };
