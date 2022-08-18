@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.2](https://github.com/mdit-vue/mdit-vue/compare/v0.9.1...v0.9.2) (2022-08-18)
+
+### Bug Fixes
+
+- **plugin-toc:** avoid toc being overridden by another rendering ([c145c26](https://github.com/mdit-vue/mdit-vue/commit/c145c26c0d79389974c9f6cd387db9e8a26daa99))
+
 ## [0.9.1](https://github.com/mdit-vue/mdit-vue/compare/v0.9.0...v0.9.1) (2022-07-26)
 
 ### Bug Fixes
