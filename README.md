@@ -50,8 +50,9 @@ This project is here to provide some unified plugins for [markdown-it](https://g
 This project was originally extracted from Vue's official project, and maintained by Vue team members. It is supporting many awesome projects:
 
 - [Slidev](https://github.com/slidevjs/slidev)
-- [VuePress v2](https://github.com/vuepress/vuepress-next)
+- [VitePress](https://github.com/vuejs/vitepress)
 - [vite-plugin-vue-markdown](https://github.com/mdit-vue/vite-plugin-vue-markdown)
+- [VuePress v2](https://github.com/vuepress/vuepress-next)
 - ... and so on
 
 ## License
