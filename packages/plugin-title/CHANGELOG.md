@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.3](https://github.com/mdit-vue/mdit-vue/compare/v0.9.2...v0.9.3) (2022-08-20)
+
+### Bug Fixes
+
+- **plugin-title:** avoid title being overridden by another rendering ([43cc020](https://github.com/mdit-vue/mdit-vue/commit/43cc0206b75b1ffcd70c221ba179c77af4ac79a5))
+
 ## [0.9.2](https://github.com/mdit-vue/mdit-vue/compare/v0.9.1...v0.9.2) (2022-08-18)
 
 **Note:** Version bump only for package @mdit-vue/plugin-title
