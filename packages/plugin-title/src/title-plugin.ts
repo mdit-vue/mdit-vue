@@ -8,28 +8,17 @@ import type { PluginSimple } from 'markdown-it';
  * Extract it into env
  */
 export const titlePlugin: PluginSimple = (md): void => {
-  let title: string;
-
-  // push the rule to the end of the chain
-  // resolve title from the parsed tokens
-  md.core.ruler.push('resolveTitle', (state) => {
-    const tokenIdx = state.tokens.findIndex((token) => token.tag === 'h1');
-    if (tokenIdx > -1) {
-      title = resolveTitleFromToken(state.tokens[tokenIdx + 1], {
-        shouldAllowHtml: false,
-        shouldEscapeText: false,
-      });
-    } else {
-      title = '';
-    }
-    return true;
-  });
-
   // extract title to env
-  const render = md.render.bind(md);
-  md.render = (src, env: MarkdownItEnv = {}) => {
-    const result = render(src, env);
-    env.title = title;
-    return result;
+  const render = md.renderer.render.bind(md.renderer);
+  md.renderer.render = (tokens, options, env: MarkdownItEnv) => {
+    const tokenIdx = tokens.findIndex((token) => token.tag === 'h1');
+    env.title =
+      tokenIdx > -1
+        ? resolveTitleFromToken(tokens[tokenIdx + 1], {
+            shouldAllowHtml: false,
+            shouldEscapeText: false,
+          })
+        : '';
+    return render(tokens, options, env);
   };
 };
