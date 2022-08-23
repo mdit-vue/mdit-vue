@@ -24,6 +24,13 @@ export interface MarkdownItHeader {
   slug: string;
 
   /**
+   * Link of the header
+   *
+   * Typically using `#${slug}` as the anchor hash
+   */
+  link: string;
+
+  /**
    * The children of the header
    */
   children: MarkdownItHeader[];
