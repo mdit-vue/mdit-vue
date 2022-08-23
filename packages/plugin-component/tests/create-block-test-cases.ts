@@ -11,21 +11,38 @@ const createSelfClosingTagsCases = (
 ): ComponentPluginTestCases => ({
   name: `self closing <${comp} />`,
   cases: [
+    // no attr
     [`<${comp} />`, `<${comp} />`],
+    [`<${comp}\n/>`, `<${comp}\n/>`],
+    // single attr
     [`<${comp} :prop-name="prop" />`, `<${comp} :prop-name="prop" />`],
+    [`<${comp}\n:prop-name="prop" />`, `<${comp}\n:prop-name="prop" />`],
+    [`<${comp}\n:prop-name="prop"\n/>`, `<${comp}\n:prop-name="prop"\n/>`],
     [`<${comp} @click="onClick" />`, `<${comp} @click="onClick" />`],
+    [`<${comp}\n@click="onClick" />`, `<${comp}\n@click="onClick" />`],
+    [`<${comp}\n@click="onClick"\n/>`, `<${comp}\n@click="onClick"\n/>`],
+    // multiple attrs
     [
       `<${comp} :prop-name="prop" @click="onClick" />`,
       `<${comp} :prop-name="prop" @click="onClick" />`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model" />`,
-      `<${comp} :prop-name="prop"\nv-model="model" />`,
+      `<${comp} :prop-name="prop"\n@click="onClick" />`,
+      `<${comp} :prop-name="prop"\n@click="onClick" />`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick" />`,
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick" />`,
+      `<${comp}\n:prop-name="prop"\n@click="onClick" />`,
+      `<${comp}\n:prop-name="prop"\n@click="onClick" />`,
     ],
+    [
+      `<${comp} :prop-name="prop"\n@click="onClick"\n/>`,
+      `<${comp} :prop-name="prop"\n@click="onClick"\n/>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n@click="onClick"\n/>`,
+      `<${comp}\n:prop-name="prop"\n@click="onClick"\n/>`,
+    ],
+    // inside header
     [`# h1 <${comp} />`, `<h1>h1 <${comp} /></h1>\n`],
     [
       `# h1 <${comp} :prop-name="prop" />`,
@@ -44,25 +61,26 @@ const createEmptyTagsCases = (comp: string): ComponentPluginTestCases => ({
   name: `empty <${comp}>`,
   cases: [
     [`<${comp}></${comp}>`, `<${comp}></${comp}>`],
+    [`<${comp}>\n</${comp}>`, `<${comp}>\n</${comp}>`],
     [
       `<${comp} :prop-name="prop"></${comp}>`,
       `<${comp} :prop-name="prop"></${comp}>`,
     ],
     [
-      `<${comp} @click="onClick"></${comp}>`,
-      `<${comp} @click="onClick"></${comp}>`,
+      `<${comp} :prop-name="prop">\n</${comp}>`,
+      `<${comp} :prop-name="prop">\n</${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop" @click="onClick"></${comp}>`,
-      `<${comp} :prop-name="prop" @click="onClick"></${comp}>`,
+      `<${comp}\n:prop-name="prop"></${comp}>`,
+      `<${comp}\n:prop-name="prop"></${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"></${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model"></${comp}>`,
+      `<${comp}\n:prop-name="prop"\n></${comp}>`,
+      `<${comp}\n:prop-name="prop"\n></${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick"></${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick"></${comp}>`,
+      `<${comp}\n:prop-name="prop"\n>\n</${comp}>`,
+      `<${comp}\n:prop-name="prop"\n>\n</${comp}>`,
     ],
     [`# h1 <${comp}></${comp}>`, `<h1>h1 <${comp}></${comp}></h1>\n`],
     [
@@ -82,25 +100,52 @@ const createTextTagsCases = (comp: string): ComponentPluginTestCases => ({
   name: `text <${comp}>`,
   cases: [
     [`<${comp}>foobar</${comp}>`, `<${comp}>foobar</${comp}>`],
+    [`<${comp}>foobar\n</${comp}>`, `<${comp}>foobar\n</${comp}>`],
+    [`<${comp}>\nfoobar</${comp}>`, `<${comp}>\nfoobar</${comp}>`],
+    [`<${comp}>\nfoobar\n</${comp}>`, `<${comp}>\nfoobar\n</${comp}>`],
     [
       `<${comp} :prop-name="prop">foobar</${comp}>`,
       `<${comp} :prop-name="prop">foobar</${comp}>`,
     ],
     [
-      `<${comp} @click="onClick">foobar</${comp}>`,
-      `<${comp} @click="onClick">foobar</${comp}>`,
+      `<${comp} :prop-name="prop">foobar\n</${comp}>`,
+      `<${comp} :prop-name="prop">foobar\n</${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop" @click="onClick">foobar</${comp}>`,
-      `<${comp} :prop-name="prop" @click="onClick">foobar</${comp}>`,
+      `<${comp} :prop-name="prop">\nfoobar</${comp}>`,
+      `<${comp} :prop-name="prop">\nfoobar</${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model">foobar</${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model">foobar</${comp}>`,
+      `<${comp} :prop-name="prop">\nfoobar\n</${comp}>`,
+      `<${comp} :prop-name="prop">\nfoobar\n</${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick">foobar</${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick">foobar</${comp}>`,
+      `<${comp}\n:prop-name="prop">foobar</${comp}>`,
+      `<${comp}\n:prop-name="prop">foobar</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">foobar\n</${comp}>`,
+      `<${comp}\n:prop-name="prop">foobar\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\nfoobar</${comp}>`,
+      `<${comp}\n:prop-name="prop">\nfoobar</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\nfoobar\n</${comp}>`,
+      `<${comp}\n:prop-name="prop">\nfoobar\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n>foobar</${comp}>`,
+      `<${comp}\n:prop-name="prop"\n>foobar</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n>foobar</${comp}>`,
+      `<${comp}\n:prop-name="prop"\n>foobar</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n>\nfoobar</${comp}>`,
+      `<${comp}\n:prop-name="prop"\n>\nfoobar</${comp}>`,
     ],
     [
       `# h1 <${comp}>foobar</${comp}>`,
@@ -129,8 +174,24 @@ const createInlineElementTagsCases = (
       `<${comp}><span>foobar</span></${comp}>`,
     ],
     [
+      `<${comp}><span>foobar</span>\n</${comp}>`,
+      `<${comp}><span>foobar</span>\n</${comp}>`,
+    ],
+    [
+      `<${comp}>\n<span>foobar</span></${comp}>`,
+      `<${comp}>\n<span>foobar</span></${comp}>`,
+    ],
+    [
       `<${comp}>\n<span>foobar</span>\n</${comp}>`,
       `<${comp}>\n<span>foobar</span>\n</${comp}>`,
+    ],
+    [
+      `<${comp}>\n\n<span>foobar</span></${comp}>`,
+      `<${comp}>\n<p><span>foobar</span></${comp}></p>\n`,
+    ],
+    [
+      `<${comp}>\n\n<span>foobar</span>\n</${comp}>`,
+      `<${comp}>\n<p><span>foobar</span></p>\n</${comp}>`,
     ],
     [
       `<${comp}>\n\n<span>foobar</span>\n\n</${comp}>`,
@@ -141,20 +202,48 @@ const createInlineElementTagsCases = (
       `<${comp} :prop-name="prop"><span>foobar</span></${comp}>`,
     ],
     [
-      `<${comp} @click="onClick"><span>foobar</span></${comp}>`,
-      `<${comp} @click="onClick"><span>foobar</span></${comp}>`,
+      `<${comp} :prop-name="prop"><span>foobar\n</span></${comp}>`,
+      `<${comp} :prop-name="prop"><span>foobar\n</span></${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop" @click="onClick"><span>foobar</span></${comp}>`,
-      `<${comp} :prop-name="prop" @click="onClick"><span>foobar</span></${comp}>`,
+      `<${comp} :prop-name="prop">\n<span>foobar</span></${comp}>`,
+      `<${comp} :prop-name="prop">\n<span>foobar</span></${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"><span>foobar</span></${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model"><span>foobar</span></${comp}>`,
+      `<${comp} :prop-name="prop">\n<span>foobar</span>\n</${comp}>`,
+      `<${comp} :prop-name="prop">\n<span>foobar</span>\n</${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick"><span>foobar</span></${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick"><span>foobar</span></${comp}>`,
+      `<${comp}\n:prop-name="prop"><span>foobar</span></${comp}>`,
+      `<${comp}\n:prop-name="prop"><span>foobar</span></${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"><span>foobar</span>\n</${comp}>`,
+      `<${comp}\n:prop-name="prop"><span>foobar</span>\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\n<span>foobar</span></${comp}>`,
+      `<${comp}\n:prop-name="prop">\n<span>foobar</span></${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\n<span>foobar</span>\n</${comp}>`,
+      `<${comp}\n:prop-name="prop">\n<span>foobar</span>\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\n\n<span>foobar</span>\n</${comp}>`,
+      `<${comp}\n:prop-name="prop">\n<p><span>foobar</span></p>\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\n\n<span>foobar</span>\n\n</${comp}>`,
+      `<${comp}\n:prop-name="prop">\n<p><span>foobar</span></p>\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n><span>foobar</span></${comp}>`,
+      `<${comp}\n:prop-name="prop"\n><span>foobar</span></${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n>\n<span>foobar</span></${comp}>`,
+      `<${comp}\n:prop-name="prop"\n>\n<span>foobar</span></${comp}>`,
     ],
     [
       `# h1 <${comp}><span>foobar</span></${comp}>`,
@@ -183,7 +272,27 @@ const createBlockElementTagsCases = (
       `<${comp}><div>foobar</div></${comp}>`,
     ],
     [
+      `<${comp}><div>foobar</div>\n</${comp}>`,
+      `<${comp}><div>foobar</div>\n</${comp}>`,
+    ],
+    [
+      `<${comp}>\n<div>foobar</div></${comp}>`,
+      `<${comp}>\n<div>foobar</div></${comp}>`,
+    ],
+    [
       `<${comp}>\n<div>foobar</div>\n</${comp}>`,
+      `<${comp}>\n<div>foobar</div>\n</${comp}>`,
+    ],
+    [
+      `<${comp}>\n\n<div>foobar</div></${comp}>`,
+      `<${comp}>\n<div>foobar</div></${comp}>`,
+    ],
+    [
+      `<${comp}>\n\n<div>foobar</div>\n</${comp}>`,
+      `<${comp}>\n<div>foobar</div>\n</${comp}>`,
+    ],
+    [
+      `<${comp}>\n\n<div>foobar</div>\n\n</${comp}>`,
       `<${comp}>\n<div>foobar</div>\n</${comp}>`,
     ],
     [
@@ -191,20 +300,44 @@ const createBlockElementTagsCases = (
       `<${comp} :prop-name="prop"><div>foobar</div></${comp}>`,
     ],
     [
-      `<${comp} @click="onClick"><div>foobar</div></${comp}>`,
-      `<${comp} @click="onClick"><div>foobar</div></${comp}>`,
+      `<${comp} :prop-name="prop"><div>foobar</div>\n</${comp}>`,
+      `<${comp} :prop-name="prop"><div>foobar</div>\n</${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop" @click="onClick"><div>foobar</div></${comp}>`,
-      `<${comp} :prop-name="prop" @click="onClick"><div>foobar</div></${comp}>`,
+      `<${comp} :prop-name="prop">\n<div>foobar</div></${comp}>`,
+      `<${comp} :prop-name="prop">\n<div>foobar</div></${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"><div>foobar</div></${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model"><div>foobar</div></${comp}>`,
+      `<${comp} :prop-name="prop">\n<div>foobar</div>\n</${comp}>`,
+      `<${comp} :prop-name="prop">\n<div>foobar</div>\n</${comp}>`,
     ],
     [
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick"><div>foobar</div></${comp}>`,
-      `<${comp} :prop-name="prop"\nv-model="model"\n@click="onClick"><div>foobar</div></${comp}>`,
+      `<${comp}\n:prop-name="prop"><div>foobar</div></${comp}>`,
+      `<${comp}\n:prop-name="prop"><div>foobar</div></${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"><div>foobar</div>\n</${comp}>`,
+      `<${comp}\n:prop-name="prop"><div>foobar</div>\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\n<div>foobar</div></${comp}>`,
+      `<${comp}\n:prop-name="prop">\n<div>foobar</div></${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\n<div>foobar</div>\n</${comp}>`,
+      `<${comp}\n:prop-name="prop">\n<div>foobar</div>\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop">\n\n<div>foobar</div>\n</${comp}>`,
+      `<${comp}\n:prop-name="prop">\n<div>foobar</div>\n</${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n><div>foobar</div></${comp}>`,
+      `<${comp}\n:prop-name="prop"\n><div>foobar</div></${comp}>`,
+    ],
+    [
+      `<${comp}\n:prop-name="prop"\n>\n<div>foobar</div></${comp}>`,
+      `<${comp}\n:prop-name="prop"\n>\n<div>foobar</div></${comp}>`,
     ],
     [
       `# h1 <${comp}><div>foobar</div></${comp}>`,

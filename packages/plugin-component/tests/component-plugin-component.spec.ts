@@ -8,7 +8,9 @@ const kebabCaseComponentTags = [
   'foo-bar',
   'v-123',
   'div-custom',
+  'divleading',
   'span-custom',
+  'spanleading',
   ...TAGS_VUE_RESERVED,
 ];
 const camelCaseComponentTags = kebabCaseComponentTags.map(camelize);

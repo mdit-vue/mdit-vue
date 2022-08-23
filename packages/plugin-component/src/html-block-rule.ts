@@ -42,7 +42,7 @@ const createHtmlSequences = ({
       new RegExp(
         '^</?(?!(' +
           forceInlineTags.join('|') +
-          ')(?![\\w-]))\\w[\\w-]*[\\s/>]',
+          ')(?![\\w-]))[A-Za-z][A-Za-z0-9\\-]*(?=(\\s|/?>|$))',
       ),
       /^$/,
       true,
