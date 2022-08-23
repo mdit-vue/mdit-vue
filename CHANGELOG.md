@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/mdit-vue/mdit-vue/compare/v0.9.4...v0.10.0) (2022-08-23)
+
+### Features
+
+- **plugin-headers:** resolve link property for headers ([da2954f](https://github.com/mdit-vue/mdit-vue/commit/da2954fbf89d40df2e9015784c5e66f8dd97da2a))
+- **types:** add link property to header ([7461417](https://github.com/mdit-vue/mdit-vue/commit/746141707b2cb0c0206310acfdcc6df58fd020f0))
+
 ## [0.9.4](https://github.com/mdit-vue/mdit-vue/compare/v0.9.3...v0.9.4) (2022-08-23)
 
 ### Bug Fixes
