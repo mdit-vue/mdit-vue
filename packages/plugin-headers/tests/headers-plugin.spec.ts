@@ -1,7 +1,7 @@
 import { slugify } from '@mdit-vue/shared';
 import type { MarkdownItEnv, MarkdownItHeader } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
-import anchorPlugin from 'markdown-it-anchor';
+import { default as anchorPlugin } from 'markdown-it-anchor';
 import { describe, expect, it } from 'vitest';
 import { headersPlugin } from '../src/index.js';
 
@@ -96,6 +96,7 @@ describe('@mdit-vue/plugin-headers > headers-plugin', () => {
             level: 2,
             title: 'foo',
             slug: 'foo',
+            link: '#foo',
             children: [],
           },
         ],
@@ -108,6 +109,7 @@ describe('@mdit-vue/plugin-headers > headers-plugin', () => {
             level: 2,
             title: 'foo  <code />',
             slug: 'foo-code',
+            link: '#foo-code',
             children: [],
           },
         ],
@@ -120,6 +122,7 @@ describe('@mdit-vue/plugin-headers > headers-plugin', () => {
             level: 2,
             title: 'foo  "baz"',
             slug: 'foo-baz',
+            link: '#foo-baz',
             children: [],
           },
         ],
@@ -132,6 +135,7 @@ describe('@mdit-vue/plugin-headers > headers-plugin', () => {
             level: 2,
             title: '< test >',
             slug: 'test',
+            link: '#test',
             children: [],
           },
         ],

@@ -94,6 +94,7 @@ export const resolveHeadersFromTokens = (
       level: headerLevel,
       title: format?.(title) ?? title,
       slug,
+      link: `#${slug}`,
       children: [],
     });
   }
