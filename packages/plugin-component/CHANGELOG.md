@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.4](https://github.com/mdit-vue/mdit-vue/compare/v0.9.3...v0.9.4) (2022-08-23)
+
+### Bug Fixes
+
+- **plugin-component:** handle multiline component tags correctly ([53724fa](https://github.com/mdit-vue/mdit-vue/commit/53724fa62dfd45112fe92d868d3dd5352757bd0c))
+
 ## [0.9.2](https://github.com/mdit-vue/mdit-vue/compare/v0.9.1...v0.9.2) (2022-08-18)
 
 **Note:** Version bump only for package @mdit-vue/plugin-component
