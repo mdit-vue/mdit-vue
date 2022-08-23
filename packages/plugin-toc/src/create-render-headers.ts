@@ -20,8 +20,8 @@ export const createRenderHeaders = ({
   const itemClassString = itemClass ? ` class="${htmlEscape(itemClass)}"` : '';
   const linkTagString = htmlEscape(linkTag);
   const linkClassString = linkClass ? ` class="${htmlEscape(linkClass)}"` : '';
-  const linkTo = (slug: string): string =>
-    linkTag === 'router-link' ? ` to="#${slug}"` : ` href="#${slug}"`;
+  const linkTo = (link: string): string =>
+    linkTag === 'router-link' ? ` to="${link}"` : ` href="${link}"`;
 
   const renderHeaders: RenderHeadersFn = (headers) => `\
 <${listTagString}${listClassString}>\
@@ -29,7 +29,7 @@ ${headers
   .map(
     (header) => `\
 <${itemTagString}${itemClassString}${itemClassString}>\
-<${linkTagString}${linkClassString}${linkTo(header.slug)}>\
+<${linkTagString}${linkClassString}${linkTo(header.link)}>\
 ${header.title}\
 </${linkTagString}>\
 ${header.children.length > 0 ? renderHeaders(header.children) : ''}\
