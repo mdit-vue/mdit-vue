@@ -41,10 +41,37 @@ export interface SfcBlock {
 }
 
 export interface MarkdownSfcBlocks {
+  /**
+   * The `<template>` block
+   */
   template: SfcBlock | null;
+
+  /**
+   * The common `<script>` block
+   */
   script: SfcBlock | null;
+
+  /**
+   * The `<script setup>` block
+   */
   scriptSetup: SfcBlock | null;
+
+  /**
+   * All `<script>` blocks.
+   *
+   * By default, SFC only allows one `<script>` block and one `<script setup>` block.
+   * However, some tools may support different types of `<script>`s, so we keep all of them here.
+   */
+  scripts: SfcBlock[];
+
+  /**
+   * All `<style>` blocks.
+   */
   styles: SfcBlock[];
+
+  /**
+   * All custom blocks.
+   */
   customBlocks: SfcBlock[];
 }
 

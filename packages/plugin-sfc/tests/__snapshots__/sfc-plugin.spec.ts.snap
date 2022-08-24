@@ -55,6 +55,42 @@ const foo = 'scriptSetup'
     "tagOpen": "<script setup lang=\\"ts\\">",
     "type": "script",
   },
+  "scripts": [
+    {
+      "content": "<script setup lang=\\"ts\\">
+const foo = 'scriptSetup'
+</script>",
+      "contentStripped": "
+const foo = 'scriptSetup'
+",
+      "tagClose": "</script>",
+      "tagOpen": "<script setup lang=\\"ts\\">",
+      "type": "script",
+    },
+    {
+      "content": "<script>
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+</script>",
+      "contentStripped": "
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+",
+      "tagClose": "</script>",
+      "tagOpen": "<script>",
+      "type": "script",
+    },
+  ],
   "styles": [
     {
       "content": "<style lang=\\"stylus\\">
@@ -130,6 +166,42 @@ const foo = 'scriptSetup'
     "tagOpen": "<script setup lang=\\"ts\\">",
     "type": "script",
   },
+  "scripts": [
+    {
+      "content": "<script setup lang=\\"ts\\">
+const foo = 'scriptSetup'
+</script>",
+      "contentStripped": "
+const foo = 'scriptSetup'
+",
+      "tagClose": "</script>",
+      "tagOpen": "<script setup lang=\\"ts\\">",
+      "type": "script",
+    },
+    {
+      "content": "<script>
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+</script>",
+      "contentStripped": "
+export default {
+  setup() {
+    return {
+      msg: 'script'
+    }
+  }
+}
+",
+      "tagClose": "</script>",
+      "tagOpen": "<script>",
+      "type": "script",
+    },
+  ],
   "styles": [
     {
       "content": "<style lang=\\"stylus\\">

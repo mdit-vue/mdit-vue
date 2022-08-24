@@ -28,6 +28,7 @@ export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
       template: null,
       script: null,
       scriptSetup: null,
+      scripts: [],
       styles: [],
       customBlocks: [],
     };
@@ -74,6 +75,7 @@ export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
     // extract sfc blocks to `env.sfcBlocks`
     const sfcBlock = match.groups;
     if (sfcBlock.type === TAG_NAME_SCRIPT) {
+      env.sfcBlocks.scripts.push(sfcBlock);
       if (SCRIPT_SETUP_TAG_OPEN_REGEXP.test(sfcBlock.tagOpen)) {
         env.sfcBlocks.scriptSetup = sfcBlock;
       } else {
