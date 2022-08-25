@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/mdit-vue/mdit-vue/compare/v0.10.0...v0.11.0) (2022-08-25)
+
+### Features
+
+- **plugin-sfc:** extract all script blocks ([8c39df6](https://github.com/mdit-vue/mdit-vue/commit/8c39df6e27c800b5c471955202a4204093412cc1))
+
 # [0.10.0](https://github.com/mdit-vue/mdit-vue/compare/v0.9.4...v0.10.0) (2022-08-23)
 
 ### Features
