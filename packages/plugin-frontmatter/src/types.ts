@@ -1,6 +1,6 @@
-import type { GrayMatterOption } from 'gray-matter';
+import type matter from 'gray-matter';
 
-type GrayMatterOptions = GrayMatterOption<string, GrayMatterOptions>;
+type GrayMatterOptions = matter.GrayMatterOption<string, GrayMatterOptions>;
 
 /**
  * Options of @mdit-vue/plugin-frontmatter

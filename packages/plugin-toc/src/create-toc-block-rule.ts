@@ -1,4 +1,4 @@
-import type { RuleBlock } from 'markdown-it/lib/parser_block.js';
+import type ParserBlock from 'markdown-it/lib/parser_block.js';
 import type { TocPluginOptions } from './types.js';
 
 /**
@@ -16,7 +16,7 @@ export const createTocBlockRule = ({
 }: Pick<
   Required<TocPluginOptions>,
   'pattern' | 'containerTag' | 'containerClass'
->): RuleBlock => {
+>): ParserBlock.RuleBlock => {
   return (state, startLine, endLine, silent): boolean => {
     // if it's indented more than 3 spaces, it should be a code block
     if (state.sCount[startLine] - state.blkIndent >= 4) {
