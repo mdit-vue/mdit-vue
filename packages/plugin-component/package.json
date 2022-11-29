@@ -41,7 +41,7 @@
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
-    "@vue/shared": "^3.2.41"
+    "@vue/shared": "^3.2.45"
   },
   "publishConfig": {
     "access": "public"
