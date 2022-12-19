@@ -19,21 +19,21 @@
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@lerna-lite/cli": "^1.13.0",
-    "@meteorlxy/eslint-config-prettier": "^2.18.0",
-    "@meteorlxy/eslint-config-prettier-typescript": "^2.18.2",
+    "@meteorlxy/eslint-config-prettier": "^2.19.0",
+    "@meteorlxy/eslint-config-prettier-typescript": "^2.19.0",
     "@meteorlxy/prettier-config": "^2.11.0",
     "@meteorlxy/tsconfig": "^2.16.0",
-    "@vitest/coverage-istanbul": "^0.25.6",
-    "eslint": "^8.29.0",
+    "@vitest/coverage-istanbul": "^0.25.8",
+    "eslint": "^8.30.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
     "sort-package-json": "^2.1.0",
     "typescript": "^4.9.4",
     "unbuild": "^1.0.2",
-    "vitest": "^0.25.6"
+    "vitest": "^0.25.8"
   },
-  "packageManager": "pnpm@7.18.1",
+  "packageManager": "pnpm@7.18.2",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
