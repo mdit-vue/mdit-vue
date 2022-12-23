@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/mdit-vue/mdit-vue/compare/v0.11.1...v0.11.2) (2022-12-23)
+
+### Bug Fixes
+
+- **shared:** avoid resolve headers in nested blocks ([ce146bd](https://github.com/mdit-vue/mdit-vue/commit/ce146bdb3f3c84320a9f7a0a4fac6f3f67bd67f8))
+
 ## [0.11.1](https://github.com/mdit-vue/mdit-vue/compare/v0.11.0...v0.11.1) (2022-08-30)
 
 **Note:** Version bump only for package mdit-vue
