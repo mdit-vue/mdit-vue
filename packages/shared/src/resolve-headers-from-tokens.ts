@@ -59,8 +59,8 @@ export const resolveHeadersFromTokens = (
   for (let i = 0; i < tokens.length; i += 1) {
     const token = tokens[i];
 
-    // if the token type does not match, skip
-    if (token?.type !== 'heading_open') {
+    // if the token type does not match, or the token level is not 0, skip
+    if (token?.type !== 'heading_open' || token?.level !== 0) {
       continue;
     }
 
