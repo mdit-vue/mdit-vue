@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/mdit-vue/mdit-vue/compare/v0.11.2...v0.12.0) (2023-02-10)
+
+### Features
+
+- **shared:** add shouldAllowNested option for resolveHeadersFromTokens ([9363b92](https://github.com/mdit-vue/mdit-vue/commit/9363b92c3ac3efbe47c1c58300ff10bbe93d35b3))
+
 ## [0.11.2](https://github.com/mdit-vue/mdit-vue/compare/v0.11.1...v0.11.2) (2022-12-23)
 
 ### Bug Fixes
