@@ -13,13 +13,22 @@ import type { HeadersPluginOptions } from './types.js';
  */
 export const headersPlugin: MarkdownIt.PluginWithOptions<
   HeadersPluginOptions
-> = (md, { level = [2, 3], slugify = defaultSlugify, format } = {}): void => {
+> = (
+  md,
+  {
+    level = [2, 3],
+    shouldAllowNested = false,
+    slugify = defaultSlugify,
+    format,
+  } = {},
+): void => {
   // extract headers to env
   const render = md.renderer.render.bind(md.renderer);
   md.renderer.render = (tokens, options, env: MarkdownItEnv) => {
     env.headers = resolveHeadersFromTokens(tokens, {
       level,
       shouldAllowHtml: false,
+      shouldAllowNested,
       shouldEscapeText: false,
       slugify,
       format,

@@ -59,6 +59,18 @@ console.log(env.headers);
 
   When using this plugin with [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) (recommended), this option should be a subset of markdown-it-anchor's `level` option to ensure the header slugs are existed.
 
+### shouldAllowNested
+
+- Type: `boolean`
+
+- Default: `false`
+
+- Details:
+
+  Should allow headers inside nested blocks or not.
+
+  If set to `true`, headers inside blockquote, list, etc. would also be extracted.
+
 ### slugify
 
 - Type: `(str: string) => string`

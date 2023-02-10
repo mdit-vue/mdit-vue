@@ -28,6 +28,15 @@ export interface HeadersPluginOptions {
    * @default [2,3]
    */
   level?: number[];
+
+  /**
+   * Should allow headers inside nested blocks or not
+   *
+   * If set to `true`, headers inside blockquote, list, etc. would also be extracted.
+   *
+   * @default false
+   */
+  shouldAllowNested?: boolean;
 }
 
 declare module '@mdit-vue/types' {
