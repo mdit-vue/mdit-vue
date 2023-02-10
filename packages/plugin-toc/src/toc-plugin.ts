@@ -21,6 +21,7 @@ export const tocPlugin: MarkdownIt.PluginWithOptions<TocPluginOptions> = (
     slugify = defaultSlugify,
     format,
     level = [2, 3],
+    shouldAllowNested = false,
     containerTag = 'nav',
     containerClass = 'table-of-contents',
     listTag = 'ul',
@@ -66,6 +67,7 @@ export const tocPlugin: MarkdownIt.PluginWithOptions<TocPluginOptions> = (
       resolveHeadersFromTokens(tokens, {
         level,
         shouldAllowHtml: true,
+        shouldAllowNested,
         shouldEscapeText: true,
         slugify,
         format,

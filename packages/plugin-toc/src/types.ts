@@ -33,6 +33,15 @@ export interface TocPluginOptions {
   level?: number[];
 
   /**
+   * Should allow headers inside nested blocks or not
+   *
+   * If set to `true`, headers inside blockquote, list, etc. would also be included.
+   *
+   * @default false
+   */
+  shouldAllowNested?: boolean;
+
+  /**
    * HTML tag of the TOC container
    *
    * @default 'nav'

@@ -75,6 +75,18 @@ const md = MarkdownIt({ html: true }).use(tocPlugin, {
 
   When using this plugin with [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) (recommended), this option should be a subset of markdown-it-anchor's `level` option to ensure the target links are existed.
 
+### shouldAllowNested
+
+- Type: `boolean`
+
+- Default: `false`
+
+- Details:
+
+  Should allow headers inside nested blocks or not.
+
+  If set to `true`, headers inside blockquote, list, etc. would also be included.
+
 ### containerTag
 
 - Type: `string`
