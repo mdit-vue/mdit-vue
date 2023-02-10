@@ -10,6 +10,13 @@ export interface ResolveHeadersOptions extends ResolveTitleOptions {
   level: number[];
 
   /**
+   * Should allow headers inside nested blocks or not
+   *
+   * If set to `true`, headers inside blockquote, list, etc. would also be resolved.
+   */
+  shouldAllowNested: boolean;
+
+  /**
    * A custom slugification function
    *
    * Would be ignored if the `id` attr of the token is set.
@@ -30,6 +37,7 @@ export const resolveHeadersFromTokens = (
   {
     level,
     shouldAllowHtml,
+    shouldAllowNested,
     shouldEscapeText,
     slugify,
     format,
@@ -59,8 +67,13 @@ export const resolveHeadersFromTokens = (
   for (let i = 0; i < tokens.length; i += 1) {
     const token = tokens[i];
 
-    // if the token type does not match, or the token level is not 0, skip
-    if (token?.type !== 'heading_open' || token?.level !== 0) {
+    // if the token type does not match, skip
+    if (token?.type !== 'heading_open') {
+      continue;
+    }
+
+    // if the token is inside a nested block and shouldAllowNested is false, skip
+    if (token?.level !== 0 && !shouldAllowNested) {
       continue;
     }
 

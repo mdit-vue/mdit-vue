@@ -55,56 +55,113 @@ describe('shared > resolve-headers-from-tokens', () => {
         level: [1, 2, 3, 4],
         slugify,
         shouldAllowHtml: false,
+        shouldAllowNested: false,
         shouldEscapeText: false,
       }),
     ).toEqual(expected);
   });
 
-  it('should not resolve headers in nested blocks', () => {
+  describe('shouldAllowNested', () => {
     const source = `\
 > # h1 in blockquote
 > ## h2 in blockquote
-> ### h3
-> #### h4 in blockquote
-> ##### h5 in blockquote
-> ###### h6 in blockquote
 
 - # h1 in list
 - ## h2 in list
-- ### h3 in list
-- #### h4 in list
-- ##### h5 in list
-- ###### h6 in list
 
 # h1 outside nested blocks
 ## h2 outside nested blocks
 `;
     const tokens = md.parse(source, {});
-    const expected: MarkdownItHeader[] = [
-      {
-        level: 1,
-        title: 'h1 outside nested blocks',
-        slug: 'h1-outside-nested-blocks',
-        link: '#h1-outside-nested-blocks',
-        children: [
-          {
-            level: 2,
-            title: 'h2 outside nested blocks',
-            slug: 'h2-outside-nested-blocks',
-            link: '#h2-outside-nested-blocks',
-            children: [],
-          },
-        ],
-      },
-    ];
 
-    expect(
-      resolveHeadersFromTokens(tokens, {
-        level: [1, 2, 3, 4],
-        slugify,
-        shouldAllowHtml: false,
-        shouldEscapeText: false,
-      }),
-    ).toEqual(expected);
+    it('should not resolve headers in nested blocks', () => {
+      const expected: MarkdownItHeader[] = [
+        {
+          level: 1,
+          title: 'h1 outside nested blocks',
+          slug: 'h1-outside-nested-blocks',
+          link: '#h1-outside-nested-blocks',
+          children: [
+            {
+              level: 2,
+              title: 'h2 outside nested blocks',
+              slug: 'h2-outside-nested-blocks',
+              link: '#h2-outside-nested-blocks',
+              children: [],
+            },
+          ],
+        },
+      ];
+
+      expect(
+        resolveHeadersFromTokens(tokens, {
+          level: [1, 2, 3, 4],
+          slugify,
+          shouldAllowHtml: false,
+          shouldAllowNested: false,
+          shouldEscapeText: false,
+        }),
+      ).toEqual(expected);
+    });
+
+    it('should resolve headers in nested blocks', () => {
+      const expected: MarkdownItHeader[] = [
+        {
+          level: 1,
+          title: 'h1 in blockquote',
+          slug: 'h1-in-blockquote',
+          link: '#h1-in-blockquote',
+          children: [
+            {
+              level: 2,
+              title: 'h2 in blockquote',
+              slug: 'h2-in-blockquote',
+              link: '#h2-in-blockquote',
+              children: [],
+            },
+          ],
+        },
+        {
+          level: 1,
+          title: 'h1 in list',
+          slug: 'h1-in-list',
+          link: '#h1-in-list',
+          children: [
+            {
+              level: 2,
+              title: 'h2 in list',
+              slug: 'h2-in-list',
+              link: '#h2-in-list',
+              children: [],
+            },
+          ],
+        },
+        {
+          level: 1,
+          title: 'h1 outside nested blocks',
+          slug: 'h1-outside-nested-blocks',
+          link: '#h1-outside-nested-blocks',
+          children: [
+            {
+              level: 2,
+              title: 'h2 outside nested blocks',
+              slug: 'h2-outside-nested-blocks',
+              link: '#h2-outside-nested-blocks',
+              children: [],
+            },
+          ],
+        },
+      ];
+
+      expect(
+        resolveHeadersFromTokens(tokens, {
+          level: [1, 2, 3, 4],
+          slugify,
+          shouldAllowHtml: false,
+          shouldAllowNested: true,
+          shouldEscapeText: false,
+        }),
+      ).toEqual(expected);
+    });
   });
 });
