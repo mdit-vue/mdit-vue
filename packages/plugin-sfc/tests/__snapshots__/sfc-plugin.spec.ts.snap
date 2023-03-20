@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract custom blocks correctly 1`] = `
 "<h1>hello vuepress</h1>
