@@ -5,8 +5,8 @@ import {
   TAG_NAME_STYLE,
   TAG_NAME_TEMPLATE,
 } from './constants.js';
-import { SCRIPT_SETUP_TAG_OPEN_REGEXP, createSfcRegexp } from './sfc-regexp.js';
 import type { SfcRegExpMatchArray } from './sfc-regexp.js';
+import { SCRIPT_SETUP_TAG_OPEN_REGEXP, createSfcRegexp } from './sfc-regexp.js';
 import type { SfcPluginOptions } from './types.js';
 
 /**
