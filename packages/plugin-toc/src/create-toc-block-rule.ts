@@ -9,15 +9,16 @@ import type { TocPluginOptions } from './types.js';
  *
  * @see https://github.com/nagaozen/markdown-it-toc-done-right
  */
-export const createTocBlockRule = ({
-  pattern,
-  containerTag,
-  containerClass,
-}: Pick<
-  Required<TocPluginOptions>,
-  'pattern' | 'containerTag' | 'containerClass'
->): ParserBlock.RuleBlock => {
-  return (state, startLine, endLine, silent): boolean => {
+export const createTocBlockRule =
+  ({
+    pattern,
+    containerTag,
+    containerClass,
+  }: Pick<
+    Required<TocPluginOptions>,
+    'pattern' | 'containerTag' | 'containerClass'
+  >): ParserBlock.RuleBlock =>
+  (state, startLine, endLine, silent): boolean => {
     // if it's indented more than 3 spaces, it should be a code block
     if (state.sCount[startLine] - state.blkIndent >= 4) {
       return false;
@@ -59,4 +60,3 @@ export const createTocBlockRule = ({
 
     return true;
   };
-};
