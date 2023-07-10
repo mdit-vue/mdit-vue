@@ -5,7 +5,7 @@
     "clean": "pnpm -r clean",
     "dev": "vitest",
     "format": "prettier --write .",
-    "lint": "prettier --check . && eslint --ext .cjs,.ts .",
+    "lint": "eslint --ext .cjs,.ts . && prettier --check .",
     "prepare": "husky install",
     "release": "pnpm release:check && lerna publish",
     "release:check": "pnpm clean && pnpm build && pnpm lint && pnpm test",
