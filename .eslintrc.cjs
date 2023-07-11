@@ -14,6 +14,7 @@ module.exports = {
         project: 'tsconfig.json',
       },
       rules: {
+        '@typescript-eslint/member-ordering': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         'import/extensions': [
           'error',
