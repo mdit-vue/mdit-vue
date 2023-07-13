@@ -23,7 +23,7 @@
     "@lerna-lite/cli": "^2.5.0",
     "@lerna-lite/publish": "^2.5.0",
     "@meteorlxy/eslint-config-prettier": "^2.25.0",
-    "@meteorlxy/eslint-config-prettier-typescript": "^2.27.0",
+    "@meteorlxy/eslint-config-prettier-typescript": "^2.27.1",
     "@meteorlxy/prettier-config": "^2.11.0",
     "@meteorlxy/tsconfig": "^2.23.1",
     "@vitest/coverage-istanbul": "^0.33.0",
