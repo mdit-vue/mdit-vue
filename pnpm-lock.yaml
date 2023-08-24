@@ -24,8 +24,8 @@ importers:
         specifier: ^2.27.3
         version: 2.27.3(@typescript-eslint/parser@6.4.1)(eslint@8.47.0)
       '@meteorlxy/eslint-config-prettier-typescript':
-        specifier: ^2.27.3
-        version: 2.27.3(@typescript-eslint/parser@6.4.1)(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6)
+        specifier: ^2.28.0
+        version: 2.28.0(@typescript-eslint/parser@6.4.1)(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6)
       '@meteorlxy/prettier-config':
         specifier: ^2.11.0
         version: 2.11.0
@@ -1261,11 +1261,11 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /@meteorlxy/eslint-config-prettier-typescript@2.27.3(@typescript-eslint/parser@6.4.1)(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6):
-    resolution: {integrity: sha512-X7fMQsAfC9LVW5T9yhOgBJByPVOcULaIMBnQ3x+zhUOKFx1ZBy3usCVfaYOeiYYybWr+tG+aRBkGX1IwiH2EuA==}
+  /@meteorlxy/eslint-config-prettier-typescript@2.28.0(@typescript-eslint/parser@6.4.1)(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6):
+    resolution: {integrity: sha512-rbqp/ith600L/ZrH99X/g7J9gCXvmyb49YE8qtylTr3CiIOgx6R5J/Eh/4s21myySWbkrtNqoHMffn9tOBaIhA==}
     dependencies:
       '@meteorlxy/eslint-config-prettier': 2.27.3(@typescript-eslint/parser@6.4.1)(eslint@8.47.0)
-      '@meteorlxy/eslint-config-typescript': 2.27.3(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6)
+      '@meteorlxy/eslint-config-typescript': 2.28.0(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint
@@ -1289,8 +1289,8 @@ packages:
       - supports-color
     dev: true
 
-  /@meteorlxy/eslint-config-typescript@2.27.3(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6):
-    resolution: {integrity: sha512-DaM1W0DJy8WGtqJJ09UXpKXQsRWq5JHXCwsR8Um7uRkIL843LIajUsChBywOv+eXKvqMTehVxbE9yA0pDzSpUQ==}
+  /@meteorlxy/eslint-config-typescript@2.28.0(eslint-plugin-import@2.28.1)(eslint@8.47.0)(typescript@5.1.6):
+    resolution: {integrity: sha512-xQGdGvJcMQT1Oecoj443TVPN/uGmOepDbcKVxG2mDbGODo8I6i85iT2/iPh3IwNLN3IlwIVKXItbxeumZWjtOw==}
     dependencies:
       '@meteorlxy/eslint-config': 2.27.3(@typescript-eslint/parser@6.4.1)(eslint@8.47.0)
       '@typescript-eslint/eslint-plugin': 6.4.1(@typescript-eslint/parser@6.4.1)(eslint@8.47.0)(typescript@5.1.6)
