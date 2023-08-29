@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "^13.0.0",
+    "@types/markdown-it": "^13.0.1",
     "markdown-it": "^13.0.1"
   },
   "publishConfig": {
