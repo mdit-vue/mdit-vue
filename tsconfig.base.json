@@ -2,9 +2,9 @@
   "extends": "@meteorlxy/tsconfig/base.json",
   "compilerOptions": {
     "esModuleInterop": true,
-    "lib": ["ES2020"],
+    "lib": ["ES2021"],
     "module": "ES2020",
-    "moduleResolution": "Node16",
-    "target": "ES2020"
+    "moduleResolution": "Bundler",
+    "target": "ES2021"
   }
 }
