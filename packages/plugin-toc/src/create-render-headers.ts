@@ -28,7 +28,7 @@ export const createRenderHeaders = ({
 ${headers
   .map(
     (header) => `\
-<${itemTagString}${itemClassString}${itemClassString}>\
+<${itemTagString}${itemClassString}>\
 <${linkTagString}${linkClassString}${linkTo(header.link)}>\
 ${header.title}\
 </${linkTagString}>\
