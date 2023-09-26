@@ -9,6 +9,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **plugin-toc:** remove duplicate itemClass ([#7](https://github.com/mdit-vue/mdit-vue/issues/7)) ([7e0f1f0](https://github.com/mdit-vue/mdit-vue/commit/7e0f1f0283093cb29016b3798a5b503cf37a698a))
 
+### BREAKING CHANGES
+
+- drop support for node 16
+
 ## [0.12.1](https://github.com/mdit-vue/mdit-vue/compare/v0.12.0...v0.12.1) (2023-08-24)
 
 **Note:** Version bump only for package mdit-vue
