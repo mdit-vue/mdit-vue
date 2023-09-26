@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/plugin-title",
-  "version": "0.12.1",
+  "version": "1.0.0",
   "description": "A markdown-it plugin to get markdown page title",
   "keywords": [
     "markdown-it",
