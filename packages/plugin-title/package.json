@@ -44,8 +44,8 @@
   "dependencies": {
     "@mdit-vue/shared": "workspace:*",
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "^13.0.1",
-    "markdown-it": "^13.0.1"
+    "@types/markdown-it": "^13.0.2",
+    "markdown-it": "^13.0.2"
   },
   "devDependencies": {
     "@types/markdown-it-emoji": "^2.0.2",
