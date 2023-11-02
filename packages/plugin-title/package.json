@@ -44,11 +44,11 @@
   "dependencies": {
     "@mdit-vue/shared": "workspace:*",
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "^13.0.2",
+    "@types/markdown-it": "^13.0.5",
     "markdown-it": "^13.0.2"
   },
   "devDependencies": {
-    "@types/markdown-it-emoji": "^2.0.2",
+    "@types/markdown-it-emoji": "^2.0.3",
     "markdown-it-emoji": "^2.0.2"
   },
   "publishConfig": {

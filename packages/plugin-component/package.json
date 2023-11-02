@@ -42,11 +42,11 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@types/markdown-it": "^13.0.2",
+    "@types/markdown-it": "^13.0.5",
     "markdown-it": "^13.0.2"
   },
   "devDependencies": {
-    "@vue/shared": "^3.3.4"
+    "@vue/shared": "^3.3.7"
   },
   "publishConfig": {
     "access": "public"
