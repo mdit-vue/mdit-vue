@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "^13.0.5",
+    "@types/markdown-it": "^13.0.6",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.2"
   },

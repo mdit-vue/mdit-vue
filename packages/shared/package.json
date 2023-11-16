@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "^13.0.5",
+    "@types/markdown-it": "^13.0.6",
     "markdown-it": "^13.0.2"
   },
   "publishConfig": {
