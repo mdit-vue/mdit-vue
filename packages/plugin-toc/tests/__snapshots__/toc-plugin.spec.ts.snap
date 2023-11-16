@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render class name correctly > complexTree 1`] = `
-"<nav><ul class=\\"toc-list\\"><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#s1-1\\">s1-1</a><ul class=\\"toc-list\\"><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#s1-1-1\\">s1-1-1</a></li><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#s1-1-2\\">s1-1-2</a></li><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#s1-1-3\\">s1-1-3</a></li></ul></li><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#s1-2\\">s1-2</a></li><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#s1-3\\">s1-3</a><ul class=\\"toc-list\\"><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#s1-3-2\\">s1-3-2</a></li></ul></li></ul></nav>
+"<nav><ul class="toc-list"><li class="toc-item"><a class="toc-link" href="#s1-1">s1-1</a><ul class="toc-list"><li class="toc-item"><a class="toc-link" href="#s1-1-1">s1-1-1</a></li><li class="toc-item"><a class="toc-link" href="#s1-1-2">s1-1-2</a></li><li class="toc-item"><a class="toc-link" href="#s1-1-3">s1-1-3</a></li></ul></li><li class="toc-item"><a class="toc-link" href="#s1-2">s1-2</a></li><li class="toc-item"><a class="toc-link" href="#s1-3">s1-3</a><ul class="toc-list"><li class="toc-item"><a class="toc-link" href="#s1-3-2">s1-3-2</a></li></ul></li></ul></nav>
 <h1>s1</h1>
 <h2>s1-1</h2>
 <h3>s1-1-1</h3>
@@ -19,7 +19,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render class name correctly 
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render class name correctly > reversedTree 1`] = `
-"<nav><ul class=\\"toc-list\\"><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#h3\\">h3</a></li><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#h2\\">h2</a></li></ul></nav>
+"<nav><ul class="toc-list"><li class="toc-item"><a class="toc-link" href="#h3">h3</a></li><li class="toc-item"><a class="toc-link" href="#h2">h2</a></li></ul></nav>
 <h6>h6</h6>
 <h5>h5</h5>
 <h4>h4</h4>
@@ -30,7 +30,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render class name correctly 
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render class name correctly > simpleTree 1`] = `
-"<nav><ul class=\\"toc-list\\"><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#h2\\">h2</a><ul class=\\"toc-list\\"><li class=\\"toc-item\\"><a class=\\"toc-link\\" href=\\"#h3\\">h3</a></li></ul></li></ul></nav>
+"<nav><ul class="toc-list"><li class="toc-item"><a class="toc-link" href="#h2">h2</a><ul class="toc-list"><li class="toc-item"><a class="toc-link" href="#h3">h3</a></li></ul></li></ul></nav>
 <h1>h1</h1>
 <h2>h2</h2>
 <h3>h3</h3>
@@ -41,7 +41,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render class name correctly 
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc (h1, h2, h3, h4) > complexTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><a href=\\"#s1\\">s1</a><ul><li><a href=\\"#s1-1\\">s1-1</a><ul><li><a href=\\"#s1-1-1\\">s1-1-1</a><ul><li><a href=\\"#s1-1-1-1\\">s1-1-1-1</a></li></ul></li><li><a href=\\"#s1-1-2\\">s1-1-2</a></li><li><a href=\\"#s1-1-3\\">s1-1-3</a><ul><li><a href=\\"#s1-1-3-1\\">s1-1-3-1</a></li></ul></li></ul></li><li><a href=\\"#s1-2\\">s1-2</a></li><li><a href=\\"#s1-3\\">s1-3</a><ul><li><a href=\\"#s1-3-2\\">s1-3-2</a><ul><li><a href=\\"#s1-3-2-1\\">s1-3-2-1</a></li></ul></li></ul></li></ul></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><a href="#s1">s1</a><ul><li><a href="#s1-1">s1-1</a><ul><li><a href="#s1-1-1">s1-1-1</a><ul><li><a href="#s1-1-1-1">s1-1-1-1</a></li></ul></li><li><a href="#s1-1-2">s1-1-2</a></li><li><a href="#s1-1-3">s1-1-3</a><ul><li><a href="#s1-1-3-1">s1-1-3-1</a></li></ul></li></ul></li><li><a href="#s1-2">s1-2</a></li><li><a href="#s1-3">s1-3</a><ul><li><a href="#s1-3-2">s1-3-2</a><ul><li><a href="#s1-3-2-1">s1-3-2-1</a></li></ul></li></ul></li></ul></li></ul></nav>
 <h1>s1</h1>
 <h2>s1-1</h2>
 <h3>s1-1-1</h3>
@@ -59,7 +59,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc (h1, h2, h3, h4) 
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc (h1, h2, h3, h4) > reversedTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><a href=\\"#h4\\">h4</a></li><li><a href=\\"#h3\\">h3</a></li><li><a href=\\"#h2\\">h2</a></li><li><a href=\\"#h1\\">h1</a></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><a href="#h4">h4</a></li><li><a href="#h3">h3</a></li><li><a href="#h2">h2</a></li><li><a href="#h1">h1</a></li></ul></nav>
 <h6>h6</h6>
 <h5>h5</h5>
 <h4>h4</h4>
@@ -70,7 +70,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc (h1, h2, h3, h4) 
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc (h1, h2, h3, h4) > simpleTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><a href=\\"#h1\\">h1</a><ul><li><a href=\\"#h2\\">h2</a><ul><li><a href=\\"#h3\\">h3</a><ul><li><a href=\\"#h4\\">h4</a></li></ul></li></ul></li></ul></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><a href="#h1">h1</a><ul><li><a href="#h2">h2</a><ul><li><a href="#h3">h3</a><ul><li><a href="#h4">h4</a></li></ul></li></ul></li></ul></li></ul></nav>
 <h1>h1</h1>
 <h2>h2</h2>
 <h3>h3</h3>
@@ -81,7 +81,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc (h1, h2, h3, h4) 
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with RouterLink > complexTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><RouterLink href=\\"#s1-1\\">s1-1</RouterLink><ul><li><RouterLink href=\\"#s1-1-1\\">s1-1-1</RouterLink></li><li><RouterLink href=\\"#s1-1-2\\">s1-1-2</RouterLink></li><li><RouterLink href=\\"#s1-1-3\\">s1-1-3</RouterLink></li></ul></li><li><RouterLink href=\\"#s1-2\\">s1-2</RouterLink></li><li><RouterLink href=\\"#s1-3\\">s1-3</RouterLink><ul><li><RouterLink href=\\"#s1-3-2\\">s1-3-2</RouterLink></li></ul></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><RouterLink href="#s1-1">s1-1</RouterLink><ul><li><RouterLink href="#s1-1-1">s1-1-1</RouterLink></li><li><RouterLink href="#s1-1-2">s1-1-2</RouterLink></li><li><RouterLink href="#s1-1-3">s1-1-3</RouterLink></li></ul></li><li><RouterLink href="#s1-2">s1-2</RouterLink></li><li><RouterLink href="#s1-3">s1-3</RouterLink><ul><li><RouterLink href="#s1-3-2">s1-3-2</RouterLink></li></ul></li></ul></nav>
 <h1>s1</h1>
 <h2>s1-1</h2>
 <h3>s1-1-1</h3>
@@ -99,7 +99,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with RouterLink >
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with RouterLink > reversedTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><RouterLink href=\\"#h3\\">h3</RouterLink></li><li><RouterLink href=\\"#h2\\">h2</RouterLink></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><RouterLink href="#h3">h3</RouterLink></li><li><RouterLink href="#h2">h2</RouterLink></li></ul></nav>
 <h6>h6</h6>
 <h5>h5</h5>
 <h4>h4</h4>
@@ -110,7 +110,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with RouterLink >
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with RouterLink > simpleTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><RouterLink href=\\"#h2\\">h2</RouterLink><ul><li><RouterLink href=\\"#h3\\">h3</RouterLink></li></ul></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><RouterLink href="#h2">h2</RouterLink><ul><li><RouterLink href="#h3">h3</RouterLink></li></ul></li></ul></nav>
 <h1>h1</h1>
 <h2>h2</h2>
 <h3>h3</h3>
@@ -121,7 +121,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with RouterLink >
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with default option (h2, h3) > complexTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><a href=\\"#s1-1\\">s1-1</a><ul><li><a href=\\"#s1-1-1\\">s1-1-1</a></li><li><a href=\\"#s1-1-2\\">s1-1-2</a></li><li><a href=\\"#s1-1-3\\">s1-1-3</a></li></ul></li><li><a href=\\"#s1-2\\">s1-2</a></li><li><a href=\\"#s1-3\\">s1-3</a><ul><li><a href=\\"#s1-3-2\\">s1-3-2</a></li></ul></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><a href="#s1-1">s1-1</a><ul><li><a href="#s1-1-1">s1-1-1</a></li><li><a href="#s1-1-2">s1-1-2</a></li><li><a href="#s1-1-3">s1-1-3</a></li></ul></li><li><a href="#s1-2">s1-2</a></li><li><a href="#s1-3">s1-3</a><ul><li><a href="#s1-3-2">s1-3-2</a></li></ul></li></ul></nav>
 <h1>s1</h1>
 <h2>s1-1</h2>
 <h3>s1-1-1</h3>
@@ -139,7 +139,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with default opti
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with default option (h2, h3) > reversedTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><a href=\\"#h3\\">h3</a></li><li><a href=\\"#h2\\">h2</a></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><a href="#h3">h3</a></li><li><a href="#h2">h2</a></li></ul></nav>
 <h6>h6</h6>
 <h5>h5</h5>
 <h4>h4</h4>
@@ -150,7 +150,7 @@ exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with default opti
 `;
 
 exports[`@mdit-vue/plugin-toc > toc-plugin > should render toc with default option (h2, h3) > simpleTree 1`] = `
-"<nav class=\\"table-of-contents\\"><ul><li><a href=\\"#h2\\">h2</a><ul><li><a href=\\"#h3\\">h3</a></li></ul></li></ul></nav>
+"<nav class="table-of-contents"><ul><li><a href="#h2">h2</a><ul><li><a href="#h3">h3</a></li></ul></li></ul></nav>
 <h1>h1</h1>
 <h2>h2</h2>
 <h3>h3</h3>

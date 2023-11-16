@@ -45,26 +45,26 @@ export default {
     "type": "script",
   },
   "scriptSetup": {
-    "content": "<script setup lang=\\"ts\\">
+    "content": "<script setup lang="ts">
 const foo = 'scriptSetup'
 </script>",
     "contentStripped": "
 const foo = 'scriptSetup'
 ",
     "tagClose": "</script>",
-    "tagOpen": "<script setup lang=\\"ts\\">",
+    "tagOpen": "<script setup lang="ts">",
     "type": "script",
   },
   "scripts": [
     {
-      "content": "<script setup lang=\\"ts\\">
+      "content": "<script setup lang="ts">
 const foo = 'scriptSetup'
 </script>",
       "contentStripped": "
 const foo = 'scriptSetup'
 ",
       "tagClose": "</script>",
-      "tagOpen": "<script setup lang=\\"ts\\">",
+      "tagOpen": "<script setup lang="ts">",
       "type": "script",
     },
     {
@@ -93,7 +93,7 @@ export default {
   ],
   "styles": [
     {
-      "content": "<style lang=\\"stylus\\">
+      "content": "<style lang="stylus">
 .h1
   red
 </style>",
@@ -102,7 +102,7 @@ export default {
   red
 ",
       "tagClose": "</style>",
-      "tagOpen": "<style lang=\\"stylus\\">",
+      "tagOpen": "<style lang="stylus">",
       "type": "style",
     },
   ],
@@ -156,26 +156,26 @@ export default {
     "type": "script",
   },
   "scriptSetup": {
-    "content": "<script setup lang=\\"ts\\">
+    "content": "<script setup lang="ts">
 const foo = 'scriptSetup'
 </script>",
     "contentStripped": "
 const foo = 'scriptSetup'
 ",
     "tagClose": "</script>",
-    "tagOpen": "<script setup lang=\\"ts\\">",
+    "tagOpen": "<script setup lang="ts">",
     "type": "script",
   },
   "scripts": [
     {
-      "content": "<script setup lang=\\"ts\\">
+      "content": "<script setup lang="ts">
 const foo = 'scriptSetup'
 </script>",
       "contentStripped": "
 const foo = 'scriptSetup'
 ",
       "tagClose": "</script>",
-      "tagOpen": "<script setup lang=\\"ts\\">",
+      "tagOpen": "<script setup lang="ts">",
       "type": "script",
     },
     {
@@ -204,7 +204,7 @@ export default {
   ],
   "styles": [
     {
-      "content": "<style lang=\\"stylus\\">
+      "content": "<style lang="stylus">
 .h1
   red
 </style>",
@@ -213,7 +213,7 @@ export default {
   red
 ",
       "tagClose": "</style>",
-      "tagOpen": "<style lang=\\"stylus\\">",
+      "tagOpen": "<style lang="stylus">",
       "type": "style",
     },
   ],

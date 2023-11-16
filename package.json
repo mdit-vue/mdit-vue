@@ -27,7 +27,7 @@
     "@meteorlxy/eslint-config-prettier-typescript": "^2.28.1",
     "@meteorlxy/prettier-config": "^2.11.0",
     "@meteorlxy/tsconfig": "^2.29.0",
-    "@vitest/coverage-istanbul": "^0.34.6",
+    "@vitest/coverage-istanbul": "1.0.0-beta.4",
     "eslint": "^8.53.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
@@ -35,7 +35,7 @@
     "sort-package-json": "^2.6.0",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
-    "vitest": "^0.34.6"
+    "vitest": "1.0.0-beta.4"
   },
   "packageManager": "pnpm@8.10.5"
 }
