@@ -1,4 +1,4 @@
-import blockNames from 'markdown-it/lib/common/html_blocks.js';
+import blockNames from 'markdown-it/lib/common/html_blocks.mjs';
 
 /**
  * List of block tags

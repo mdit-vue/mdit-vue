@@ -1,6 +1,6 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
-import emojiPlugin from 'markdown-it-emoji';
+import { full as emojiPlugin } from 'markdown-it-emoji';
 import { describe, expect, it } from 'vitest';
 import { titlePlugin } from '../src/index.js';
 
