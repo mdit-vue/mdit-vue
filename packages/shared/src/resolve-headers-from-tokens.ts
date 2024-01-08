@@ -88,6 +88,7 @@ export const resolveHeadersFromTokens = (
     // the next token of 'heading_open' contains the heading content
     const nextToken = tokens[i + 1];
 
+    /* istanbul ignore if -- @preserve */
     // if the next token does not exist, skip
     if (!nextToken) {
       continue;

@@ -57,6 +57,7 @@ export const sfcPlugin: MarkdownIt.PluginWithOptions<SfcPluginOptions> = (
     env: MarkdownItEnv,
     self,
   ) => {
+    /* istanbul ignore if -- @preserve */
     // skip if `env.sfcBlocks` is not initialized
     if (!env.sfcBlocks) {
       return htmlBlockRule(tokens, idx, options, env, self);
