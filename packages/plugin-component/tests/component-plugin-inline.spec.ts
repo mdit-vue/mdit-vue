@@ -28,4 +28,17 @@ describe('@mdit-vue/plugin-component > component-plugin', () => {
       });
     });
   });
+
+  it('should render invalid html inline tags correctly', () => {
+    const md = MarkdownIt({ html: true }).use(componentPlugin);
+
+    const source = ['<1 />', '<中文 />', '<@foo />'].join('\n\n');
+    const expected =
+      ['&lt;1 /&gt;', '&lt;中文 /&gt;', '&lt;@foo /&gt;']
+        .map((item) => `<p>${item}</p>`)
+        .join('\n') + '\n';
+
+    const rendered = md.render(source);
+    expect(rendered).toBe(expected);
+  });
 });
