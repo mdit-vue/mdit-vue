@@ -13,8 +13,11 @@
     "test": "vitest run"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "*.{cjs,ts}": "eslint --fix",
+    "*.!(cjs|ts)": "prettier --write --ignore-unknown",
+    "*.(cjs|ts)": [
+      "eslint --fix",
+      "prettier --write"
+    ],
     "package.json": "sort-package-json"
   },
   "prettier": "@meteorlxy/prettier-config",
