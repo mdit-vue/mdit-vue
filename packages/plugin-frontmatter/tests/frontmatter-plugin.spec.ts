@@ -150,7 +150,7 @@ bar: bar
 
 describe('@mdit-vue/plugin-frontmatter > frontmatter-plugin', () => {
   testCases.forEach(
-    ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) =>
+    ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) => {
       it(`case ${i}`, () => {
         const md = MarkdownIt().use(frontmatterPlugin, options);
         const env: MarkdownItEnv = { ...rawEnv };
@@ -158,6 +158,7 @@ describe('@mdit-vue/plugin-frontmatter > frontmatter-plugin', () => {
         expect(env.content).toEqual(content);
         expect(env.frontmatter).toEqual(frontmatter);
         expect(env.excerpt).toEqual(excerpt);
-      }),
+      });
+    },
   );
 });

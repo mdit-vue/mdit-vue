@@ -21,8 +21,8 @@ npm i @mdit-vue/plugin-toc
 ## Usage
 
 ```ts
-import MarkdownIt from 'markdown-it';
 import { tocPlugin } from '@mdit-vue/plugin-toc';
+import MarkdownIt from 'markdown-it';
 
 const md = MarkdownIt({ html: true }).use(tocPlugin, {
   // options

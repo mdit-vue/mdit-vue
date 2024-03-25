@@ -1,6 +1,5 @@
 import { slugify } from '@mdit-vue/shared';
 import MarkdownIt from 'markdown-it';
-// eslint-disable-next-line import/no-named-default
 import { default as anchorPlugin } from 'markdown-it-anchor';
 import { describe, expect, it } from 'vitest';
 import { tocPlugin } from '../src/index.js';
@@ -165,14 +164,14 @@ describe('@mdit-vue/plugin-toc > toc-plugin', () => {
       ],
     ];
 
-    testCases.forEach(([source, expected], i) =>
+    testCases.forEach(([source, expected], i) => {
       it(`case ${i}`, () => {
         expect(md.render(source)).toEqual(`\
 <nav class="table-of-contents"><ul><li><a href="#${expected.slug}">${expected.title}</a></li></ul></nav>
 <h2 id="${expected.slug}" tabindex="-1"><a class="header-anchor" href="#${expected.slug}" aria-hidden="true">#</a> ${expected.h2}</h2>
 `);
-      }),
-    );
+      });
+    });
   });
 
   describe('edge cases', () => {

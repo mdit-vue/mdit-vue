@@ -68,12 +68,12 @@ export const resolveHeadersFromTokens = (
     const token = tokens[i];
 
     // if the token type does not match, skip
-    if (token?.type !== 'heading_open') {
+    if (token.type !== 'heading_open') {
       continue;
     }
 
     // if the token is inside a nested block and shouldAllowNested is false, skip
-    if (token?.level !== 0 && !shouldAllowNested) {
+    if (token.level !== 0 && !shouldAllowNested) {
       continue;
     }
 
@@ -88,8 +88,9 @@ export const resolveHeadersFromTokens = (
     // the next token of 'heading_open' contains the heading content
     const nextToken = tokens[i + 1];
 
-    /* istanbul ignore if -- @preserve */
     // if the next token does not exist, skip
+    /* istanbul ignore if -- @preserve */
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!nextToken) {
       continue;
     }

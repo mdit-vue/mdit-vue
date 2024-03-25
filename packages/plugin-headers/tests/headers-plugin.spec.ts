@@ -142,12 +142,12 @@ describe('@mdit-vue/plugin-headers > headers-plugin', () => {
       ],
     ];
 
-    testCases.forEach(([source, expected], i) =>
+    testCases.forEach(([source, expected], i) => {
       it(`case ${i}`, () => {
         const env: MarkdownItEnv = {};
         md.render(source, env);
         expect(env.headers).toEqual(expected);
-      }),
-    );
+      });
+    });
   });
 });

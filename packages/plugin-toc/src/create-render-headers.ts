@@ -12,7 +12,7 @@ export const createRenderHeaders = ({
   linkClass,
 }: Pick<
   Required<TocPluginOptions>,
-  'listTag' | 'listClass' | 'itemClass' | 'linkTag' | 'linkClass'
+  'itemClass' | 'linkClass' | 'linkTag' | 'listClass' | 'listTag'
 >): RenderHeadersFn => {
   const listTagString = htmlEscape(listTag);
   const listClassString = listClass ? ` class="${htmlEscape(listClass)}"` : '';

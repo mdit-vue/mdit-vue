@@ -16,7 +16,7 @@ export const createTocBlockRule =
     containerClass,
   }: Pick<
     Required<TocPluginOptions>,
-    'pattern' | 'containerTag' | 'containerClass'
+    'containerClass' | 'containerTag' | 'pattern'
   >): ParserBlock.RuleBlock =>
   (state, startLine, endLine, silent): boolean => {
     // if it's indented more than 3 spaces, it should be a code block

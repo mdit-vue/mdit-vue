@@ -23,8 +23,8 @@ declare module '@mdit-vue/types' {
 ```
 
 ```ts
-import MarkdownIt from 'markdown-it';
 import type { MarkdownItEnv } from '@mdit-vue/types';
+import MarkdownIt from 'markdown-it';
 
 const md = MarkdownIt({ html: true });
 const env: MarkdownItEnv = {};

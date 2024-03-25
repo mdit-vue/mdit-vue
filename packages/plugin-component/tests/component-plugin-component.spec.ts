@@ -39,13 +39,13 @@ describe('@mdit-vue/plugin-component > component-plugin', () => {
 
   describe('should not render component tags if `html` option is disabled', () => {
     const md = MarkdownIt({ html: false }).use(componentPlugin);
-    componentTags.forEach((comp, index) =>
+    componentTags.forEach((comp, index) => {
       it(`case ${index}`, () => {
         const source = `<${comp}>foobar</${comp}>`;
         const expected = `<p>&lt;${comp}&gt;foobar&lt;/${comp}&gt;</p>\n`;
         const rendered = md.render(source);
         expect(rendered).toBe(expected);
-      }),
-    );
+      });
+    });
   });
 });

@@ -1,20 +1,21 @@
 {
   "name": "@mdit-vue/monorepo",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "pnpm -r build",
     "clean": "pnpm -r clean",
     "dev": "vitest",
     "format": "prettier --write .",
-    "lint": "eslint --ext .cjs,.ts . && prettier --check .",
+    "lint": "eslint . && prettier --check .",
     "prepare": "husky",
     "release": "pnpm release:check && lerna publish",
     "release:check": "pnpm clean && pnpm build && pnpm lint && pnpm test",
     "test": "vitest run"
   },
   "lint-staged": {
-    "*.!(cjs|ts)": "prettier --write --ignore-unknown",
-    "*.(cjs|ts)": [
+    "*.!(js|ts)": "prettier --write --ignore-unknown",
+    "*.(js|ts)": [
       "eslint --fix",
       "prettier --write"
     ],
@@ -26,10 +27,9 @@
     "@commitlint/config-conventional": "^19.0.3",
     "@lerna-lite/cli": "^3.3.1",
     "@lerna-lite/publish": "^3.3.1",
-    "@meteorlxy/eslint-config-prettier": "^2.27.3",
-    "@meteorlxy/eslint-config-prettier-typescript": "^2.28.1",
-    "@meteorlxy/prettier-config": "^2.11.0",
-    "@meteorlxy/tsconfig": "^2.29.0",
+    "@meteorlxy/eslint-config": "^3.1.0",
+    "@meteorlxy/prettier-config": "^3.0.0",
+    "@meteorlxy/tsconfig": "^3.0.0",
     "@vitest/coverage-istanbul": "^1.3.1",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",

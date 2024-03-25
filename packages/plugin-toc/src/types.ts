@@ -60,7 +60,7 @@ export interface TocPluginOptions {
    *
    * @default 'ul'
    */
-  listTag?: 'ul' | 'ol';
+  listTag?: 'ol' | 'ul';
 
   /**
    * The class for the TOC list

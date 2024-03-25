@@ -20,9 +20,9 @@ npm i @mdit-vue/plugin-sfc
 This plugin will only take effects when the `html` option of markdown-it is enabled:
 
 ```ts
-import MarkdownIt from 'markdown-it';
 import { sfcPlugin } from '@mdit-vue/plugin-sfc';
 import type { MarkdownItEnv } from '@mdit-vue/types';
+import MarkdownIt from 'markdown-it';
 
 const md = MarkdownIt({ html: true }).use(sfcPlugin, {
   // options

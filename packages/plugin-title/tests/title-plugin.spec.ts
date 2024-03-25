@@ -13,13 +13,13 @@ describe('@mdit-vue/plugin-title > title-plugin', () => {
       ['# title from h1 `foobar`', 'title from h1 foobar'],
     ];
 
-    testCases.forEach(([source, expected]) =>
+    testCases.forEach(([source, expected]) => {
       it(source, () => {
         const env: MarkdownItEnv = {};
         md.render(source, env);
         expect(env.title).toEqual(expected);
-      }),
-    );
+      });
+    });
   });
 
   it('should extract empty title', () => {

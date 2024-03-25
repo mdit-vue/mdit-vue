@@ -10,9 +10,11 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
+  "eslint.experimental.useFlatConfig": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
+    "markdown",
     "typescript",
     "typescriptreact"
   ],
