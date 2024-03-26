@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm -r build",
-    "clean": "pnpm -r clean",
+    "build": "pnpm -r --stream build",
+    "clean": "pnpm -r --stream clean",
     "dev": "vitest",
     "format": "prettier --write .",
     "lint": "eslint . && prettier --check .",
