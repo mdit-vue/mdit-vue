@@ -8,7 +8,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "[markdown]": {
-    "files.trimTrailingWhitespace": false
+    "files.trimTrailingWhitespace": false,
   },
   "eslint.experimental.useFlatConfig": true,
   "eslint.validate": [
@@ -16,7 +16,7 @@
     "javascriptreact",
     "markdown",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
   ],
-  "cSpell.words": ["frontmatter", "mdit", "slidev", "slugification"]
+  "cSpell.words": ["frontmatter", "mdit", "slidev", "slugification"],
 }
