@@ -25,9 +25,9 @@
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
-    "@lerna-lite/cli": "^3.3.1",
-    "@lerna-lite/publish": "^3.3.1",
-    "@meteorlxy/eslint-config": "^3.3.0",
+    "@lerna-lite/cli": "^3.3.2",
+    "@lerna-lite/publish": "^3.3.2",
+    "@meteorlxy/eslint-config": "^3.3.1",
     "@meteorlxy/prettier-config": "^3.2.0",
     "@meteorlxy/tsconfig": "^3.0.0",
     "@vitest/coverage-istanbul": "^1.4.0",
@@ -36,7 +36,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "sort-package-json": "^2.10.0",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.4",
     "unbuild": "^2.0.0",
     "vitest": "^1.4.0"
   },
