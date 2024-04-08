@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/mdit-vue/mdit-vue/compare/v2.0.0...v2.1.0) (2024-04-08)
+
+**Note:** Version bump only for package @mdit-vue/types
+
 # [2.0.0](https://github.com/mdit-vue/mdit-vue/compare/v1.0.0...v2.0.0) (2023-12-08)
 
 **Note:** Version bump only for package @mdit-vue/types

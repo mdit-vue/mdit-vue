@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/mdit-vue/mdit-vue/compare/v2.0.0...v2.1.0) (2024-04-08)
+
+### Features
+
+- upgrade markdown-it types to v14 ([6839be8](https://github.com/mdit-vue/mdit-vue/commit/6839be8c090c9c1faa73c17a048a37cdf53b4625))
+
 # [2.0.0](https://github.com/mdit-vue/mdit-vue/compare/v1.0.0...v2.0.0) (2023-12-08)
 
 ### Features
