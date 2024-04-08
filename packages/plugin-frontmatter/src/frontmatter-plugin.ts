@@ -1,6 +1,6 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import grayMatter from 'gray-matter';
-import type MarkdownIt from 'markdown-it';
+import type { PluginWithOptions } from 'markdown-it';
 import type { FrontmatterPluginOptions } from './types.js';
 
 /**
@@ -8,9 +8,10 @@ import type { FrontmatterPluginOptions } from './types.js';
  *
  * Extract them into env
  */
-export const frontmatterPlugin: MarkdownIt.PluginWithOptions<
-  FrontmatterPluginOptions
-> = (md, { grayMatterOptions, renderExcerpt = true } = {}): void => {
+export const frontmatterPlugin: PluginWithOptions<FrontmatterPluginOptions> = (
+  md,
+  { grayMatterOptions, renderExcerpt = true } = {},
+): void => {
   const render = md.render.bind(md);
   md.render = (src, env: MarkdownItEnv = {}) => {
     const { data, content, excerpt = '' } = grayMatter(src, grayMatterOptions);

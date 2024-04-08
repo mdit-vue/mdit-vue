@@ -1,4 +1,4 @@
-import type Token from 'markdown-it/lib/token.js';
+import type Token from 'markdown-it/lib/token.mjs';
 import { htmlEscape } from './html-escape.js';
 
 interface TokenMeta {

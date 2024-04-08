@@ -3,7 +3,7 @@ import {
   resolveHeadersFromTokens,
 } from '@mdit-vue/shared';
 import type { MarkdownItEnv } from '@mdit-vue/types';
-import type MarkdownIt from 'markdown-it';
+import type { PluginWithOptions } from 'markdown-it';
 import type { HeadersPluginOptions } from './types.js';
 
 /**
@@ -11,9 +11,7 @@ import type { HeadersPluginOptions } from './types.js';
  *
  * Extract them into env
  */
-export const headersPlugin: MarkdownIt.PluginWithOptions<
-  HeadersPluginOptions
-> = (
+export const headersPlugin: PluginWithOptions<HeadersPluginOptions> = (
   md,
   {
     level = [2, 3],

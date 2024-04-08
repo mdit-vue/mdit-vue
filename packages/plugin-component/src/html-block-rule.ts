@@ -1,4 +1,4 @@
-import type ParserBlock from 'markdown-it/lib/parser_block.js';
+import type ParserBlock from 'markdown-it/lib/parser_block.mjs';
 import {
   HTML_OPEN_AND_CLOSE_TAG_IN_THE_SAME_LINE_RE,
   HTML_OPEN_CLOSE_TAG_RE,

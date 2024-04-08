@@ -1,4 +1,4 @@
-import type ParserBlock from 'markdown-it/lib/parser_block.js';
+import type ParserBlock from 'markdown-it/lib/parser_block.mjs';
 import type { TocPluginOptions } from './types.js';
 
 /**

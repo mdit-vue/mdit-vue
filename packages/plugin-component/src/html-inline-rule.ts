@@ -1,4 +1,4 @@
-import type ParserInline from 'markdown-it/lib/parser_inline.js';
+import type { RuleInline } from 'markdown-it/lib/parser_inline.mjs';
 import { HTML_TAG_RE } from './html-re.js';
 
 // Forked and modified from 'markdown-it/lib/rules_inline/html_inline.js'
@@ -8,7 +8,7 @@ const isLetter = (ch: number): boolean => {
   return lc >= 0x61 /* a */ && lc <= 0x7a; /* z */
 };
 
-export const htmlInlineRule: ParserInline.RuleInline = (state, silent) => {
+export const htmlInlineRule: RuleInline = (state, silent) => {
   const { pos } = state;
 
   if (!state.md.options.html) {

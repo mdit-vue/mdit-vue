@@ -1,5 +1,5 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
-import type MarkdownIt from 'markdown-it';
+import type { PluginWithOptions } from 'markdown-it';
 import {
   TAG_NAME_SCRIPT,
   TAG_NAME_STYLE,
@@ -14,7 +14,7 @@ import type { SfcPluginOptions } from './types.js';
  *
  * Extract them into env and avoid rendering them
  */
-export const sfcPlugin: MarkdownIt.PluginWithOptions<SfcPluginOptions> = (
+export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
   md,
   { customBlocks = [] }: SfcPluginOptions = {},
 ): void => {
