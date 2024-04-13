@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/mdit-vue/mdit-vue/compare/v2.1.0...v2.1.1) (2024-04-13)
+
+### Bug Fixes
+
+- **plugin-component:** inline html block tags to make cjs build work ([eb1a264](https://github.com/mdit-vue/mdit-vue/commit/eb1a2640cfe4675727aede7330d075476bb698d1))
+
 # [2.1.0](https://github.com/mdit-vue/mdit-vue/compare/v2.0.0...v2.1.0) (2024-04-08)
 
 ### Features
