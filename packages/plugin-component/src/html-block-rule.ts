@@ -1,4 +1,4 @@
-import type ParserBlock from 'markdown-it/lib/parser_block.mjs';
+import type { RuleBlock } from 'markdown-it/lib/parser_block.mjs';
 import {
   HTML_OPEN_AND_CLOSE_TAG_IN_THE_SAME_LINE_RE,
   HTML_OPEN_CLOSE_TAG_RE,
@@ -58,7 +58,7 @@ const createHtmlSequences = ({
 
 export const createHtmlBlockRule = (
   options: Required<ComponentPluginOptions>,
-): ParserBlock.RuleBlock => {
+): RuleBlock => {
   const HTML_SEQUENCES = createHtmlSequences(options);
 
   return (state, startLine, endLine, silent): boolean => {
