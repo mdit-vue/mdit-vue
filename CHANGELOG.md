@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/mdit-vue/mdit-vue/compare/v2.1.1...v2.1.2) (2024-04-15)
+
+### Bug Fixes
+
+- sync markdown-it types updates ([#9](https://github.com/mdit-vue/mdit-vue/issues/9)) ([f6768b1](https://github.com/mdit-vue/mdit-vue/commit/f6768b10e0cd06843886448065369a1c3aa143bd))
+
 ## [2.1.1](https://github.com/mdit-vue/mdit-vue/compare/v2.1.0...v2.1.1) (2024-04-13)
 
 ### Bug Fixes
