@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/shared",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Shared utils and types of mdit-vue",
   "keywords": [
     "markdown-it",
