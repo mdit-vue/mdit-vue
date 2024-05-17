@@ -25,8 +25,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@lerna-lite/cli": "^3.3.3",
-    "@lerna-lite/publish": "^3.3.3",
+    "@lerna-lite/cli": "^3.4.0",
+    "@lerna-lite/publish": "^3.4.0",
     "@meteorlxy/eslint-config": "^3.4.0",
     "@meteorlxy/prettier-config": "^3.2.0",
     "@meteorlxy/tsconfig": "^3.0.0",
