@@ -49,7 +49,7 @@
     "markdown-it": "^14.1.0"
   },
   "devDependencies": {
-    "markdown-it-anchor": "^9.0.0"
+    "markdown-it-anchor": "^9.0.1"
   },
   "publishConfig": {
     "access": "public"
