@@ -26,20 +26,20 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@lerna-lite/cli": "^3.4.0",
-    "@lerna-lite/publish": "^3.4.0",
+    "@lerna-lite/cli": "^3.5.1",
+    "@lerna-lite/publish": "^3.5.1",
     "@meteorlxy/eslint-config": "^3.7.0",
     "@meteorlxy/prettier-config": "^3.2.0",
     "@meteorlxy/tsconfig": "^3.0.0",
     "@vitest/coverage-istanbul": "^1.6.0",
     "eslint": "^8.57.0",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
-    "prettier": "^3.2.5",
+    "lint-staged": "^15.2.6",
+    "prettier": "^3.3.2",
     "sort-package-json": "^2.10.0",
     "typescript": "^5.4.5",
     "unbuild": "^2.0.0",
     "vitest": "^1.6.0"
   },
-  "packageManager": "pnpm@9.1.3"
+  "packageManager": "pnpm@9.3.0"
 }
