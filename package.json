@@ -31,15 +31,15 @@
     "@meteorlxy/eslint-config": "^3.8.0",
     "@meteorlxy/prettier-config": "^3.8.0",
     "@meteorlxy/tsconfig": "^3.8.0",
-    "@vitest/coverage-istanbul": "^2.0.3",
+    "@vitest/coverage-istanbul": "^2.0.4",
     "eslint": "^8.57.0",
-    "husky": "^9.0.11",
+    "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
     "sort-package-json": "^2.10.0",
     "typescript": "^5.5.3",
     "unbuild": "^2.0.0",
-    "vitest": "^2.0.3"
+    "vitest": "^2.0.4"
   },
-  "packageManager": "pnpm@9.5.0"
+  "packageManager": "pnpm@9.6.0"
 }
