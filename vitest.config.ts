@@ -18,6 +18,7 @@ export default defineConfig({
   },
   test: {
     coverage: {
+      include: ['packages/*/src/**/*.ts'],
       provider: 'istanbul',
       reporter: ['clover', 'json', 'lcov', 'text'],
     },
