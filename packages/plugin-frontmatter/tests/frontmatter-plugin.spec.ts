@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import type { FrontmatterPluginOptions } from '../src/index.js';
 import { frontmatterPlugin } from '../src/index.js';
 
-const testCases: {
+const TEST_CASES: {
   source: string;
   options: FrontmatterPluginOptions;
   env: MarkdownItEnv;
@@ -149,7 +149,7 @@ bar: bar
 ];
 
 describe('@mdit-vue/plugin-frontmatter > frontmatter-plugin', () => {
-  testCases.forEach(
+  TEST_CASES.forEach(
     ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) => {
       it(`case ${i}`, () => {
         const md = MarkdownIt().use(frontmatterPlugin, options);

@@ -1,33 +1,21 @@
-import * as fs from 'node:fs';
-import * as path from 'node:path';
+import fs from 'node:fs';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { meteorlxy } from '@meteorlxy/eslint-config';
 
-const packages = fs.readdirSync(
+const PACKAGES = fs.readdirSync(
   path.resolve(fileURLToPath(import.meta.url), '../packages'),
 );
 
-export default meteorlxy(
-  {
-    typescript: {
-      tsconfigPath: 'tsconfig.json',
-      overrides: {
-        '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/prefer-destructuring': 'off',
-        'prefer-template': 'off',
-      },
+export default meteorlxy({
+  imports: {
+    packageDir: ['./', ...PACKAGES.map((item) => `./packages/${item}`)],
+  },
+  typescript: {
+    overrides: {
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/prefer-destructuring': 'off',
+      'prefer-template': 'off',
     },
   },
-  {
-    files: ['**/*.spec.ts'],
-    rules: {
-      'import/no-extraneous-dependencies': [
-        'error',
-        {
-          devDependencies: true,
-          packageDir: ['./', ...packages.map((item) => `./packages/${item}`)],
-        },
-      ],
-    },
-  },
-);
+});

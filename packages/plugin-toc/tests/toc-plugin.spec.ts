@@ -113,58 +113,59 @@ describe('@mdit-vue/plugin-toc > toc-plugin', () => {
       })
       .use(tocPlugin, { slugify });
 
-    const testCases: [string, { slug: string; title: string; h2: string }][] = [
-      // html element should be kept as is
+    const TEST_CASES: [string, { slug: string; title: string; h2: string }][] =
       [
-        `\
+        // html element should be kept as is
+        [
+          `\
 [[toc]]
 ## foo <bar />
 `,
-        {
-          slug: 'foo',
-          title: 'foo <bar />',
-          h2: 'foo <bar />',
-        },
-      ],
-      // inline code should be escaped
-      [
-        `\
+          {
+            slug: 'foo',
+            title: 'foo <bar />',
+            h2: 'foo <bar />',
+          },
+        ],
+        // inline code should be escaped
+        [
+          `\
 [[toc]]
 ## foo <bar /> \`<code />\`
 `,
-        {
-          slug: 'foo-code',
-          title: 'foo <bar /> &lt;code /&gt;',
-          h2: 'foo <bar /> <code>&lt;code /&gt;</code>',
-        },
-      ],
-      // text should be escaped
-      [
-        `\
+          {
+            slug: 'foo-code',
+            title: 'foo <bar /> &lt;code /&gt;',
+            h2: 'foo <bar /> <code>&lt;code /&gt;</code>',
+          },
+        ],
+        // text should be escaped
+        [
+          `\
 [[toc]]
 ## foo <bar/> "baz"
 `,
-        {
-          slug: 'foo-baz',
-          title: 'foo <bar/> &quot;baz&quot;',
-          h2: 'foo <bar/> &quot;baz&quot;',
-        },
-      ],
-      // text should be escaped
-      [
-        `\
+          {
+            slug: 'foo-baz',
+            title: 'foo <bar/> &quot;baz&quot;',
+            h2: 'foo <bar/> &quot;baz&quot;',
+          },
+        ],
+        // text should be escaped
+        [
+          `\
 [[toc]]
 ## < test >
 `,
-        {
-          slug: 'test',
-          title: '&lt; test &gt;',
-          h2: '&lt; test &gt;',
-        },
-      ],
-    ];
+          {
+            slug: 'test',
+            title: '&lt; test &gt;',
+            h2: '&lt; test &gt;',
+          },
+        ],
+      ];
 
-    testCases.forEach(([source, expected], i) => {
+    TEST_CASES.forEach(([source, expected], i) => {
       it(`case ${i}`, () => {
         expect(md.render(source)).toEqual(`\
 <nav class="table-of-contents"><ul><li><a href="#${expected.slug}">${expected.title}</a></li></ul></nav>

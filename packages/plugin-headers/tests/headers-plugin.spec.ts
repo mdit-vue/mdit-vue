@@ -87,7 +87,7 @@ describe('@mdit-vue/plugin-headers > headers-plugin', () => {
       .use(anchorPlugin, { slugify })
       .use(headersPlugin, { slugify });
 
-    const testCases: [string, MarkdownItHeader[]][] = [
+    const TEST_CASES: [string, MarkdownItHeader[]][] = [
       // html element should be ignored
       [
         '## foo <bar />',
@@ -142,7 +142,7 @@ describe('@mdit-vue/plugin-headers > headers-plugin', () => {
       ],
     ];
 
-    testCases.forEach(([source, expected], i) => {
+    TEST_CASES.forEach(([source, expected], i) => {
       it(`case ${i}`, () => {
         const env: MarkdownItEnv = {};
         md.render(source, env);

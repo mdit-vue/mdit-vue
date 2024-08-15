@@ -8,15 +8,15 @@ import {
 } from '../src/index.js';
 import { createInlineTestCases } from './create-inline-test-cases.js';
 
-const forceNonInlineTags = [...TAGS_VUE_RESERVED, ...TAGS_BLOCK, 'script'];
-const inlineTags = TAGS_INLINE.filter(
-  (item) => !forceNonInlineTags.includes(item),
+const FORCE_NON_INLINE_TAGS = [...TAGS_VUE_RESERVED, ...TAGS_BLOCK, 'script'];
+const INLINE_TAGS = TAGS_INLINE.filter(
+  (item) => !FORCE_NON_INLINE_TAGS.includes(item),
 );
 
 describe('@mdit-vue/plugin-component > component-plugin', () => {
   describe('should render html inline tags correctly', () => {
     const md = MarkdownIt({ html: true }).use(componentPlugin);
-    const testCases = createInlineTestCases(inlineTags);
+    const testCases = createInlineTestCases(INLINE_TAGS);
     testCases.forEach(({ name, cases }) => {
       describe(name, () => {
         cases.forEach(([source, expected], index) => {

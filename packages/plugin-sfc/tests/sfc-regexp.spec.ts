@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { SCRIPT_SETUP_TAG_OPEN_REGEXP } from '../src/index.js';
 
-const testCases: [string, boolean][] = [
+const TEST_CASES: [string, boolean][] = [
   ['<script>', false],
   ['<script lang="ts">', false],
   ['<script lang="ts"   >', false],
@@ -19,7 +19,7 @@ const testCases: [string, boolean][] = [
 
 describe('@mdit-vue/plugin-sfc > sfc-regexp', () => {
   describe('should test setup script open tag correctly', () => {
-    testCases.forEach(([source, expected]) => {
+    TEST_CASES.forEach(([source, expected]) => {
       it(source, () => {
         expect(SCRIPT_SETUP_TAG_OPEN_REGEXP.test(source)).toBe(expected);
       });

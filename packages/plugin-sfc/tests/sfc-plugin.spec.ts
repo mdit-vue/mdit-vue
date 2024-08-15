@@ -3,7 +3,7 @@ import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
 import { sfcPlugin } from '../src/index.js';
 
-const source = `\
+const SOURCE = `\
 # hello vuepress
 
 {{ msg }}
@@ -37,7 +37,7 @@ describe('@mdit-vue/plugin-sfc > sfc-plugin', () => {
     const md = MarkdownIt({ html: true }).use(sfcPlugin);
     const env: MarkdownItEnv = {};
 
-    const rendered = md.render(source, env);
+    const rendered = md.render(SOURCE, env);
 
     expect(rendered).toMatchSnapshot();
     expect(env.sfcBlocks).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe('@mdit-vue/plugin-sfc > sfc-plugin', () => {
     });
     const env: MarkdownItEnv = {};
 
-    const rendered = md.render(source, env);
+    const rendered = md.render(SOURCE, env);
 
     expect(rendered).toMatchSnapshot();
     expect(env.sfcBlocks).toMatchSnapshot();

@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { htmlEscape } from '../src/index.js';
 
-const testCases = [['&<>\'"', '&amp;&lt;&gt;&#39;&quot;']];
+const TEST_CASES = [['&<>\'"', '&amp;&lt;&gt;&#39;&quot;']];
 
 describe('shared > html-escape', () => {
   describe('should escape special chars', () => {
-    testCases.forEach(([source, expected]) => {
+    TEST_CASES.forEach(([source, expected]) => {
       it(source, () => {
         expect(htmlEscape(source)).toBe(expected);
       });
