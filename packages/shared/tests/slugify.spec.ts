@@ -24,12 +24,10 @@ const TEST_CASES: [string, string][] = [
   ['ABCDEFGHIJKLMNOPQRSTUVWXYZé', 'abcdefghijklmnopqrstuvwxyze'],
 ];
 
-describe('shared > slugify', () => {
-  describe('should slugify string correctly', () => {
-    TEST_CASES.forEach(([source, expected]) => {
-      it(`${source} => ${expected}`, () => {
-        expect(slugify(source)).toBe(expected);
-      });
+describe('should slugify string correctly', () => {
+  TEST_CASES.forEach(([source, expected]) => {
+    it(`${source} => ${expected}`, () => {
+      expect(slugify(source)).toBe(expected);
     });
   });
 });

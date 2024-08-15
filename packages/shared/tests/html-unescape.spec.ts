@@ -10,12 +10,10 @@ const TEST_CASES = [
   ],
 ];
 
-describe('shared > html-unescape', () => {
-  describe('should unescape special chars', () => {
-    TEST_CASES.forEach(([source, expected]) => {
-      it(source, () => {
-        expect(htmlUnescape(source)).toBe(expected);
-      });
+describe('should unescape special chars', () => {
+  TEST_CASES.forEach(([source, expected]) => {
+    it(source, () => {
+      expect(htmlUnescape(source)).toBe(expected);
     });
   });
 });

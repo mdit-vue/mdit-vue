@@ -148,7 +148,7 @@ bar: bar
   },
 ];
 
-describe('@mdit-vue/plugin-frontmatter > frontmatter-plugin', () => {
+describe('should extract frontmatter and excerpt correctly', () => {
   TEST_CASES.forEach(
     ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) => {
       it(`case ${i}`, () => {

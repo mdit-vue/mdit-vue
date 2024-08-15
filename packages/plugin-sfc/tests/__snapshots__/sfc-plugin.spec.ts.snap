@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract custom blocks correctly 1`] = `
+exports[`should extract custom blocks correctly 1`] = `
 "<h1>hello vuepress</h1>
 <p>{{ msg }}</p>
 "
 `;
 
-exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract custom blocks correctly 2`] = `
+exports[`should extract custom blocks correctly 2`] = `
 {
   "customBlocks": [
     {
@@ -120,7 +120,7 @@ export default {
 }
 `;
 
-exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract default sfc blocks correctly 1`] = `
+exports[`should extract default sfc blocks correctly 1`] = `
 "<h1>hello vuepress</h1>
 <p>{{ msg }}</p>
 <docs>
@@ -129,7 +129,7 @@ extra hoisted tag
 "
 `;
 
-exports[`@mdit-vue/plugin-sfc > sfc-plugin > should extract default sfc blocks correctly 2`] = `
+exports[`should extract default sfc blocks correctly 2`] = `
 {
   "customBlocks": [],
   "script": {

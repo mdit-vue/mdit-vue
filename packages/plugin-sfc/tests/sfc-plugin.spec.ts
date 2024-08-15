@@ -1,6 +1,6 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
-import { describe, expect, it } from 'vitest';
+import { expect, it } from 'vitest';
 import { sfcPlugin } from '../src/index.js';
 
 const SOURCE = `\
@@ -32,26 +32,24 @@ export default {
 </style>
 `;
 
-describe('@mdit-vue/plugin-sfc > sfc-plugin', () => {
-  it('should extract default sfc blocks correctly', () => {
-    const md = MarkdownIt({ html: true }).use(sfcPlugin);
-    const env: MarkdownItEnv = {};
+it('should extract default sfc blocks correctly', () => {
+  const md = MarkdownIt({ html: true }).use(sfcPlugin);
+  const env: MarkdownItEnv = {};
 
-    const rendered = md.render(SOURCE, env);
+  const rendered = md.render(SOURCE, env);
 
-    expect(rendered).toMatchSnapshot();
-    expect(env.sfcBlocks).toMatchSnapshot();
+  expect(rendered).toMatchSnapshot();
+  expect(env.sfcBlocks).toMatchSnapshot();
+});
+
+it('should extract custom blocks correctly', () => {
+  const md = MarkdownIt({ html: true }).use(sfcPlugin, {
+    customBlocks: ['docs'],
   });
+  const env: MarkdownItEnv = {};
 
-  it('should extract custom blocks correctly', () => {
-    const md = MarkdownIt({ html: true }).use(sfcPlugin, {
-      customBlocks: ['docs'],
-    });
-    const env: MarkdownItEnv = {};
+  const rendered = md.render(SOURCE, env);
 
-    const rendered = md.render(SOURCE, env);
-
-    expect(rendered).toMatchSnapshot();
-    expect(env.sfcBlocks).toMatchSnapshot();
-  });
+  expect(rendered).toMatchSnapshot();
+  expect(env.sfcBlocks).toMatchSnapshot();
 });

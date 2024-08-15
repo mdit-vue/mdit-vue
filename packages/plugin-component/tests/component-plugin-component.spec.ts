@@ -21,31 +21,29 @@ const COMPONENT_TAGS = [
   ...PASCAL_CASE_COMPONENT_TAGS,
 ];
 
-describe('@mdit-vue/plugin-component > component-plugin', () => {
-  describe('should render component tags correctly', () => {
-    const md = MarkdownIt({ html: true }).use(componentPlugin);
-    const testCases = createComponentTestCases(COMPONENT_TAGS);
-    testCases.forEach(({ name, cases }) => {
-      describe(name, () => {
-        cases.forEach(([source, expected], index) => {
-          it(`case ${index}`, () => {
-            const rendered = md.render(source);
-            expect(rendered).toBe(expected);
-          });
+describe('should render component tags correctly', () => {
+  const md = MarkdownIt({ html: true }).use(componentPlugin);
+  const testCases = createComponentTestCases(COMPONENT_TAGS);
+  testCases.forEach(({ name, cases }) => {
+    describe(name, () => {
+      cases.forEach(([source, expected], index) => {
+        it(`case ${index}`, () => {
+          const rendered = md.render(source);
+          expect(rendered).toBe(expected);
         });
       });
     });
   });
+});
 
-  describe('should not render component tags if `html` option is disabled', () => {
-    const md = MarkdownIt({ html: false }).use(componentPlugin);
-    COMPONENT_TAGS.forEach((comp, index) => {
-      it(`case ${index}`, () => {
-        const source = `<${comp}>foobar</${comp}>`;
-        const expected = `<p>&lt;${comp}&gt;foobar&lt;/${comp}&gt;</p>\n`;
-        const rendered = md.render(source);
-        expect(rendered).toBe(expected);
-      });
+describe('should not render component tags if `html` option is disabled', () => {
+  const md = MarkdownIt({ html: false }).use(componentPlugin);
+  COMPONENT_TAGS.forEach((comp, index) => {
+    it(`case ${index}`, () => {
+      const source = `<${comp}>foobar</${comp}>`;
+      const expected = `<p>&lt;${comp}&gt;foobar&lt;/${comp}&gt;</p>\n`;
+      const rendered = md.render(source);
+      expect(rendered).toBe(expected);
     });
   });
 });

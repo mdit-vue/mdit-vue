@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers (h1, h2, h3, h4) > complexTree 1`] = `
+exports[`should extract headers (h1, h2, h3, h4) > complexTree 1`] = `
 [
   {
     "children": [
@@ -88,7 +88,7 @@ exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers (h1,
 ]
 `;
 
-exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers (h1, h2, h3, h4) > reversedTree 1`] = `
+exports[`should extract headers (h1, h2, h3, h4) > reversedTree 1`] = `
 [
   {
     "children": [],
@@ -121,7 +121,7 @@ exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers (h1,
 ]
 `;
 
-exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers (h1, h2, h3, h4) > simpleTree 1`] = `
+exports[`should extract headers (h1, h2, h3, h4) > simpleTree 1`] = `
 [
   {
     "children": [
@@ -157,7 +157,7 @@ exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers (h1,
 ]
 `;
 
-exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers with default option (h2, h3) > complexTree 1`] = `
+exports[`should extract headers with default option (h2, h3) > complexTree 1`] = `
 [
   {
     "children": [
@@ -213,7 +213,7 @@ exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers with
 ]
 `;
 
-exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers with default option (h2, h3) > reversedTree 1`] = `
+exports[`should extract headers with default option (h2, h3) > reversedTree 1`] = `
 [
   {
     "children": [],
@@ -232,7 +232,7 @@ exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers with
 ]
 `;
 
-exports[`@mdit-vue/plugin-headers > headers-plugin > should extract headers with default option (h2, h3) > simpleTree 1`] = `
+exports[`should extract headers with default option (h2, h3) > simpleTree 1`] = `
 [
   {
     "children": [

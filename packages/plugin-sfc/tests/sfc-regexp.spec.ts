@@ -17,12 +17,10 @@ const TEST_CASES: [string, boolean][] = [
   ['<script \nlang="ts"\n setup  \n  >', true],
 ];
 
-describe('@mdit-vue/plugin-sfc > sfc-regexp', () => {
-  describe('should test setup script open tag correctly', () => {
-    TEST_CASES.forEach(([source, expected]) => {
-      it(source, () => {
-        expect(SCRIPT_SETUP_TAG_OPEN_REGEXP.test(source)).toBe(expected);
-      });
+describe('should test setup script open tag correctly', () => {
+  TEST_CASES.forEach(([source, expected]) => {
+    it(source, () => {
+      expect(SCRIPT_SETUP_TAG_OPEN_REGEXP.test(source)).toBe(expected);
     });
   });
 });
