@@ -86,7 +86,7 @@ describe('should not include html elements and should not escape texts', () => {
     .use(anchorPlugin, { slugify })
     .use(headersPlugin, { slugify });
 
-  const TEST_CASES: [string, MarkdownItHeader[]][] = [
+  const testCases: [string, MarkdownItHeader[]][] = [
     // html element should be ignored
     [
       '## foo <bar />',
@@ -141,7 +141,7 @@ describe('should not include html elements and should not escape texts', () => {
     ],
   ];
 
-  TEST_CASES.forEach(([source, expected], i) => {
+  testCases.forEach(([source, expected], i) => {
     it(`case ${i}`, () => {
       const env: MarkdownItEnv = {};
       md.render(source, env);

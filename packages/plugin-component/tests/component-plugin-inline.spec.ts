@@ -8,14 +8,14 @@ import {
 } from '../src/index.js';
 import { createInlineTestCases } from './create-inline-test-cases.js';
 
-const FORCE_NON_INLINE_TAGS = [...TAGS_VUE_RESERVED, ...TAGS_BLOCK, 'script'];
-const INLINE_TAGS = TAGS_INLINE.filter(
-  (item) => !FORCE_NON_INLINE_TAGS.includes(item),
+const forceNonInlineTags = [...TAGS_VUE_RESERVED, ...TAGS_BLOCK, 'script'];
+const inlineTags = TAGS_INLINE.filter(
+  (item) => !forceNonInlineTags.includes(item),
 );
 
 describe('should render html inline tags correctly', () => {
   const md = MarkdownIt({ html: true }).use(componentPlugin);
-  const testCases = createInlineTestCases(INLINE_TAGS);
+  const testCases = createInlineTestCases(inlineTags);
   testCases.forEach(({ name, cases }) => {
     describe(name, () => {
       cases.forEach(([source, expected], index) => {

@@ -2,14 +2,14 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   resolve: {
     alias: [
       {
         find: /^@mdit-vue\/([^/]*)$/,
-        replacement: path.resolve(ROOT, './packages/$1/src/index.ts'),
+        replacement: path.resolve(root, './packages/$1/src/index.ts'),
       },
     ],
   },

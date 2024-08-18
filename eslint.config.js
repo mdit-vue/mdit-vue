@@ -3,13 +3,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { meteorlxy } from '@meteorlxy/eslint-config';
 
-const PACKAGES = fs.readdirSync(
+const packages = fs.readdirSync(
   path.resolve(fileURLToPath(import.meta.url), '../packages'),
 );
 
 export default meteorlxy({
   imports: {
-    packageDir: ['./', ...PACKAGES.map((item) => `./packages/${item}`)],
+    packageDir: ['./', ...packages.map((item) => `./packages/${item}`)],
   },
   typescript: {
     overrides: {

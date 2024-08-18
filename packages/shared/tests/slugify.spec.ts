@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { slugify } from '../src/index.js';
 
-const TEST_CASES: [string, string][] = [
+const testCases: [string, string][] = [
   ['Привет', 'привет'],
   ['Лед üäöß', 'лед-uaoß'],
   ['hangul 가', 'hangul-가'],
@@ -25,7 +25,7 @@ const TEST_CASES: [string, string][] = [
 ];
 
 describe('should slugify string correctly', () => {
-  TEST_CASES.forEach(([source, expected]) => {
+  testCases.forEach(([source, expected]) => {
     it(`${source} => ${expected}`, () => {
       expect(slugify(source)).toBe(expected);
     });

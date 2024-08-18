@@ -3,7 +3,7 @@ import MarkdownIt from 'markdown-it';
 import { expect, it } from 'vitest';
 import { sfcPlugin } from '../src/index.js';
 
-const SOURCE = `\
+const source = `\
 # hello vuepress
 
 {{ msg }}
@@ -36,7 +36,7 @@ it('should extract default sfc blocks correctly', () => {
   const md = MarkdownIt({ html: true }).use(sfcPlugin);
   const env: MarkdownItEnv = {};
 
-  const rendered = md.render(SOURCE, env);
+  const rendered = md.render(source, env);
 
   expect(rendered).toMatchSnapshot();
   expect(env.sfcBlocks).toMatchSnapshot();
@@ -48,7 +48,7 @@ it('should extract custom blocks correctly', () => {
   });
   const env: MarkdownItEnv = {};
 
-  const rendered = md.render(SOURCE, env);
+  const rendered = md.render(source, env);
 
   expect(rendered).toMatchSnapshot();
   expect(env.sfcBlocks).toMatchSnapshot();

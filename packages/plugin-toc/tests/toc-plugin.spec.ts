@@ -4,7 +4,7 @@ import { default as anchorPlugin } from 'markdown-it-anchor';
 import { describe, expect, it } from 'vitest';
 import { tocPlugin } from '../src/index.js';
 
-const FIXTURES = {
+const fixtures = {
   simpleTree: `\
 [[toc]]
 # h1
@@ -44,7 +44,7 @@ const FIXTURES = {
 describe('should render toc with default option (h2, h3)', () => {
   const md = MarkdownIt().use(tocPlugin);
 
-  Object.entries(FIXTURES).forEach(([name, source]) => {
+  Object.entries(fixtures).forEach(([name, source]) => {
     it(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('should render toc (h1, h2, h3, h4)', () => {
     level: [1, 2, 3, 4],
   });
 
-  Object.entries(FIXTURES).forEach(([name, source]) => {
+  Object.entries(fixtures).forEach(([name, source]) => {
     it(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
@@ -70,7 +70,7 @@ describe('should render toc with RouterLink', () => {
     linkTag: 'RouterLink',
   });
 
-  Object.entries(FIXTURES).forEach(([name, source]) => {
+  Object.entries(fixtures).forEach(([name, source]) => {
     it(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
@@ -88,7 +88,7 @@ describe('should render class name correctly', () => {
     linkClass: 'toc-link',
   });
 
-  Object.entries(FIXTURES).forEach(([name, source]) => {
+  Object.entries(fixtures).forEach(([name, source]) => {
     it(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
@@ -112,7 +112,7 @@ describe('should include html elements and should escape texts', () => {
     })
     .use(tocPlugin, { slugify });
 
-  const TEST_CASES: [string, { slug: string; title: string; h2: string }][] = [
+  const testCases: [string, { slug: string; title: string; h2: string }][] = [
     // html element should be kept as is
     [
       `\
@@ -163,7 +163,7 @@ describe('should include html elements and should escape texts', () => {
     ],
   ];
 
-  TEST_CASES.forEach(([source, expected], i) => {
+  testCases.forEach(([source, expected], i) => {
     it(`case ${i}`, () => {
       expect(md.render(source)).toEqual(`\
 <nav class="table-of-contents"><ul><li><a href="#${expected.slug}">${expected.title}</a></li></ul></nav>

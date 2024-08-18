@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import type { FrontmatterPluginOptions } from '../src/index.js';
 import { frontmatterPlugin } from '../src/index.js';
 
-const TEST_CASES: {
+const testCases: {
   source: string;
   options: FrontmatterPluginOptions;
   env: MarkdownItEnv;
@@ -149,7 +149,7 @@ bar: bar
 ];
 
 describe('should extract frontmatter and excerpt correctly', () => {
-  TEST_CASES.forEach(
+  testCases.forEach(
     ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) => {
       it(`case ${i}`, () => {
         const md = MarkdownIt().use(frontmatterPlugin, options);
