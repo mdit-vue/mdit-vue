@@ -1,6 +1,6 @@
 import { slugify } from '@mdit-vue/shared';
 import MarkdownIt from 'markdown-it';
-import { default as anchorPlugin } from 'markdown-it-anchor';
+import anchorPlugin from 'markdown-it-anchor';
 import { describe, expect, it } from 'vitest';
 import { tocPlugin } from '../src/index.js';
 
