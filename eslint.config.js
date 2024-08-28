@@ -15,6 +15,7 @@ export default meteorlxy({
     overrides: {
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/prefer-destructuring': 'off',
+      'import/no-rename-default': 'off',
       'prefer-template': 'off',
     },
   },
