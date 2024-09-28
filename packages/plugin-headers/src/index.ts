@@ -1,2 +1,2 @@
 export * from './headers-plugin.js';
-export * from './types.js';
+export type * from './types.js';
