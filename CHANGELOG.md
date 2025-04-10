@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/mdit-vue/mdit-vue/compare/v2.1.3...v2.1.4) (2025-04-10)
+
+### Bug Fixes
+
+- **plugin-frontmatter:** extract frontmatter in parse step (close [#13](https://github.com/mdit-vue/mdit-vue/issues/13)) ([#14](https://github.com/mdit-vue/mdit-vue/issues/14)) ([1192bd2](https://github.com/mdit-vue/mdit-vue/commit/1192bd26430105738c2f00136aea48311be46bc7))
+
 ## [2.1.3](https://github.com/mdit-vue/mdit-vue/compare/v2.1.2...v2.1.3) (2024-05-13)
 
 **Note:** Version bump only for package @mdit-vue/monorepo
