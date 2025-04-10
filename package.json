@@ -24,22 +24,27 @@
   },
   "prettier": "@meteorlxy/prettier-config",
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
-    "@lerna-lite/cli": "^3.12.0",
-    "@lerna-lite/publish": "^3.12.0",
-    "@meteorlxy/eslint-config": "^4.8.2",
-    "@meteorlxy/prettier-config": "^4.8.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@lerna-lite/cli": "^4.0.0",
+    "@lerna-lite/publish": "^4.0.0",
+    "@meteorlxy/eslint-config": "^4.9.1",
+    "@meteorlxy/prettier-config": "^4.9.0",
     "@meteorlxy/tsconfig": "^4.8.0",
-    "@vitest/coverage-istanbul": "^3.0.5",
-    "eslint": "^9.19.0",
+    "@vitest/coverage-istanbul": "^3.1.1",
+    "eslint": "^9.24.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.4.2",
-    "sort-package-json": "^2.14.0",
-    "typescript": "^5.7.3",
-    "unbuild": "^3.3.1",
-    "vitest": "^3.0.5"
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "sort-package-json": "^3.0.0",
+    "typescript": "^5.8.3",
+    "unbuild": "^3.5.0",
+    "vitest": "^3.1.1"
   },
-  "packageManager": "pnpm@10.2.0"
+  "packageManager": "pnpm@10.8.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
 }
