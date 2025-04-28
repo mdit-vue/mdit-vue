@@ -22,6 +22,9 @@ const testCases: [string, string][] = [
   ['hŒllœ', 'hœllœ'],
   ['Fußball', 'fußball'],
   ['ABCDEFGHIJKLMNOPQRSTUVWXYZé', 'abcdefghijklmnopqrstuvwxyze'],
+  // should not start with a number
+  ['1a', '_1a'],
+  ['123456', '_123456'],
 ];
 
 describe('should slugify string correctly', () => {
