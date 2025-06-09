@@ -45,6 +45,10 @@
     "@types/markdown-it": "^14.1.2",
     "markdown-it": "^14.1.0"
   },
+  "devDependencies": {
+    "unbuild": "^3.5.0",
+    "vitest": "^3.2.2"
+  },
   "publishConfig": {
     "access": "public"
   }
