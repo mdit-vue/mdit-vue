@@ -51,7 +51,7 @@
   "devDependencies": {
     "markdown-it-anchor": "^9.2.0",
     "unbuild": "^3.5.0",
-    "vitest": "^3.2.2"
+    "vitest": "^3.2.4"
   },
   "publishConfig": {
     "access": "public"

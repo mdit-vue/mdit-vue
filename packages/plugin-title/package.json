@@ -51,7 +51,7 @@
     "@types/markdown-it-emoji": "^3.0.1",
     "markdown-it-emoji": "^3.0.0",
     "unbuild": "^3.5.0",
-    "vitest": "^3.2.2"
+    "vitest": "^3.2.4"
   },
   "publishConfig": {
     "access": "public"
