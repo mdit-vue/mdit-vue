@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/mdit-vue/mdit-vue/compare/v2.1.4...v3.0.0) (2025-08-11)
+
+### Build System
+
+- drop node 18 ([a4775a6](https://github.com/mdit-vue/mdit-vue/commit/a4775a6f3017ee1065075352429cde5587df8c0f))
+
+### BREAKING CHANGES
+
+- drop node 18
+
 ## [2.1.4](https://github.com/mdit-vue/mdit-vue/compare/v2.1.3...v2.1.4) (2025-04-10)
 
 **Note:** Version bump only for package @mdit-vue/plugin-component
