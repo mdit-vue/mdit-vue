@@ -1,6 +1,6 @@
 {
   "name": "@mdit-vue/plugin-headers",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A markdown-it plugin to get markdown headers",
   "keywords": [
     "markdown-it",
