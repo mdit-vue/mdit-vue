@@ -42,13 +42,13 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@types/markdown-it": "^14.1.2",
-    "markdown-it": "^14.1.0"
+    "@types/markdown-it": "catalog:prod",
+    "markdown-it": "catalog:prod"
   },
   "devDependencies": {
-    "@vue/shared": "^3.5.17",
-    "unbuild": "^3.5.0",
-    "vitest": "^3.2.4"
+    "@vue/shared": "catalog:dev-test",
+    "unbuild": "catalog:dev",
+    "vitest": "catalog:dev"
   },
   "publishConfig": {
     "access": "public"

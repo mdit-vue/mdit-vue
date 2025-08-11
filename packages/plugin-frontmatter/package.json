@@ -44,13 +44,13 @@
   },
   "dependencies": {
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "^14.1.2",
-    "gray-matter": "^4.0.3",
-    "markdown-it": "^14.1.0"
+    "@types/markdown-it": "catalog:prod",
+    "gray-matter": "catalog:prod",
+    "markdown-it": "catalog:prod"
   },
   "devDependencies": {
-    "unbuild": "^3.5.0",
-    "vitest": "^3.2.4"
+    "unbuild": "catalog:dev",
+    "vitest": "catalog:dev"
   },
   "publishConfig": {
     "access": "public"

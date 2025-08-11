@@ -1,2 +1,33 @@
 packages:
-  - 'packages/*'
+  - packages/*
+
+catalogs:
+  dev:
+    '@commitlint/cli': ^19.8.1
+    '@commitlint/config-conventional': ^19.8.1
+    '@lerna-lite/cli': ^4.7.0
+    '@lerna-lite/publish': ^4.7.0
+    '@meteorlxy/eslint-config': ^6.6.0
+    '@meteorlxy/prettier-config': ^6.6.0
+    '@meteorlxy/tsconfig': ^6.0.0
+    '@vitest/coverage-istanbul': ^3.2.4
+    eslint: ^9.33.0
+    husky: ^9.1.7
+    lint-staged: ^16.1.5
+    prettier: ^3.6.2
+    sort-package-json: ^3.4.0
+    typescript: ^5.9.2
+    unbuild: ^3.6.0
+    vitest: ^3.2.4
+
+  dev-test:
+    '@types/markdown-it-emoji': ^3.0.1
+    '@vue/shared': ^3.5.18
+    markdown-it-anchor: ^9.2.0
+    markdown-it-emoji: ^3.0.0
+
+  prod:
+    '@types/markdown-it': ^14.1.2
+    '@vue/shared': ^3.5.18
+    gray-matter: ^4.0.3
+    markdown-it: ^14.1.0

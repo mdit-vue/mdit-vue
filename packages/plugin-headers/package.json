@@ -45,13 +45,13 @@
   "dependencies": {
     "@mdit-vue/shared": "workspace:*",
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "^14.1.2",
-    "markdown-it": "^14.1.0"
+    "@types/markdown-it": "catalog:prod",
+    "markdown-it": "catalog:prod"
   },
   "devDependencies": {
-    "markdown-it-anchor": "^9.2.0",
-    "unbuild": "^3.5.0",
-    "vitest": "^3.2.4"
+    "markdown-it-anchor": "catalog:dev-test",
+    "unbuild": "catalog:dev",
+    "vitest": "catalog:dev"
   },
   "publishConfig": {
     "access": "public"

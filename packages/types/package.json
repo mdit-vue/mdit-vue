@@ -40,7 +40,7 @@
     "build": "unbuild"
   },
   "devDependencies": {
-    "unbuild": "^3.5.0"
+    "unbuild": "catalog:dev"
   },
   "publishConfig": {
     "access": "public"
