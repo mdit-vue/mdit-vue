@@ -36,7 +36,9 @@
     "husky": "catalog:dev",
     "lint-staged": "catalog:dev",
     "prettier": "catalog:dev",
+    "rimraf": "catalog:dev",
     "sort-package-json": "catalog:dev",
+    "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
     "vitest": "catalog:dev"
   },

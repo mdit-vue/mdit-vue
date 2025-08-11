@@ -29,7 +29,8 @@
     "./dist"
   ],
   "scripts": {
-    "build": "tsdown"
+    "build": "tsdown",
+    "clean": "rimraf ./dist"
   },
   "devDependencies": {
     "tsdown": "catalog:dev"
