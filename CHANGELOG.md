@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### BREAKING CHANGES
 
-- drop node 18
+- drop node 18 and migrate to pure ESM packages
 
 ## [2.1.4](https://github.com/mdit-vue/mdit-vue/compare/v2.1.3...v2.1.4) (2025-04-10)
 
