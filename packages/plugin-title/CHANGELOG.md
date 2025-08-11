@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/mdit-vue/mdit-vue/compare/v3.0.1...v3.0.2) (2025-08-11)
+
+### Bug Fixes
+
+- **plugin-title:** avoid output types being tree-shaken ([6255fd4](https://github.com/mdit-vue/mdit-vue/commit/6255fd43a4c4322af7f72d8fc201b44a12650ec5))
+
 ## [3.0.1](https://github.com/mdit-vue/mdit-vue/compare/v3.0.0...v3.0.1) (2025-08-11)
 
 **Note:** Version bump only for package @mdit-vue/plugin-title
