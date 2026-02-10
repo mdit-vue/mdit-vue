@@ -58,7 +58,7 @@ describe('options', () => {
     });
   });
 
-  it('blockTags should have higher priority', () => {
+  describe('blockTags should have higher priority', () => {
     const blockTags = ['force-block', 'ForceBlock'];
     const inlineTags = blockTags;
     const md = MarkdownIt({ html: true }).use(componentPlugin, {
