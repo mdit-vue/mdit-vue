@@ -1,5 +1,6 @@
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
+
 import {
   TAGS_BLOCK,
   TAGS_INLINE,

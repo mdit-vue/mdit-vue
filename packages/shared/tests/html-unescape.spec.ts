@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+
 import { htmlUnescape } from '../src/index.js';
 
 const testCases = [

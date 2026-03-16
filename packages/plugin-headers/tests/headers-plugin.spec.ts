@@ -3,6 +3,7 @@ import type { MarkdownItEnv, MarkdownItHeader } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
 import anchorPlugin from 'markdown-it-anchor';
 import { describe, expect, it } from 'vitest';
+
 import { headersPlugin } from '../src/index.js';
 
 const fixtures = {

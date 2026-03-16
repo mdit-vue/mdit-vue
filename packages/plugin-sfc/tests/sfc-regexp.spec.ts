@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+
 import { SCRIPT_SETUP_TAG_OPEN_REGEXP } from '../src/index.js';
 
 const testCases: [string, boolean][] = [

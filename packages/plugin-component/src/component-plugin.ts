@@ -1,4 +1,5 @@
 import type { PluginWithOptions } from 'markdown-it';
+
 import { createHtmlBlockRule } from './html-block-rule.js';
 import { htmlInlineRule } from './html-inline-rule.js';
 import type { ComponentPluginOptions } from './types.js';

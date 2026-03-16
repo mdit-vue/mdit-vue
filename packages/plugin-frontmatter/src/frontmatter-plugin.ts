@@ -1,6 +1,7 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import grayMatter from 'gray-matter';
 import type { PluginWithOptions } from 'markdown-it';
+
 import type { FrontmatterPluginOptions } from './types.js';
 
 /**

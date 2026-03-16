@@ -1,5 +1,6 @@
 import type { MarkdownItHeader } from '@mdit-vue/types';
 import type Token from 'markdown-it/lib/token.mjs';
+
 import type { ResolveTitleOptions } from './resolve-title-from-token.js';
 import { resolveTitleFromToken } from './resolve-title-from-token.js';
 

@@ -1,6 +1,7 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
+
 import type { FrontmatterPluginOptions } from '../src/index.js';
 import { frontmatterPlugin } from '../src/index.js';
 

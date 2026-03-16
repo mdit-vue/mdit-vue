@@ -5,28 +5,31 @@
   "keywords": [
     "markdown-it",
     "markdown-it-plugin",
-    "vue",
-    "sfc"
+    "sfc",
+    "vue"
   ],
   "homepage": "https://github.com/mdit-vue",
   "bugs": {
     "url": "https://github.com/mdit-vue/mdit-vue/issues"
   },
+  "license": "MIT",
+  "author": "meteorlxy <meteor.lxy@foxmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mdit-vue/mdit-vue.git"
   },
-  "license": "MIT",
-  "author": "meteorlxy <meteor.lxy@foxmail.com>",
+  "files": [
+    "./dist"
+  ],
   "type": "module",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
-  "types": "./dist/index.d.ts",
-  "files": [
-    "./dist"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsdown",
     "clean": "rimraf ./dist",
@@ -43,8 +46,5 @@
   },
   "engines": {
     "node": ">=20.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

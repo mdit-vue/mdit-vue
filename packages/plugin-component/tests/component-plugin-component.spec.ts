@@ -1,6 +1,7 @@
 import { camelize, capitalize } from '@vue/shared';
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
+
 import { TAGS_VUE_RESERVED, componentPlugin } from '../src/index.js';
 import { createComponentTestCases } from './create-component-test-cases.js';
 

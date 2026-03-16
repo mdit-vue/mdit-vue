@@ -4,6 +4,7 @@ import {
 } from '@mdit-vue/shared';
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
+
 import type { HeadersPluginOptions } from './types.js';
 
 /**

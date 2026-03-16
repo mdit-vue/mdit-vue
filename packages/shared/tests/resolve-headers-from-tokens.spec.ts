@@ -1,6 +1,7 @@
 import type { MarkdownItHeader } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
+
 import { resolveHeadersFromTokens, slugify } from '../src/index.js';
 
 const md = MarkdownIt();

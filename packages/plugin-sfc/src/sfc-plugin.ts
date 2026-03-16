@@ -1,5 +1,6 @@
 import type { MarkdownItEnv } from '@mdit-vue/types';
 import type { PluginWithOptions } from 'markdown-it';
+
 import {
   TAG_NAME_SCRIPT,
   TAG_NAME_STYLE,

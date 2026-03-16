@@ -3,6 +3,7 @@ import {
   resolveHeadersFromTokens,
 } from '@mdit-vue/shared';
 import type { PluginWithOptions } from 'markdown-it';
+
 import { createRenderHeaders } from './create-render-headers.js';
 import { createTocBlockRule } from './create-toc-block-rule.js';
 import type { TocPluginOptions } from './types.js';
