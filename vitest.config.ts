@@ -13,9 +13,6 @@ export default defineConfig({
       },
     ],
   },
-  esbuild: {
-    target: 'node14',
-  },
   test: {
     coverage: {
       include: ['packages/*/src/**/*.ts'],
