@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm -r --stream build",
+    "build": "pnpm run -r --stream build",
     "check-types": "tsc --noEmit --skipLibCheck",
-    "clean": "pnpm -r --stream clean",
+    "clean": "pnpm run -r --stream clean",
     "dev": "vitest",
     "format": "oxfmt",
     "lint": "eslint . && oxfmt --check",
@@ -40,11 +40,5 @@
     ],
     "*.!(js|ts)": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@10.32.1",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "unrs-resolver"
-    ]
-  }
+  "packageManager": "pnpm@11.0.8"
 }

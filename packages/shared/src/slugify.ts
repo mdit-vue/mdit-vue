@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-control-regex
+// eslint-disable-next-line no-control-regex -- to remove control characters
 const rControl = /[\u0000-\u001f]/g;
 const rSpecial = /[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'“”‘’<>,.?/]+/g;
 const rCombining = /[\u0300-\u036F]/g;

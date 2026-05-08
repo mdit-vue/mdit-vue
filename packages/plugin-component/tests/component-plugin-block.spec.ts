@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
 
 import { TAGS_BLOCK, componentPlugin } from '../src/index.js';
+
 import { createBlockTestCases } from './create-block-test-cases.js';
 
 describe('should render html block tags correctly', () => {

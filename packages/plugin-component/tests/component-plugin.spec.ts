@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
 
 import { componentPlugin } from '../src/index.js';
+
 import { createBlockTestCases } from './create-block-test-cases.js';
 import { createInlineTestCases } from './create-inline-test-cases.js';
 

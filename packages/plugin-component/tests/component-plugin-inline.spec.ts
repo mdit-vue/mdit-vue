@@ -7,6 +7,7 @@ import {
   TAGS_VUE_RESERVED,
   componentPlugin,
 } from '../src/index.js';
+
 import { createInlineTestCases } from './create-inline-test-cases.js';
 
 const forceNonInlineTags = [...TAGS_VUE_RESERVED, ...TAGS_BLOCK, 'script'];

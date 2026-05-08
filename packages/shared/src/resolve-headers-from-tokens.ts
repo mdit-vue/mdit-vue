@@ -91,7 +91,7 @@ export const resolveHeadersFromTokens = (
 
     // if the next token does not exist, skip
     /* istanbul ignore if -- @preserve */
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- the next token may not exist in some edge cases
     if (!nextToken) {
       continue;
     }
