@@ -1,7 +1,7 @@
 export {};
 
-declare module '@mdit-vue/types' {
-  interface MarkdownItEnv {
+declare module 'markdown-it' {
+  interface Env {
     /**
      * The title that extracted by `@mdit-vue/plugin-title`
      */

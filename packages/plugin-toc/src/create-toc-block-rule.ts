@@ -1,4 +1,4 @@
-import type { RuleBlock } from 'markdown-it/lib/parser_block.mjs';
+import type { RuleBlock } from '@mdit-vue/types';
 
 import type { TocPluginOptions } from './types.js';
 

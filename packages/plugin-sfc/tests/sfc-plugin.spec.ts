@@ -1,4 +1,4 @@
-import type { MarkdownItEnv } from '@mdit-vue/types';
+import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 import { expect, it } from 'vitest';
 
@@ -35,7 +35,7 @@ export default {
 
 it('should extract default sfc blocks correctly', () => {
   const md = MarkdownIt({ html: true }).use(sfcPlugin);
-  const env: MarkdownItEnv = {};
+  const env: Env = {};
 
   const rendered = md.render(source, env);
 
@@ -47,7 +47,7 @@ it('should extract custom blocks correctly', () => {
   const md = MarkdownIt({ html: true }).use(sfcPlugin, {
     customBlocks: ['docs'],
   });
-  const env: MarkdownItEnv = {};
+  const env: Env = {};
 
   const rendered = md.render(source, env);
 

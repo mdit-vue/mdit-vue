@@ -36,13 +36,16 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@types/markdown-it": "catalog:prod",
-    "markdown-it": "catalog:prod"
+    "@mdit-vue/types": "workspace:*"
   },
   "devDependencies": {
     "@vue/shared": "catalog:dev-test",
+    "markdown-it": "catalog:prod",
     "tsdown": "catalog:dev",
     "vitest": "catalog:dev"
+  },
+  "peerDependencies": {
+    "markdown-it": "catalog:prod"
   },
   "engines": {
     "node": ">=20.0.0"

@@ -39,8 +39,8 @@ export interface HeadersPluginOptions {
   shouldAllowNested?: boolean;
 }
 
-declare module '@mdit-vue/types' {
-  interface MarkdownItEnv {
+declare module 'markdown-it' {
+  interface Env {
     /**
      * The headers that extracted by `@mdit-vue/plugin-headers`
      */

@@ -1,5 +1,4 @@
-import type { MarkdownItEnv } from '@mdit-vue/types';
-import type { PluginWithOptions } from 'markdown-it';
+import type { MarkdownIt } from 'markdown-it';
 
 import {
   TAG_NAME_SCRIPT,
@@ -15,15 +14,15 @@ import type { SfcPluginOptions } from './types.js';
  *
  * Extract them into env and avoid rendering them
  */
-export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
-  md,
+export const sfcPlugin = (
+  md: MarkdownIt,
   { customBlocks = [] }: SfcPluginOptions = {},
 ): void => {
   const sfcRegexp = createSfcRegexp({ customBlocks });
 
   // wrap the original render function
   const render = md.render.bind(md);
-  md.render = (src, env: MarkdownItEnv = {}) => {
+  md.render = (src, env = {}) => {
     // initialize `env.sfcBlocks`
     env.sfcBlocks = {
       template: null,
@@ -50,17 +49,11 @@ export const sfcPlugin: PluginWithOptions<SfcPluginOptions> = (
   };
 
   // wrap the original html_block renderer rule
-  const htmlBlockRule = md.renderer.rules.html_block!;
-  md.renderer.rules.html_block = (
-    tokens,
-    idx,
-    options,
-    env: MarkdownItEnv,
-    self,
-  ) => {
+  const htmlBlockRule = md.renderer.rules.html_block;
+  md.renderer.rules.html_block = (tokens, idx, options, env, self) => {
     /* istanbul ignore if -- @preserve */
     // skip if `env.sfcBlocks` is not initialized
-    if (!env.sfcBlocks) {
+    if (!env?.sfcBlocks) {
       return htmlBlockRule(tokens, idx, options, env, self);
     }
 

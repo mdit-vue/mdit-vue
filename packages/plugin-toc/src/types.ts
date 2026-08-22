@@ -81,7 +81,7 @@ export interface TocPluginOptions {
    *
    * @default 'a'
    */
-  linkTag?: 'a' | 'router-link';
+  linkTag?: 'a' | 'router-link' | 'RouterLink';
 
   /**
    * The class for the link inside the `<li>` tag

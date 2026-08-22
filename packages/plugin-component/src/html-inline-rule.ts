@@ -1,13 +1,16 @@
-import type { RuleInline } from 'markdown-it/lib/parser_inline.mjs';
+import type { RuleInline } from '@mdit-vue/types';
 
 import { HTML_TAG_RE } from './html-re.js';
 
-// Forked and modified from 'markdown-it/lib/rules_inline/html_inline.js'
+// Forked and modified from 'markdown-it/src/rules_inline/html_inline.ts'
 
 const isLetter = (ch: number): boolean => {
   const lc = ch | 0x20; // to lower case
   return lc >= 0x61 /* a */ && lc <= 0x7a; /* z */
 };
+
+const isLinkOpen = (str: string): boolean => /^<a[>\s]/i.test(str);
+const isLinkClose = (str: string): boolean => /^<\/a\s*>/i.test(str);
 
 export const htmlInlineRule: RuleInline = (state, silent) => {
   const { pos } = state;
@@ -41,7 +44,14 @@ export const htmlInlineRule: RuleInline = (state, silent) => {
 
   if (!silent) {
     const token = state.push('html_inline', '', 0);
-    token.content = state.src.slice(pos, pos + match[0].length);
+    token.content = match[0];
+
+    if (isLinkOpen(token.content)) {
+      state.linkLevel++;
+    }
+    if (isLinkClose(token.content)) {
+      state.linkLevel--;
+    }
   }
   state.pos += match[0].length;
   return true;

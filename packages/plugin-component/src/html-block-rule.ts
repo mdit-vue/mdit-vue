@@ -1,4 +1,4 @@
-import type { RuleBlock } from 'markdown-it/lib/parser_block.mjs';
+import type { RuleBlock } from '@mdit-vue/types';
 
 import {
   HTML_OPEN_AND_CLOSE_TAG_IN_THE_SAME_LINE_RE,
@@ -8,7 +8,7 @@ import {
 import { TAGS_BLOCK, TAGS_INLINE, TAGS_VUE_RESERVED } from './tags.js';
 import type { ComponentPluginOptions } from './types.js';
 
-// Forked and modified from 'markdown-it/lib/rules_block/html_block.js'
+// Forked and modified from 'markdown-it/src/rules_block/html_block.ts'
 
 /**
  * ADDED: wrap the `HTML_SEQUENCES` with a function, because we allow user options
@@ -27,10 +27,14 @@ const createHtmlSequences = ({
   // An array of opening and corresponding closing sequences for html tags,
   // last argument defines whether it can terminate a paragraph or not
   const HTML_SEQUENCES: [RegExp, RegExp, boolean][] = [
-    [/^<(script|pre|style)(?=(\s|>|$))/i, /<\/(script|pre|style)>/i, true],
+    [
+      /^<(script|pre|style|textarea)(?=(\s|>|$))/i,
+      /<\/(script|pre|style|textarea)>/i,
+      true,
+    ],
     [/^<!--/, /-->/, true],
     [/^<\?/, /\?>/, true],
-    [/^<![A-Z]/, />/, true],
+    [/^<![A-Za-z]/, />/, true],
     [/^<!\[CDATA\[/, /\]\]>/, true],
     // MODIFIED: Support extra block tags from user options
     [
@@ -123,12 +127,23 @@ export const createHtmlBlockRule = (
 
     nextLine = startLine + 1;
 
+    // Block types whose end condition is a blank line have `/^$/` as their
+    // closing regexp. For all other types (e.g. `<!--` comments), a blank line
+    // is regular content and must not terminate the block - it ends only when
+    // its closing sequence is found.
+    const endsOnBlankLine = HTML_SEQUENCES[i][1].test('');
+
     // If we are here - we detected HTML block.
     // Let's roll down till block end.
     if (!HTML_SEQUENCES[i][1].test(lineText)) {
       for (; nextLine < endLine; nextLine++) {
         if (state.sCount[nextLine] < state.blkIndent) {
-          break;
+          // An outdented blank line shouldn't end a block that doesn't end on a
+          // blank line (e.g. a `<!--` comment inside a list item). Such blocks
+          // must continue until their closing sequence regardless of indent.
+          if (endsOnBlankLine || !state.isEmpty(nextLine)) {
+            break;
+          }
         }
 
         pos = state.bMarks[nextLine] + state.tShift[nextLine];
