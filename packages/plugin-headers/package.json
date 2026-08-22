@@ -38,14 +38,16 @@
   },
   "dependencies": {
     "@mdit-vue/shared": "workspace:*",
-    "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "catalog:prod",
-    "markdown-it": "catalog:prod"
+    "@mdit-vue/types": "workspace:*"
   },
   "devDependencies": {
+    "markdown-it": "catalog:prod",
     "markdown-it-anchor": "catalog:dev-test",
     "tsdown": "catalog:dev",
     "vitest": "catalog:dev"
+  },
+  "peerDependencies": {
+    "markdown-it": "catalog:prod"
   },
   "engines": {
     "node": ">=20.0.0"

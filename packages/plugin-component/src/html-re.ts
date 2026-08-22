@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention -- forked from markdown-it */
 
-// Forked and modified from 'markdown-it/lib/common/html_re.js'
+// Forked and modified from 'markdown-it/src/common/html_re.ts'
 
 // Regexps to match html elements
 
@@ -19,9 +19,9 @@ const attribute = '(?:\\s+' + attr_name + '(?:\\s*=\\s*' + attr_value + ')?)';
 const open_tag = '<[A-Za-z][A-Za-z0-9\\-]*' + attribute + '*\\s*\\/?>';
 
 const close_tag = '<\\/[A-Za-z][A-Za-z0-9\\-]*\\s*>';
-const comment = '<!---->|<!--(?:-?[^>-])(?:-?[^-])*-->';
+const comment = '<!---?>|<!--(?:[^-]|-[^-]|--[^>])*-->';
 const processing = '<[?][\\s\\S]*?[?]>';
-const declaration = '<![A-Z]+\\s+[^>]*>';
+const declaration = '<![A-Za-z][^>]*>';
 const cdata = '<!\\[CDATA\\[[\\s\\S]*?\\]\\]>';
 
 export const HTML_TAG_RE = new RegExp(

@@ -1,6 +1,5 @@
-import type { MarkdownItEnv } from '@mdit-vue/types';
 import grayMatter from 'gray-matter';
-import type { PluginWithOptions } from 'markdown-it';
+import type { MarkdownIt } from 'markdown-it';
 
 import type { FrontmatterPluginOptions } from './types.js';
 
@@ -9,12 +8,12 @@ import type { FrontmatterPluginOptions } from './types.js';
  *
  * Extract them into env
  */
-export const frontmatterPlugin: PluginWithOptions<FrontmatterPluginOptions> = (
-  md,
-  { grayMatterOptions, renderExcerpt = true } = {},
+export const frontmatterPlugin = (
+  md: MarkdownIt,
+  { grayMatterOptions, renderExcerpt = true }: FrontmatterPluginOptions = {},
 ): void => {
   const parse = md.parse.bind(md);
-  md.parse = (src, env: MarkdownItEnv = {}) => {
+  md.parse = (src, env) => {
     const { data, content, excerpt = '' } = grayMatter(src, grayMatterOptions);
 
     // extract stripped content

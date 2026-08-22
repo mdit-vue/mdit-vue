@@ -10,7 +10,13 @@ import {
 
 import { createInlineTestCases } from './create-inline-test-cases.js';
 
-const forceNonInlineTags = [...TAGS_VUE_RESERVED, ...TAGS_BLOCK, 'script'];
+const forceNonInlineTags = [
+  ...TAGS_VUE_RESERVED,
+  ...TAGS_BLOCK,
+  'script',
+  'textarea',
+];
+
 const inlineTags = TAGS_INLINE.filter(
   (item) => !forceNonInlineTags.includes(item),
 );

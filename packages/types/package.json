@@ -34,7 +34,11 @@
     "clean": "rimraf ./dist"
   },
   "devDependencies": {
+    "markdown-it": "catalog:prod",
     "tsdown": "catalog:dev"
+  },
+  "peerDependencies": {
+    "markdown-it": "catalog:prod"
   },
   "engines": {
     "node": ">=20.0.0"

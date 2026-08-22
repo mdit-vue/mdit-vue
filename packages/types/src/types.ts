@@ -1,7 +1,19 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type -- to be extended with module augmentation
-export interface MarkdownItEnv {
-  // to be extended with module augmentation
-}
+import type { StateBlock, StateInline } from 'markdown-it';
+
+/**
+ * Block rule of markdown-it
+ */
+export type RuleBlock = (
+  state: StateBlock,
+  startLine: number,
+  endLine: number,
+  silent: boolean,
+) => boolean;
+
+/**
+ * Inline rule of markdown-it
+ */
+export type RuleInline = (state: StateInline, silent: boolean) => boolean;
 
 export interface MarkdownItHeader {
   /**

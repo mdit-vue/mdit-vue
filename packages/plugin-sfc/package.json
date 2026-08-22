@@ -35,14 +35,13 @@
     "clean": "rimraf ./dist",
     "test": "vitest"
   },
-  "dependencies": {
-    "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "catalog:prod",
-    "markdown-it": "catalog:prod"
-  },
   "devDependencies": {
+    "markdown-it": "catalog:prod",
     "tsdown": "catalog:dev",
     "vitest": "catalog:dev"
+  },
+  "peerDependencies": {
+    "markdown-it": "catalog:prod"
   },
   "engines": {
     "node": ">=20.0.0"

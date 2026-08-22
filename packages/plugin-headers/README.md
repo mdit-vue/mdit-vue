@@ -17,13 +17,13 @@ npm i @mdit-vue/plugin-headers
 
 ```ts
 import { headersPlugin } from '@mdit-vue/plugin-headers';
-import type { MarkdownItEnv } from '@mdit-vue/types';
+import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 
 const md = MarkdownIt({ html: true }).use(headersPlugin, {
   // options
 });
-const env: MarkdownItEnv = {};
+const env: Env = {};
 
 const rendered = md.render(
   `\

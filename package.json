@@ -40,5 +40,5 @@
     ],
     "*.!(js|ts)": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.0.8"
+  "packageManager": "pnpm@11.22.0"
 }

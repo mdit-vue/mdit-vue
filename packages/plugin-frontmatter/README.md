@@ -20,7 +20,7 @@ npm i @mdit-vue/plugin-frontmatter
 
 ```ts
 import { frontmatterPlugin } from '@mdit-vue/plugin-frontmatter';
-import type { MarkdownItEnv } from '@mdit-vue/types';
+import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 
 const md = MarkdownIt({ html: true }).use(frontmatterPlugin, {
@@ -30,7 +30,7 @@ const md = MarkdownIt({ html: true }).use(frontmatterPlugin, {
     excerpt_separator: '<!-- more -->',
   },
 });
-const env: MarkdownItEnv = {};
+const env: Env = {};
 
 const rendered = md.render(
   `\

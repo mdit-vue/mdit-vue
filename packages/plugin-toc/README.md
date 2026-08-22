@@ -139,7 +139,7 @@ const md = MarkdownIt({ html: true }).use(tocPlugin, {
 
 ### linkTag
 
-- Type: `'a' | 'router-link'`
+- Type: `'a' | 'router-link' | 'RouterLink'`
 
 - Default: `'a'`
 

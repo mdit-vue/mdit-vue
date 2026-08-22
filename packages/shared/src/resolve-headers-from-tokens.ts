@@ -1,5 +1,5 @@
 import type { MarkdownItHeader } from '@mdit-vue/types';
-import type Token from 'markdown-it/lib/token.mjs';
+import type { Token } from 'markdown-it';
 
 import type { ResolveTitleOptions } from './resolve-title-from-token.js';
 import { resolveTitleFromToken } from './resolve-title-from-token.js';
@@ -103,7 +103,7 @@ export const resolveHeadersFromTokens = (
 
     // the id of the heading anchor is the slugify result of markdown-it-anchor
     // if the id does not exist, slugify the title ourselves
-    const slug = token.attrGet('id') ?? slugify(title);
+    const slug = token.attrGet('id')?.toString() ?? slugify(title);
 
     // push the header to tree
     push({
