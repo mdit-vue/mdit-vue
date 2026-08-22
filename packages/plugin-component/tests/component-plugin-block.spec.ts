@@ -37,4 +37,21 @@ describe('some behaviors of original html block ruler (mainly for coverage purpo
       expect(rendered).toBe(expected);
     });
   });
+
+  describe('those html blocks whose end condition is not an empty line', () => {
+    it('should not be ended by an empty line inside a list item', () => {
+      const source = '- <!--\n  foo\n\n  bar\n  -->\n';
+      const expected = '<ul>\n<li>\n<!--\nfoo\n\nbar\n-->\n</li>\n</ul>\n';
+      const rendered = md.render(source);
+      expect(rendered).toBe(expected);
+    });
+
+    it('should be ended by an outdented line inside a list item', () => {
+      const source = '- <!--\n  foo\nbar\n-->\n';
+      const expected =
+        '<ul>\n<li>\n<!--\nfoo\n</li>\n</ul>\n<p>bar\n--&gt;</p>\n';
+      const rendered = md.render(source);
+      expect(rendered).toBe(expected);
+    });
+  });
 });

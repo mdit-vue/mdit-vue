@@ -54,3 +54,8 @@ it('should extract custom blocks correctly', () => {
   expect(rendered).toMatchSnapshot();
   expect(env.sfcBlocks).toMatchSnapshot();
 });
+
+it('should render when env is omitted', () => {
+  const md = MarkdownIt({ html: true }).use(sfcPlugin);
+  expect(md.render(source)).toBe(md.render(source, {}));
+});

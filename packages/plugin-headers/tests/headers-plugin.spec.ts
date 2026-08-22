@@ -151,3 +151,11 @@ describe('should not include html elements and should not escape texts', () => {
     });
   });
 });
+
+it('should render when env is omitted', () => {
+  const md = MarkdownIt().use(headersPlugin);
+  const tokens = md.parse('# h1\n## h2', {});
+  expect(md.renderer.render(tokens, md.options)).toBe(
+    '<h1>h1</h1>\n<h2>h2</h2>\n',
+  );
+});

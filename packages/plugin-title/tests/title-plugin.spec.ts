@@ -30,3 +30,8 @@ it('should extract empty title', () => {
   md.render('', env);
   expect(env.title).toEqual('');
 });
+
+it('should render when env is omitted', () => {
+  const tokens = md.parse('# title', {});
+  expect(md.renderer.render(tokens, md.options)).toBe('<h1>title</h1>\n');
+});
