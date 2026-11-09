@@ -17,23 +17,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
+      - uses: pnpm/setup@v3
         with:
-          cache: pnpm
-          node-version: lts/*
-          registry-url: https://registry.npmjs.org/
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Ensure latest npm
-        run: |
-          npm install -g npm@latest
-          npm --version
+          cache: true
+          require-lockfile: true
 
       - name: Release check
         run: pnpm run release:check
@@ -42,6 +29,6 @@ jobs:
         run: pnpm lerna publish from-package --yes
 
       - name: Create release changelog
-        run: npx changelogithub
+        run: pnpx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
