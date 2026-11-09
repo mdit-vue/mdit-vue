@@ -216,28 +216,22 @@ catalogs:
       specifier: ^5.1.0
       version: 5.1.0
   dev-test:
-    '@types/markdown-it-emoji':
-      specifier: ^3.0.1
-      version: 3.0.1
     '@vue/shared':
       specifier: ^3.5.45
       version: 3.5.45
     markdown-it-anchor:
-      specifier: ^9.2.0
-      version: 9.2.1
+      specifier: ^10.1.0
+      version: 10.1.0
     markdown-it-emoji:
-      specifier: ^3.0.0
+      specifier: ^3.1.0
       version: 3.1.0
   prod:
-    '@types/markdown-it':
-      specifier: ^14.2.0
-      version: 14.2.0
     gray-matter:
       specifier: ^4.0.3
       version: 4.0.3
     markdown-it:
-      specifier: ^14.3.3
-      version: 14.3.3
+      specifier: ^15.0.3
+      version: 15.0.3
 
 importers:
 
@@ -297,12 +291,12 @@ importers:
 
   packages/plugin-component:
     dependencies:
-      '@types/markdown-it':
-        specifier: catalog:prod
-        version: 14.2.0
+      '@mdit-vue/types':
+        specifier: workspace:*
+        version: link:../types
       markdown-it:
         specifier: catalog:prod
-        version: 14.3.3
+        version: 15.0.3
     devDependencies:
       '@vue/shared':
         specifier: catalog:dev-test
@@ -319,15 +313,12 @@ importers:
       '@mdit-vue/types':
         specifier: workspace:*
         version: link:../types
-      '@types/markdown-it':
-        specifier: catalog:prod
-        version: 14.2.0
       gray-matter:
         specifier: catalog:prod
         version: 4.0.3
       markdown-it:
         specifier: catalog:prod
-        version: 14.3.3
+        version: 15.0.3
     devDependencies:
       tsdown:
         specifier: catalog:dev
@@ -344,16 +335,13 @@ importers:
       '@mdit-vue/types':
         specifier: workspace:*
         version: link:../types
-      '@types/markdown-it':
-        specifier: catalog:prod
-        version: 14.2.0
       markdown-it:
         specifier: catalog:prod
-        version: 14.3.3
+        version: 15.0.3
     devDependencies:
       markdown-it-anchor:
         specifier: catalog:dev-test
-        version: 9.2.1(@types/markdown-it@14.2.0)(markdown-it@14.3.3)
+        version: 10.1.0(markdown-it@15.0.3)
       tsdown:
         specifier: catalog:dev
         version: 0.23.7(typescript@6.0.3)
@@ -366,12 +354,9 @@ importers:
       '@mdit-vue/types':
         specifier: workspace:*
         version: link:../types
-      '@types/markdown-it':
-        specifier: catalog:prod
-        version: 14.2.0
       markdown-it:
         specifier: catalog:prod
-        version: 14.3.3
+        version: 15.0.3
     devDependencies:
       tsdown:
         specifier: catalog:dev
@@ -388,16 +373,10 @@ importers:
       '@mdit-vue/types':
         specifier: workspace:*
         version: link:../types
-      '@types/markdown-it':
-        specifier: catalog:prod
-        version: 14.2.0
       markdown-it:
         specifier: catalog:prod
-        version: 14.3.3
+        version: 15.0.3
     devDependencies:
-      '@types/markdown-it-emoji':
-        specifier: catalog:dev-test
-        version: 3.0.1
       markdown-it-emoji:
         specifier: catalog:dev-test
         version: 3.1.0
@@ -416,16 +395,13 @@ importers:
       '@mdit-vue/types':
         specifier: workspace:*
         version: link:../types
-      '@types/markdown-it':
-        specifier: catalog:prod
-        version: 14.2.0
       markdown-it:
         specifier: catalog:prod
-        version: 14.3.3
+        version: 15.0.3
     devDependencies:
       markdown-it-anchor:
         specifier: catalog:dev-test
-        version: 9.2.1(@types/markdown-it@14.2.0)(markdown-it@14.3.3)
+        version: 10.1.0(markdown-it@15.0.3)
       tsdown:
         specifier: catalog:dev
         version: 0.23.7(typescript@6.0.3)
@@ -438,12 +414,9 @@ importers:
       '@mdit-vue/types':
         specifier: workspace:*
         version: link:../types
-      '@types/markdown-it':
-        specifier: catalog:prod
-        version: 14.2.0
       markdown-it:
         specifier: catalog:prod
-        version: 14.3.3
+        version: 15.0.3
     devDependencies:
       tsdown:
         specifier: catalog:dev
@@ -453,6 +426,10 @@ importers:
         version: 5.1.0(@types/node@26.6.6)(@vitest/coverage-istanbul@5.1.0)(vite@8.3.6(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1))
 
   packages/types:
+    dependencies:
+      markdown-it:
+        specifier: catalog:prod
+        version: 15.0.3
     devDependencies:
       tsdown:
         specifier: catalog:dev
@@ -1362,20 +1339,8 @@ packages:
   '@types/katex@0.16.8':
     resolution: {integrity: sha512-trgaNyfU+Xh2Tc+ABIb44a5AYUpicB3uwirOioeOkNPPbmgRNtcWyDeeFRzjPZENO9Vq8gvVqfhaaXWLlevVwg==}
 
-  '@types/linkify-it@5.0.0':
-    resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
-
-  '@types/markdown-it-emoji@3.0.1':
-    resolution: {integrity: sha512-cz1j8R35XivBqq9mwnsrP2fsz2yicLhB8+PDtuVkKOExwEdsVBNI+ROL3sbhtR5occRZ66vT0QnwFZCqdjf3pA==}
-
-  '@types/markdown-it@14.2.0':
-    resolution: {integrity: sha512-NoQ2yGlLWj4wpxMs+TYmRKk3thDrQ97agr7sFqfLsAlvoS8SNQuTrlObhFqG9iugdTtgOE9jpJ6FNM4ZGsa5xQ==}
-
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
-
-  '@types/mdurl@2.0.0':
-    resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
 
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
@@ -1669,6 +1634,9 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
+  argparse@3.0.4:
+    resolution: {integrity: sha512-fwWK3Zq22l4XJJjx5mcBHGikIk+hJqO+32dPm0Jur7+rtG5x1scOjSfdT9ZKeWHPpsya/l0HHK4tDImBkTrtvA==}
+
   argue-cli@3.2.0:
     resolution: {integrity: sha512-VipTB0gXgGIFO2Rg9yEVN5wLt2AurJcZqDbgmYSwPwsykhLrQhs240/bfceev4w68lI8JshoOJIk9uW7tFzROw==}
     engines: {node: '>=22'}
@@ -1875,9 +1843,9 @@ packages:
     resolution: {integrity: sha512-AnfC1ATldl49/cvZdLPDjBfrRNwbDO05aibiOtzQu3qtlbJtomNLhF30HEtn/7iBz50dlMECqATo3fG0LrdEgw==}
     engines: {node: '>=14'}
 
-  entities@4.5.0:
-    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
-    engines: {node: '>=0.12'}
+  entities@8.1.0:
+    resolution: {integrity: sha512-kxL7msIffSuh9aaFAMD7rxAIuTRMAHMeBtgHW2yUdWw732ZNh4MehkF2gdjvtdmikkaIP9bFDDJOPlsvm7avrA==}
+    engines: {node: '>=20.19.0'}
 
   env-paths@2.2.1:
     resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
@@ -2413,8 +2381,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  linkify-it@5.0.2:
-    resolution: {integrity: sha512-ONTm2jCMAVZjgQa/Fy1kScXsuOoF5NPTsoFBdE1KVIZ2vAh/r9+Bqo+0jINCBYnavTPQZz38QzFTme79ENoN3Q==}
+  linkify-it@6.1.0:
+    resolution: {integrity: sha512-wJ/TwpSDTLepCrQoYWYIExIKg5Zchex2Nn5yk2mFnB+6PtdkHtyLx742md9csRjjOnGkKIS/RrbY7l8D6gT9Vw==}
 
   lint-staged@17.6.0:
     resolution: {integrity: sha512-nOhBfYkZEwkFtNzD5pK9s9LkcWoxJ+whLzEnhqi9nl7zTB5n7tg8+9iYgMGx2Wm3VlLu8cbNj0RACzY+nWi5iQ==}
@@ -2446,17 +2414,20 @@ packages:
     resolution: {integrity: sha512-Je0fLJ0F5atA7F+eIlLzk+Wkcl57JDf4kf+EW8xiP5E31xOQxkIxTbgf1Oi1Lw9tRI9UEMRdI5Vz2xTzoNU1Jw==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  markdown-it-anchor@9.2.1:
-    resolution: {integrity: sha512-p6APiLJDFAW2GEvaavDvhIBn7jrX2jLv77NkBGgNacFTurbORYc4pyYySg/mI6mpR6cHQuAtzKtmqgQr4K8dsQ==}
+  markdown-it-anchor@10.1.0:
+    resolution: {integrity: sha512-htMTOUnoGqoWguddWO+NBrOEdh3dt9k1RIhTlr2CQTJOPiLZglDDGADu+Ch+47roTO6nxl2aJfSYykmOhdJCew==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
+    peerDependenciesMeta:
+      '@types/markdown-it':
+        optional: true
 
   markdown-it-emoji@3.1.0:
     resolution: {integrity: sha512-NhmMEH2ywduD4Nty1E8uB5NqfLhAT1VR0dyvoJyStKOqCzbZmVdn/+8wj7zpDsb/fLBikpCPsWwxqKlvMmbz4g==}
 
-  markdown-it@14.3.3:
-    resolution: {integrity: sha512-L//tDAkjTjJCU6pBUSBTgs3Kg4InVaZuUZog/b6V12UKhcDQ7S78877ibbCanRExwPuYP1CZD7Gd2dxSy1GXRg==}
+  markdown-it@15.0.3:
+    resolution: {integrity: sha512-+Az7Ojz3iRGu8KYMvJ6xVhvrxP3eE+vEtJX75Ow88XBpcQNV/0lGX5ZynIIBftREo4DC2jsveAMDaeltmm8QvQ==}
     hasBin: true
 
   markdown-table@3.1.0:
@@ -3097,8 +3068,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  uc.micro@2.1.0:
-    resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
+  uc.micro@3.0.0:
+    resolution: {integrity: sha512-U3PppEkleoTnIfi8BozMx3yju3qc/L6SwqWo2Sw+54PX+PX0q9I+r1Um5HCmqD7n9VDX5/v3vQH/AjA6deDdtw==}
 
   uglify-js@3.19.3:
     resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
@@ -4221,22 +4192,9 @@ snapshots:
 
   '@types/katex@0.16.8': {}
 
-  '@types/linkify-it@5.0.0': {}
-
-  '@types/markdown-it-emoji@3.0.1':
-    dependencies:
-      '@types/markdown-it': 14.2.0
-
-  '@types/markdown-it@14.2.0':
-    dependencies:
-      '@types/linkify-it': 5.0.0
-      '@types/mdurl': 2.0.0
-
   '@types/mdast@4.0.4':
     dependencies:
       '@types/unist': 3.0.3
-
-  '@types/mdurl@2.0.0': {}
 
   '@types/ms@2.1.0': {}
 
@@ -4499,6 +4457,8 @@ snapshots:
 
   argparse@2.0.1: {}
 
+  argparse@3.0.4: {}
+
   argue-cli@3.2.0: {}
 
   assertion-error@2.0.1: {}
@@ -4672,7 +4632,7 @@ snapshots:
 
   empathic@2.1.0: {}
 
-  entities@4.5.0: {}
+  entities@8.1.0: {}
 
   env-paths@2.2.1: {}
 
@@ -5172,9 +5132,9 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  linkify-it@5.0.2:
+  linkify-it@6.1.0:
     dependencies:
-      uc.micro: 2.1.0
+      uc.micro: 3.0.0
 
   lint-staged@17.6.0:
     dependencies:
@@ -5223,21 +5183,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  markdown-it-anchor@9.2.1(@types/markdown-it@14.2.0)(markdown-it@14.3.3):
+  markdown-it-anchor@10.1.0(markdown-it@15.0.3):
     dependencies:
-      '@types/markdown-it': 14.2.0
-      markdown-it: 14.3.3
+      markdown-it: 15.0.3
 
   markdown-it-emoji@3.1.0: {}
 
-  markdown-it@14.3.3:
+  markdown-it@15.0.3:
     dependencies:
-      argparse: 2.0.1
-      entities: 4.5.0
-      linkify-it: 5.0.2
+      argparse: 3.0.4
+      entities: 8.1.0
+      linkify-it: 6.1.0
       mdurl: 2.1.0
       punycode.js: 2.3.1
-      uc.micro: 2.1.0
+      uc.micro: 3.0.0
 
   markdown-table@3.1.0: {}
 
@@ -6107,7 +6066,7 @@ snapshots:
 
   typescript@6.0.3: {}
 
-  uc.micro@2.1.0: {}
+  uc.micro@3.0.0: {}
 
   uglify-js@3.19.3:
     optional: true

@@ -1,4 +1,4 @@
-import type { MarkdownItEnv } from '@mdit-vue/types';
+import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 import { describe, expect, it } from 'vitest';
 
@@ -8,10 +8,10 @@ import { frontmatterPlugin } from '../src/index.js';
 const testCases: {
   source: string;
   options: FrontmatterPluginOptions;
-  env: MarkdownItEnv;
-  content: MarkdownItEnv['content'];
-  frontmatter: MarkdownItEnv['frontmatter'];
-  excerpt: MarkdownItEnv['excerpt'];
+  env: Env;
+  content: Env['content'];
+  frontmatter: Env['frontmatter'];
+  excerpt: Env['excerpt'];
 }[] = [
   {
     source: `\
@@ -154,7 +154,7 @@ describe('should extract frontmatter and excerpt correctly', () => {
     ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) => {
       it(`case ${i}`, () => {
         const md = MarkdownIt().use(frontmatterPlugin, options);
-        const env: MarkdownItEnv = { ...rawEnv };
+        const env: Env = { ...rawEnv };
         md.render(source, env);
         expect(env.content).toEqual(content);
         expect(env.frontmatter).toEqual(frontmatter);

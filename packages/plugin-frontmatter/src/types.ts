@@ -21,8 +21,8 @@ export interface FrontmatterPluginOptions {
   renderExcerpt?: boolean;
 }
 
-declare module '@mdit-vue/types' {
-  interface MarkdownItEnv {
+declare module 'markdown-it' {
+  interface Env {
     /**
      * The raw Markdown content without frontmatter
      */

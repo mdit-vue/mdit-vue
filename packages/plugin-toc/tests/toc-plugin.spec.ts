@@ -66,9 +66,9 @@ describe('should render toc (h1, h2, h3, h4)', () => {
   });
 });
 
-describe('should render toc with RouterLink', () => {
+describe('should render toc with router-link', () => {
   const md = MarkdownIt().use(tocPlugin, {
-    linkTag: 'RouterLink',
+    linkTag: 'router-link',
   });
 
   Object.entries(fixtures).forEach(([name, source]) => {

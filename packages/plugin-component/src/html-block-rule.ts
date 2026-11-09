@@ -1,4 +1,4 @@
-import type { RuleBlock } from 'markdown-it/lib/parser_block.mjs';
+import type { MarkdownItBlockRule } from '@mdit-vue/types';
 
 import {
   HTML_OPEN_AND_CLOSE_TAG_IN_THE_SAME_LINE_RE,
@@ -59,10 +59,10 @@ const createHtmlSequences = ({
 
 export const createHtmlBlockRule = (
   options: Required<ComponentPluginOptions>,
-): RuleBlock => {
+): MarkdownItBlockRule => {
   const HTML_SEQUENCES = createHtmlSequences(options);
 
-  return (state, startLine, endLine, silent): boolean => {
+  return (state, startLine, endLine, silent) => {
     let i: number;
     let nextLine: number;
     let lineText: string;

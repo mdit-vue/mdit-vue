@@ -2,8 +2,7 @@ import {
   slugify as defaultSlugify,
   resolveHeadersFromTokens,
 } from '@mdit-vue/shared';
-import type { MarkdownItEnv } from '@mdit-vue/types';
-import type { PluginWithOptions } from 'markdown-it';
+import type { MarkdownItPlugin } from '@mdit-vue/types';
 
 import type { HeadersPluginOptions } from './types.js';
 
@@ -12,7 +11,7 @@ import type { HeadersPluginOptions } from './types.js';
  *
  * Extract them into env
  */
-export const headersPlugin: PluginWithOptions<HeadersPluginOptions> = (
+export const headersPlugin: MarkdownItPlugin<HeadersPluginOptions> = (
   md,
   {
     level = [2, 3],
@@ -20,10 +19,10 @@ export const headersPlugin: PluginWithOptions<HeadersPluginOptions> = (
     slugify = defaultSlugify,
     format,
   } = {},
-): void => {
+) => {
   // extract headers to env
   const render = md.renderer.render.bind(md.renderer);
-  md.renderer.render = (tokens, options, env: MarkdownItEnv) => {
+  md.renderer.render = (tokens, options, env = {}) => {
     env.headers = resolveHeadersFromTokens(tokens, {
       level,
       shouldAllowHtml: false,

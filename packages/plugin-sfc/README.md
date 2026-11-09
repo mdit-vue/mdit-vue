@@ -21,13 +21,13 @@ This plugin will only take effects when the `html` option of markdown-it is enab
 
 ```ts
 import { sfcPlugin } from '@mdit-vue/plugin-sfc';
-import type { MarkdownItEnv } from '@mdit-vue/types';
+import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 
 const md = MarkdownIt({ html: true }).use(sfcPlugin, {
   // options
 });
-const env: MarkdownItEnv = {};
+const env: Env = {};
 
 const rendered = md.render(
   `\
