@@ -23,6 +23,7 @@
     "@meteorlxy/eslint-config": "catalog:dev",
     "@meteorlxy/oxfmt-config": "catalog:dev",
     "@meteorlxy/tsconfig": "catalog:dev",
+    "@types/node": "catalog:dev",
     "@vitest/coverage-istanbul": "catalog:dev",
     "eslint": "catalog:dev",
     "husky": "catalog:dev",
@@ -40,5 +41,5 @@
     ],
     "*.!(js|ts)": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.0.8"
+  "packageManager": "pnpm@12.18.0"
 }
