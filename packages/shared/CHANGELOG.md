@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/mdit-vue/mdit-vue/compare/v3.0.2...v4.0.0) (2026-11-09)
+
+**Note:** Version bump only for package @mdit-vue/shared
+
 ## [3.0.2](https://github.com/mdit-vue/mdit-vue/compare/v3.0.1...v3.0.2) (2025-08-11)
 
 **Note:** Version bump only for package @mdit-vue/shared
