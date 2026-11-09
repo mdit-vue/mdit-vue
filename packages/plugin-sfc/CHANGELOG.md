@@ -5,7 +5,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [4.0.0](https://github.com/mdit-vue/mdit-vue/compare/v3.0.2...v4.0.0) (2026-11-09)
 
-**Note:** Version bump only for package @mdit-vue/plugin-sfc
+### Features
+
+- upgrade to markdown-it v15 ([#21](https://github.com/mdit-vue/mdit-vue/issues/21)) ([6dcad83](https://github.com/mdit-vue/mdit-vue/commit/6dcad83a7c626c590dd694067237cfcd6f70cc56))
+
+### BREAKING CHANGES
+
+- upgrade to markdown-it v15, remove `MarkdownItEnv` in favor of markdown-it's built-in `Env` type, and require Node.js 20.19.0 or later
 
 ## [3.0.2](https://github.com/mdit-vue/mdit-vue/compare/v3.0.1...v3.0.2) (2025-08-11)
 
