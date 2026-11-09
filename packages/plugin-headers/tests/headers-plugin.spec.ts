@@ -3,7 +3,7 @@ import type { MarkdownItHeader } from '@mdit-vue/types';
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 import anchorPlugin from 'markdown-it-anchor';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { headersPlugin } from '../src/index.js';
 
@@ -45,7 +45,7 @@ describe('should extract headers with default option (h2, h3)', () => {
   const md = MarkdownIt().use(headersPlugin);
 
   Object.entries(fixtures).forEach(([name, source]) => {
-    it(name, () => {
+    test(name, () => {
       const env: Env = {};
       md.render(source, env);
       expect(env.headers).toMatchSnapshot();
@@ -59,7 +59,7 @@ describe('should extract nothing', () => {
   });
 
   Object.entries(fixtures).forEach(([name, source]) => {
-    it(name, () => {
+    test(name, () => {
       const env: Env = {};
       md.render(source, env);
       expect(env.headers).toEqual([]);
@@ -73,7 +73,7 @@ describe('should extract headers (h1, h2, h3, h4)', () => {
   });
 
   Object.entries(fixtures).forEach(([name, source]) => {
-    it(name, () => {
+    test(name, () => {
       const env: Env = {};
       md.render(source, env);
       expect(env.headers).toMatchSnapshot();
@@ -144,10 +144,17 @@ describe('should not include html elements and should not escape texts', () => {
   ];
 
   testCases.forEach(([source, expected], i) => {
-    it(`case ${i}`, () => {
+    test(`case ${i}`, () => {
       const env: Env = {};
       md.render(source, env);
       expect(env.headers).toEqual(expected);
     });
   });
+});
+
+test('should render without env', () => {
+  const md = MarkdownIt().use(headersPlugin);
+  const tokens = md.parse('## heading', {});
+
+  expect(md.renderer.render(tokens, md.options)).toBe('<h2>heading</h2>\n');
 });

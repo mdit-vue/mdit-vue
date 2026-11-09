@@ -1,7 +1,7 @@
 import { slugify } from '@mdit-vue/shared';
 import MarkdownIt from 'markdown-it';
 import anchorPlugin from 'markdown-it-anchor';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { tocPlugin } from '../src/index.js';
 
@@ -46,7 +46,7 @@ describe('should render toc with default option (h2, h3)', () => {
   const md = MarkdownIt().use(tocPlugin);
 
   Object.entries(fixtures).forEach(([name, source]) => {
-    it(name, () => {
+    test(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
     });
@@ -59,7 +59,7 @@ describe('should render toc (h1, h2, h3, h4)', () => {
   });
 
   Object.entries(fixtures).forEach(([name, source]) => {
-    it(name, () => {
+    test(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
     });
@@ -72,7 +72,7 @@ describe('should render toc with router-link', () => {
   });
 
   Object.entries(fixtures).forEach(([name, source]) => {
-    it(name, () => {
+    test(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
     });
@@ -90,7 +90,7 @@ describe('should render class name correctly', () => {
   });
 
   Object.entries(fixtures).forEach(([name, source]) => {
-    it(name, () => {
+    test(name, () => {
       const result = md.render(source);
       expect(result).toMatchSnapshot();
     });
@@ -165,7 +165,7 @@ describe('should include html elements and should escape texts', () => {
   ];
 
   testCases.forEach(([source, expected], i) => {
-    it(`case ${i}`, () => {
+    test(`case ${i}`, () => {
       expect(md.render(source)).toEqual(`\
 <nav class="table-of-contents"><ul><li><a href="#${expected.slug}">${expected.title}</a></li></ul></nav>
 <h2 id="${expected.slug}" tabindex="-1"><a class="header-anchor" href="#${expected.slug}" aria-hidden="true">#</a> ${expected.h2}</h2>
@@ -175,7 +175,7 @@ describe('should include html elements and should escape texts', () => {
 });
 
 describe('edge cases', () => {
-  it('should not terminate the blockquote', () => {
+  test('should not terminate the blockquote', () => {
     const md = MarkdownIt().use(tocPlugin);
 
     const source = `\

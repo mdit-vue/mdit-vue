@@ -1,12 +1,12 @@
 import type { MarkdownItHeader } from '@mdit-vue/types';
 import MarkdownIt from 'markdown-it';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { resolveHeadersFromTokens, slugify } from '../src/index.js';
 
 const md = MarkdownIt();
 
-it('should resolve headers correctly', () => {
+test('should resolve headers correctly', () => {
   const source = `\
 # h1
 ## h2
@@ -74,7 +74,7 @@ describe('shouldAllowNested', () => {
 `;
   const tokens = md.parse(source, {});
 
-  it('should not resolve headers in nested blocks', () => {
+  test('should not resolve headers in nested blocks', () => {
     const expected: MarkdownItHeader[] = [
       {
         level: 1,
@@ -104,7 +104,7 @@ describe('shouldAllowNested', () => {
     ).toEqual(expected);
   });
 
-  it('should resolve headers in nested blocks', () => {
+  test('should resolve headers in nested blocks', () => {
     const expected: MarkdownItHeader[] = [
       {
         level: 1,

@@ -1,6 +1,6 @@
 import { camelize, capitalize } from '@vue/shared';
 import MarkdownIt from 'markdown-it';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { TAGS_VUE_RESERVED, componentPlugin } from '../src/index.js';
 
@@ -29,7 +29,7 @@ describe('should render component tags correctly', () => {
   testCases.forEach(({ name, cases }) => {
     describe(name, () => {
       cases.forEach(([source, expected], index) => {
-        it(`case ${index}`, () => {
+        test(`case ${index}`, () => {
           const rendered = md.render(source);
           expect(rendered).toBe(expected);
         });
@@ -41,7 +41,7 @@ describe('should render component tags correctly', () => {
 describe('should not render component tags if `html` option is disabled', () => {
   const md = MarkdownIt({ html: false }).use(componentPlugin);
   componentTags.forEach((comp, index) => {
-    it(`case ${index}`, () => {
+    test(`case ${index}`, () => {
       const source = `<${comp}>foobar</${comp}>`;
       const expected = `<p>&lt;${comp}&gt;foobar&lt;/${comp}&gt;</p>\n`;
       const rendered = md.render(source);

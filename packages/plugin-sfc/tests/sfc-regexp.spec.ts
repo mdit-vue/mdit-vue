@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { SCRIPT_SETUP_TAG_OPEN_REGEXP } from '../src/index.js';
 
@@ -20,7 +20,7 @@ const testCases: [string, boolean][] = [
 
 describe('should test setup script open tag correctly', () => {
   testCases.forEach(([source, expected]) => {
-    it(source, () => {
+    test(source, () => {
       expect(SCRIPT_SETUP_TAG_OPEN_REGEXP.test(source)).toBe(expected);
     });
   });

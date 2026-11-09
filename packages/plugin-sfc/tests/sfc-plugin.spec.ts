@@ -1,6 +1,6 @@
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
-import { expect, it } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { sfcPlugin } from '../src/index.js';
 
@@ -33,7 +33,7 @@ export default {
 </style>
 `;
 
-it('should extract default sfc blocks correctly', () => {
+test('should extract default sfc blocks correctly', () => {
   const md = MarkdownIt({ html: true }).use(sfcPlugin);
   const env: Env = {};
 
@@ -43,7 +43,7 @@ it('should extract default sfc blocks correctly', () => {
   expect(env.sfcBlocks).toMatchSnapshot();
 });
 
-it('should extract custom blocks correctly', () => {
+test('should extract custom blocks correctly', () => {
   const md = MarkdownIt({ html: true }).use(sfcPlugin, {
     customBlocks: ['docs'],
   });

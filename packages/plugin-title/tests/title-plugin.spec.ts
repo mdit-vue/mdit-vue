@@ -1,7 +1,7 @@
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 import { full as emojiPlugin } from 'markdown-it-emoji';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { titlePlugin } from '../src/index.js';
 
@@ -14,7 +14,7 @@ describe('should extract title from h1 heading', () => {
   ];
 
   testCases.forEach(([source, expected]) => {
-    it(source, () => {
+    test(source, () => {
       const env: Env = {};
       md.render(source, env);
       expect(env.title).toEqual(expected);
@@ -22,8 +22,14 @@ describe('should extract title from h1 heading', () => {
   });
 });
 
-it('should extract empty title', () => {
+test('should extract empty title', () => {
   const env: Env = {};
   md.render('', env);
   expect(env.title).toEqual('');
+});
+
+test('should render without env', () => {
+  const tokens = md.parse('# title', {});
+
+  expect(md.renderer.render(tokens, md.options)).toBe('<h1>title</h1>\n');
 });

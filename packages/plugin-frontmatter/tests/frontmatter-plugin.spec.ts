@@ -1,6 +1,6 @@
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import type { FrontmatterPluginOptions } from '../src/index.js';
 import { frontmatterPlugin } from '../src/index.js';
@@ -152,7 +152,7 @@ bar: bar
 describe('should extract frontmatter and excerpt correctly', () => {
   testCases.forEach(
     ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) => {
-      it(`case ${i}`, () => {
+      test(`case ${i}`, () => {
         const md = MarkdownIt().use(frontmatterPlugin, options);
         const env: Env = { ...rawEnv };
         md.render(source, env);
