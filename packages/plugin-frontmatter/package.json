@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@mdit-vue/types": "workspace:*",
-    "@types/markdown-it": "catalog:prod",
     "gray-matter": "catalog:prod",
     "markdown-it": "catalog:prod"
   },
@@ -47,6 +46,6 @@
     "vitest": "catalog:dev"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.19.0"
   }
 }

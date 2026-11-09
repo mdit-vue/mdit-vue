@@ -1,4 +1,4 @@
-import type { RuleInline } from 'markdown-it/lib/parser_inline.mjs';
+import type { MarkdownItInlineRule } from '@mdit-vue/types';
 
 import { HTML_TAG_RE } from './html-re.js';
 
@@ -9,7 +9,7 @@ const isLetter = (ch: number): boolean => {
   return lc >= 0x61 /* a */ && lc <= 0x7a; /* z */
 };
 
-export const htmlInlineRule: RuleInline = (state, silent) => {
+export const htmlInlineRule: MarkdownItInlineRule = (state, silent) => {
   const { pos } = state;
 
   if (!state.md.options.html) {

@@ -1,5 +1,5 @@
 import MarkdownIt from 'markdown-it';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { componentPlugin } from '../src/index.js';
 
@@ -8,7 +8,7 @@ import { createInlineTestCases } from './create-inline-test-cases.js';
 
 describe('compatibility with other markdown syntax', () => {
   const md = MarkdownIt({ html: true }).use(componentPlugin);
-  it('should work with autolink', () => {
+  test('should work with autolink', () => {
     const source = [
       '<https://github.com>',
       '<localhost:5001/foo>',
@@ -51,7 +51,7 @@ describe('options', () => {
     testCases.forEach(({ name, cases }) => {
       describe(name, () => {
         cases.forEach(([source, expected], index) => {
-          it(`case ${index}`, () => {
+          test(`case ${index}`, () => {
             const rendered = md.render(source);
             expect(rendered).toBe(expected);
           });
@@ -72,7 +72,7 @@ describe('options', () => {
     testCases.forEach(({ name, cases }) => {
       describe(name, () => {
         cases.forEach(([source, expected], index) => {
-          it(`case ${index}`, () => {
+          test(`case ${index}`, () => {
             const rendered = md.render(source);
             expect(rendered).toBe(expected);
           });

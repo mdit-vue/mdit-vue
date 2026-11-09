@@ -1,5 +1,5 @@
 import MarkdownIt from 'markdown-it';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import {
   TAGS_BLOCK,
@@ -21,7 +21,7 @@ describe('should render html inline tags correctly', () => {
   testCases.forEach(({ name, cases }) => {
     describe(name, () => {
       cases.forEach(([source, expected], index) => {
-        it(`case ${index}`, () => {
+        test(`case ${index}`, () => {
           const rendered = md.render(source);
           expect(rendered).toBe(expected);
         });
@@ -30,7 +30,7 @@ describe('should render html inline tags correctly', () => {
   });
 });
 
-it('should render invalid html inline tags correctly', () => {
+test('should render invalid html inline tags correctly', () => {
   const md = MarkdownIt({ html: true }).use(componentPlugin);
 
   const source = ['<1 />', '<中文 />', '<@foo />'].join('\n\n');

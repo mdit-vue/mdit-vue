@@ -1,4 +1,4 @@
-import type { PluginWithOptions } from 'markdown-it';
+import type { MarkdownItPlugin } from '@mdit-vue/types';
 
 import { createHtmlBlockRule } from './html-block-rule.js';
 import { htmlInlineRule } from './html-inline-rule.js';
@@ -7,10 +7,10 @@ import type { ComponentPluginOptions } from './types.js';
 /**
  * Allows better use of Vue components in Markdown
  */
-export const componentPlugin: PluginWithOptions<ComponentPluginOptions> = (
+export const componentPlugin: MarkdownItPlugin<ComponentPluginOptions> = (
   md,
   { blockTags = [], inlineTags = [] } = {},
-): void => {
+) => {
   const htmlBlockRule = createHtmlBlockRule({
     blockTags,
     inlineTags,

@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { slugify } from '../src/index.js';
 
@@ -30,7 +30,7 @@ const testCases: [string, string][] = [
 
 describe('should slugify string correctly', () => {
   testCases.forEach(([source, expected]) => {
-    it(`${source} => ${expected}`, () => {
+    test(`${source} => ${expected}`, () => {
       expect(slugify(source)).toBe(expected);
     });
   });

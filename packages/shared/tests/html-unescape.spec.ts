@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import { htmlUnescape } from '../src/index.js';
 
@@ -13,7 +13,7 @@ const testCases = [
 
 describe('should unescape special chars', () => {
   testCases.forEach(([source, expected]) => {
-    it(source, () => {
+    test(source, () => {
       expect(htmlUnescape(source)).toBe(expected);
     });
   });
