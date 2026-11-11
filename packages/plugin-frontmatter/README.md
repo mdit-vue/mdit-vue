@@ -23,7 +23,7 @@ import { frontmatterPlugin } from '@mdit-vue/plugin-frontmatter';
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 
-const md = MarkdownIt({ html: true }).use(frontmatterPlugin, {
+const md = new MarkdownIt({ html: true }).use(frontmatterPlugin, {
   // options
   grayMatterOptions: {
     excerpt: true,

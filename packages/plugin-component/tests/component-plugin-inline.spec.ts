@@ -16,7 +16,7 @@ const inlineTags = TAGS_INLINE.filter(
 );
 
 describe('should render html inline tags correctly', () => {
-  const md = MarkdownIt({ html: true }).use(componentPlugin);
+  const md = new MarkdownIt({ html: true }).use(componentPlugin);
   const testCases = createInlineTestCases(inlineTags);
   testCases.forEach(({ name, cases }) => {
     describe(name, () => {
@@ -31,7 +31,7 @@ describe('should render html inline tags correctly', () => {
 });
 
 test('should render invalid html inline tags correctly', () => {
-  const md = MarkdownIt({ html: true }).use(componentPlugin);
+  const md = new MarkdownIt({ html: true }).use(componentPlugin);
 
   const source = ['<1 />', '<中文 />', '<@foo />'].join('\n\n');
   const expected =

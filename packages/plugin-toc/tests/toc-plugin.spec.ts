@@ -43,7 +43,7 @@ const fixtures = {
 };
 
 describe('should render toc with default option (h2, h3)', () => {
-  const md = MarkdownIt().use(tocPlugin);
+  const md = new MarkdownIt().use(tocPlugin);
 
   Object.entries(fixtures).forEach(([name, source]) => {
     test(name, () => {
@@ -54,7 +54,7 @@ describe('should render toc with default option (h2, h3)', () => {
 });
 
 describe('should render toc (h1, h2, h3, h4)', () => {
-  const md = MarkdownIt().use(tocPlugin, {
+  const md = new MarkdownIt().use(tocPlugin, {
     level: [1, 2, 3, 4],
   });
 
@@ -67,7 +67,7 @@ describe('should render toc (h1, h2, h3, h4)', () => {
 });
 
 describe('should render toc with router-link', () => {
-  const md = MarkdownIt().use(tocPlugin, {
+  const md = new MarkdownIt().use(tocPlugin, {
     linkTag: 'router-link',
   });
 
@@ -80,7 +80,7 @@ describe('should render toc with router-link', () => {
 });
 
 describe('should render class name correctly', () => {
-  const md = MarkdownIt().use(tocPlugin, {
+  const md = new MarkdownIt().use(tocPlugin, {
     // remove default container class
     containerClass: '',
     // add custom list / item / link class
@@ -98,7 +98,7 @@ describe('should render class name correctly', () => {
 });
 
 describe('should include html elements and should escape texts', () => {
-  const md = MarkdownIt({
+  const md = new MarkdownIt({
     html: true,
   })
     .use(anchorPlugin, {
@@ -176,7 +176,7 @@ describe('should include html elements and should escape texts', () => {
 
 describe('edge cases', () => {
   test('should not terminate the blockquote', () => {
-    const md = MarkdownIt().use(tocPlugin);
+    const md = new MarkdownIt().use(tocPlugin);
 
     const source = `\
 > foo

@@ -22,7 +22,7 @@ This plugin will only take effects when the `html` option of markdown-it is enab
 import { componentPlugin } from '@mdit-vue/plugin-component';
 import MarkdownIt from 'markdown-it';
 
-const md = MarkdownIt({ html: true }).use(componentPlugin, {
+const md = new MarkdownIt({ html: true }).use(componentPlugin, {
   // options
 });
 

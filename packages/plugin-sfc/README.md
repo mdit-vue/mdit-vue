@@ -24,7 +24,7 @@ import { sfcPlugin } from '@mdit-vue/plugin-sfc';
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 
-const md = MarkdownIt({ html: true }).use(sfcPlugin, {
+const md = new MarkdownIt({ html: true }).use(sfcPlugin, {
   // options
 });
 const env: Env = {};

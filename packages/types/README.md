@@ -44,7 +44,7 @@ declare module 'markdown-it' {
   }
 }
 
-const md = MarkdownIt({ html: true });
+const md = new MarkdownIt({ html: true });
 const env: Env = {};
 const rendered = md.render('raw markdown text', env);
 ```

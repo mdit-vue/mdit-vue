@@ -24,7 +24,7 @@ const componentTags = [
 ];
 
 describe('should render component tags correctly', () => {
-  const md = MarkdownIt({ html: true }).use(componentPlugin);
+  const md = new MarkdownIt({ html: true }).use(componentPlugin);
   const testCases = createComponentTestCases(componentTags);
   testCases.forEach(({ name, cases }) => {
     describe(name, () => {
@@ -39,7 +39,7 @@ describe('should render component tags correctly', () => {
 });
 
 describe('should not render component tags if `html` option is disabled', () => {
-  const md = MarkdownIt({ html: false }).use(componentPlugin);
+  const md = new MarkdownIt({ html: false }).use(componentPlugin);
   componentTags.forEach((comp, index) => {
     test(`case ${index}`, () => {
       const source = `<${comp}>foobar</${comp}>`;

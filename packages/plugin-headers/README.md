@@ -20,7 +20,7 @@ import { headersPlugin } from '@mdit-vue/plugin-headers';
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 
-const md = MarkdownIt({ html: true }).use(headersPlugin, {
+const md = new MarkdownIt({ html: true }).use(headersPlugin, {
   // options
 });
 const env: Env = {};

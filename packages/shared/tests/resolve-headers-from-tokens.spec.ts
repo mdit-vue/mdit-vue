@@ -4,7 +4,7 @@ import { describe, expect, test } from 'vitest';
 
 import { resolveHeadersFromTokens, slugify } from '../src/index.js';
 
-const md = MarkdownIt();
+const md = new MarkdownIt();
 
 test('should resolve headers correctly', () => {
   const source = `\

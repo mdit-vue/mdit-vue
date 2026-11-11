@@ -20,7 +20,7 @@ import { titlePlugin } from '@mdit-vue/plugin-title';
 import type { Env } from 'markdown-it';
 import MarkdownIt from 'markdown-it';
 
-const md = MarkdownIt({ html: true }).use(titlePlugin);
+const md = new MarkdownIt({ html: true }).use(titlePlugin);
 const env: Env = {};
 
 const rendered = md.render(

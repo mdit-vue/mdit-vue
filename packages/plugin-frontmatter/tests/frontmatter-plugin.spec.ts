@@ -153,7 +153,7 @@ describe('should extract frontmatter and excerpt correctly', () => {
   testCases.forEach(
     ({ source, options, env: rawEnv, content, frontmatter, excerpt }, i) => {
       test(`case ${i}`, () => {
-        const md = MarkdownIt().use(frontmatterPlugin, options);
+        const md = new MarkdownIt().use(frontmatterPlugin, options);
         const env: Env = { ...rawEnv };
         md.render(source, env);
         expect(env.content).toEqual(content);

@@ -34,7 +34,7 @@ export default {
 `;
 
 test('should extract default sfc blocks correctly', () => {
-  const md = MarkdownIt({ html: true }).use(sfcPlugin);
+  const md = new MarkdownIt({ html: true }).use(sfcPlugin);
   const env: Env = {};
 
   const rendered = md.render(source, env);
@@ -44,7 +44,7 @@ test('should extract default sfc blocks correctly', () => {
 });
 
 test('should extract custom blocks correctly', () => {
-  const md = MarkdownIt({ html: true }).use(sfcPlugin, {
+  const md = new MarkdownIt({ html: true }).use(sfcPlugin, {
     customBlocks: ['docs'],
   });
   const env: Env = {};

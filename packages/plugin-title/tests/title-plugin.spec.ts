@@ -5,7 +5,7 @@ import { describe, expect, test } from 'vitest';
 
 import { titlePlugin } from '../src/index.js';
 
-const md = MarkdownIt().use(emojiPlugin).use(titlePlugin);
+const md = new MarkdownIt().use(emojiPlugin).use(titlePlugin);
 
 describe('should extract title from h1 heading', () => {
   const testCases = [

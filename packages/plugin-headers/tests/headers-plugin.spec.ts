@@ -42,7 +42,7 @@ const fixtures = {
 };
 
 describe('should extract headers with default option (h2, h3)', () => {
-  const md = MarkdownIt().use(headersPlugin);
+  const md = new MarkdownIt().use(headersPlugin);
 
   Object.entries(fixtures).forEach(([name, source]) => {
     test(name, () => {
@@ -54,7 +54,7 @@ describe('should extract headers with default option (h2, h3)', () => {
 });
 
 describe('should extract nothing', () => {
-  const md = MarkdownIt().use(headersPlugin, {
+  const md = new MarkdownIt().use(headersPlugin, {
     level: [],
   });
 
@@ -68,7 +68,7 @@ describe('should extract nothing', () => {
 });
 
 describe('should extract headers (h1, h2, h3, h4)', () => {
-  const md = MarkdownIt().use(headersPlugin, {
+  const md = new MarkdownIt().use(headersPlugin, {
     level: [1, 2, 3, 4],
   });
 
@@ -82,7 +82,7 @@ describe('should extract headers (h1, h2, h3, h4)', () => {
 });
 
 describe('should not include html elements and should not escape texts', () => {
-  const md = MarkdownIt({
+  const md = new MarkdownIt({
     html: true,
   })
     .use(anchorPlugin, { slugify })
@@ -153,7 +153,7 @@ describe('should not include html elements and should not escape texts', () => {
 });
 
 test('should render without env', () => {
-  const md = MarkdownIt().use(headersPlugin);
+  const md = new MarkdownIt().use(headersPlugin);
   const tokens = md.parse('## heading', {});
 
   expect(md.renderer.render(tokens, md.options)).toBe('<h2>heading</h2>\n');

@@ -7,7 +7,7 @@ import { createBlockTestCases } from './create-block-test-cases.js';
 import { createInlineTestCases } from './create-inline-test-cases.js';
 
 describe('compatibility with other markdown syntax', () => {
-  const md = MarkdownIt({ html: true }).use(componentPlugin);
+  const md = new MarkdownIt({ html: true }).use(componentPlugin);
   test('should work with autolink', () => {
     const source = [
       '<https://github.com>',
@@ -39,7 +39,7 @@ describe('options', () => {
   describe('should allow setting blockTags and inlineTags', () => {
     const blockTags = ['img', 'slot'];
     const inlineTags = ['Foo', 'foo-bar', 'FooBar', 'fooBar'];
-    const md = MarkdownIt({ html: true }).use(componentPlugin, {
+    const md = new MarkdownIt({ html: true }).use(componentPlugin, {
       blockTags,
       inlineTags,
     });
@@ -63,7 +63,7 @@ describe('options', () => {
   describe('blockTags should have higher priority', () => {
     const blockTags = ['force-block', 'ForceBlock'];
     const inlineTags = blockTags;
-    const md = MarkdownIt({ html: true }).use(componentPlugin, {
+    const md = new MarkdownIt({ html: true }).use(componentPlugin, {
       blockTags,
       inlineTags,
     });
