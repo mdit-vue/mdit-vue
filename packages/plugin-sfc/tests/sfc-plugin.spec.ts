@@ -39,8 +39,8 @@ test('should extract default sfc blocks correctly', () => {
 
   const rendered = md.render(source, env);
 
-  expect(rendered).toMatchSnapshot();
-  expect(env.sfcBlocks).toMatchSnapshot();
+  expect(rendered).toMatchSnapshot('rendered');
+  expect(env.sfcBlocks).toMatchSnapshot('sfc blocks');
 });
 
 test('should extract custom blocks correctly', () => {
@@ -51,6 +51,6 @@ test('should extract custom blocks correctly', () => {
 
   const rendered = md.render(source, env);
 
-  expect(rendered).toMatchSnapshot();
-  expect(env.sfcBlocks).toMatchSnapshot();
+  expect(rendered).toMatchSnapshot('rendered');
+  expect(env.sfcBlocks).toMatchSnapshot('sfc blocks');
 });

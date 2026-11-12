@@ -10,13 +10,5 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false,
   },
-  "eslint.useFlatConfig": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "markdown",
-    "typescript",
-    "typescriptreact",
-  ],
   "cSpell.words": ["frontmatter", "mdit", "slidev", "slugification"],
 }

@@ -13,7 +13,7 @@ export const frontmatterPlugin: MarkdownItPlugin<FrontmatterPluginOptions> = (
   { grayMatterOptions, renderExcerpt = true } = {},
 ) => {
   const parse = md.parse.bind(md);
-  // eslint-disable-next-line @typescript-eslint/no-useless-default-assignment -- preserve runtime support for an omitted env
+  // oxlint-disable-next-line typescript/no-useless-default-assignment -- preserve runtime support for an omitted env
   md.parse = (src, env = {}) => {
     const { data, content, excerpt = '' } = grayMatter(src, grayMatterOptions);
 

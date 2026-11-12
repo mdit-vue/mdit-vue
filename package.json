@@ -8,7 +8,7 @@
     "clean": "pnpm run -r --stream clean",
     "dev": "vitest",
     "format": "oxfmt",
-    "lint": "eslint . && oxfmt --check",
+    "lint": "oxlint && oxfmt --check",
     "prepare": "husky",
     "release": "pnpm release:check && pnpm release:version",
     "release:check": "pnpm clean && pnpm build && pnpm check-types && pnpm lint && pnpm test",
@@ -18,17 +18,19 @@
   "devDependencies": {
     "@commitlint/cli": "catalog:dev",
     "@commitlint/config-conventional": "catalog:dev",
+    "@commitlint/types": "catalog:dev",
     "@lerna-lite/cli": "catalog:dev",
     "@lerna-lite/publish": "catalog:dev",
-    "@meteorlxy/eslint-config": "catalog:dev",
     "@meteorlxy/oxfmt-config": "catalog:dev",
+    "@meteorlxy/oxlint-config": "catalog:dev",
     "@meteorlxy/tsconfig": "catalog:dev",
     "@types/node": "catalog:dev",
     "@vitest/coverage-istanbul": "catalog:dev",
-    "eslint": "catalog:dev",
     "husky": "catalog:dev",
     "lint-staged": "catalog:dev",
     "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
     "rimraf": "catalog:dev",
     "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
@@ -36,7 +38,7 @@
   },
   "lint-staged": {
     "*.(js|ts)": [
-      "eslint --fix",
+      "oxlint --fix",
       "oxfmt --no-error-on-unmatched-pattern"
     ],
     "*.!(js|ts)": "oxfmt --no-error-on-unmatched-pattern"

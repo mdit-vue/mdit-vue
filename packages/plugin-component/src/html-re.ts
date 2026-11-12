@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention -- forked from markdown-it */
-
 // Forked and modified from 'markdown-it/lib/common/html_re.js'
 
 // Regexps to match html elements

@@ -1,27 +1,26 @@
 packages:
   - packages/*
 
-allowBuilds:
-  unrs-resolver: true
-
 catalogs:
   dev:
     '@commitlint/cli': ^21.2.4
     '@commitlint/config-conventional': ^21.2.4
+    '@commitlint/types': ^21.2.3
     '@lerna-lite/cli': ^5.8.0
     '@lerna-lite/publish': ^5.8.0
-    '@meteorlxy/eslint-config': ^7.10.0
     '@meteorlxy/oxfmt-config': ^7.10.0
+    '@meteorlxy/oxlint-config': ^7.10.1
     '@meteorlxy/tsconfig': ^7.7.1
     '@vitest/coverage-istanbul': ^5.1.0
     '@types/node': ^26.6.6
-    eslint: ^10.14.0
     husky: ^9.1.7
     lint-staged: ^17.6.0
     oxfmt: ^0.77.0
+    oxlint: ^1.92.0
+    oxlint-tsgolint: ^7.0.2006
     rimraf: ^6.1.4
     tsdown: ^0.23.7
-    typescript: ^6.0.3
+    typescript: ^7.0.2
     vitest: ^5.1.0
 
   dev-test:
@@ -34,6 +33,4 @@ catalogs:
     markdown-it: ^15.0.3
 
 minimumReleaseAgeExclude:
-  - '@meteorlxy/eslint-config'
-  - '@meteorlxy/oxfmt-config'
-  - '@meteorlxy/tsconfig'
+  - '@meteorlxy/*'

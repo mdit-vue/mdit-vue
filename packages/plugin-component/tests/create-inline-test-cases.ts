@@ -268,11 +268,10 @@ const createInlineElementTagsCases = (
 /**
  * block element
  *
+ * This is invalid HTML and should be avoided.
+ *
  * @example
  * <span><div>foobar</div></span>
- *
- * @remark
- * This is invalid HTML and should be avoided
  */
 const createBlockElementTagsCases = (
   comp: string,
